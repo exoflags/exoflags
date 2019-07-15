@@ -4,14 +4,17 @@
   "private": true,
   "dependencies": {
     "arup-scripts": "0.1.5",
+    "node-sass": "^4.12.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "arup-scripts start",
+    "build": "arup-scripts build",
+    "test": "arup-scripts test",
+    "eject": "arup-scripts eject",
+    "prettier": "prettier --config prettier.config.js --write \"./**/*.js\"",
+    "analyze": "source-map-explorer \"build/static/js/*.js\""
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -27,5 +30,16 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
+  "devDependencies": {
+    "husky": "^3.0.0",
+    "prettier": "^1.18.2",
+    "pretty-quick": "^1.11.1",
+    "source-map-explorer": "^2.0.1"
   }
 }
