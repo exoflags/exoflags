@@ -1,7 +1,9 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import Grid from '@material-ui/core/Grid';
+
 import { FullScreen } from '../Layout';
+import Flag from '../Flag';
 
 export const FlagPane = () => (
   <FullScreen bg="steelblue" center>
@@ -15,7 +17,7 @@ export const FlagPane = () => (
       </Grid>
 
       <Grid item xs={12} sm={6}>
-        2
+        <Flag />
       </Grid>
     </Grid>
   </FullScreen>
