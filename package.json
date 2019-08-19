@@ -5,11 +5,14 @@
   "dependencies": {
     "@emotion/core": "^10.0.15",
     "@emotion/styled": "^10.0.15",
+    "@material-ui/core": "^4.3.2",
+    "antd": "^3.21.4",
     "arup-scripts": "0.1.5",
     "emotion-theming": "^10.0.14",
     "node-sass": "^4.12.0",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "typography": "^0.16.19"
   },
   "scripts": {
     "start": "arup-scripts start",

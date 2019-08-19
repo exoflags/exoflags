@@ -4,7 +4,6 @@ import styled from '@emotion/styled';
 import Logo from './Logo';
 
 const Wrapper = styled.header`
-  border: 1px solid red;
   position: fixed;
   top: 0;
   left: 0;
