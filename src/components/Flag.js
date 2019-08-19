@@ -19,11 +19,19 @@ const colorScale = scaleLinear()
   .domain([0, 100])
   .range(['#0000FF', '#FF0000']);
 
-const radiiScale = scaleLinear()
+const planetaryRadiiScale = scaleLinear()
   .domain([0, 100])
   .range([0, 100]);
 
-const massScale = scaleLinear()
+const planetaryMassScale = scaleLinear()
+  .domain([0, 100])
+  .range([0, 1]);
+
+const solarRadiiScale = scaleLinear()
+  .domain([0, 100])
+  .range([0, 100]);
+
+const solarMassScale = scaleLinear()
   .domain([0, 100])
   .range([0, 1]);
 
@@ -32,44 +40,113 @@ const bgStyle = (value) => css`
 `;
 
 // TODO: last bit is a percentage of the width - make this clearer!!!! can perhaps edit scale
-const borderWidth = (flagHeight, flagWidth, width) => `${flagHeight}px 0 0 ${flagWidth * (width/100)}px`;
-
-const borderColor = (mass) => `transparent transparent transparent rgba(0, 0, 0, ${massScale(mass)})`;
-
-const Triangle = styled.div`
-  position: relative;
-  height: 100%;
-  width: ${props => radiiScale(props.radii)}%;
-  border: 1px solid yellow;
-
-  border-style: solid;
-  border-width: ${props => borderWidth(props.flagHeight, props.flagWidth, radiiScale(props.radii))};;
-  border-color: ${props => borderColor(props.mass)};
+const planetaryBorderWidth = (flagHeight, flagWidth, width) => `
+  ${flagHeight}px
+  0
+  0
+  ${flagWidth * (width/100)}px
 `;
+
+const planetaryBorderColor = (opacity) => `
+  transparent
+  transparent
+  transparent
+  rgba(0, 0, 0, ${opacity})
+`;
+
+// TODO: last bit is a percentage of the width - make this clearer!!!! can perhaps edit scale
+const solarBorderWidth = (flagHeight, flagWidth, width) => `
+  ${flagHeight}px
+  ${flagWidth * (width / 100)}px
+  0
+  0
+`;
+
+const solarBorderColor = (opacity) => `
+  transparent
+  rgba(255, 255, 255, ${opacity})
+  transparent
+  transparent
+`;
+
+const PlanetaryTriangle = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: ${props => planetaryRadiiScale(props.planetaryRadii)}%;
+  border-style: solid;
+  border-width: ${props => planetaryBorderWidth(props.flagHeight, props.flagWidth, planetaryRadiiScale(props.planetaryRadii))};
+  border-color: ${props => planetaryBorderColor(planetaryMassScale(props.planetaryMass))};
+`;
+
+const SolarTriangle = styled.div`
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: ${props => solarRadiiScale(props.solarRadii)}%;
+  border-style: solid;
+  border-width: ${props => solarBorderWidth(props.flagHeight, props.flagWidth, solarRadiiScale(props.solarRadii))};
+  border-color: ${props => solarBorderColor(solarMassScale(props.solarMass))};
+`;
+
+// SolarTriangle
+// swap height and width values
+// bottom: 0;
+// right: 0;
+// border - width: ${ props => solarBorderHeight(props.flagHeight, props.flagWidth, solarRadiiScale(props.solarRadii)) };
+
+// const solarBorderHeight = (flagHeight, flagWidth, height) => `
+//   ${flagHeight * (height / 100)}px
+//   ${flagWidth}px
+//   0
+//   0
+// `;
+
+// const solarBorderColor = (opacity) => `
+//   transparent
+//   rgba(255, 255, 255, ${opacity})
+//   transparent
+//   transparent
+// `;
 
 const BaseFlag = styled.div`
   position: relative;
   width: ${props => props.width}px;
   height: ${props => props.height}px;
 
-  ${props => props.redshift && bgStyle(props.redshift)};
+  ${props => props.redshift !== undefined && bgStyle(props.redshift)};
 `;
 
-const Flag = () => (
+const Flag = ({
+  redshift = 0,
+  planetaryMass = 0,
+  planetaryRadii = 0,
+  solarMass = 0,
+  solarRadii = 0
+}) => (
   <AutoSizer disableHeight>
     {({ width }) => {
-      const flagWidth = width > 400 ? 400 : width;
-      const flagHeight = flagWidth * (2 / 3);
+      const flagWidth = 500; //width > 400 ? 400 : width;
+      const flagHeight = 300; //flagWidth * (2 / 3);
 
       return (
         <BaseFlag
           width={flagWidth}
           height={flagHeight}
-          redshift={20}
+          redshift={redshift}
         >
-          <Triangle
-            radii={70}
-            mass={20}
+          <PlanetaryTriangle
+            planetaryMass={planetaryMass}
+            planetaryRadii={planetaryRadii}
+            flagHeight={flagHeight}
+            flagWidth={flagWidth}
+          />
+          
+          <SolarTriangle
+            solarMass={solarMass}
+            solarRadii={solarRadii}
             flagHeight={flagHeight}
             flagWidth={flagWidth}
           />

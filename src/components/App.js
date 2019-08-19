@@ -4,6 +4,7 @@ import Header from './Header';
 import { FullScreen } from './Layout';
 import { TitlePane, FlagPane } from './Panes';
 import { Slider } from 'antd';
+import Flag from './Flag';
 
 const marks = {
   0: '0°C',

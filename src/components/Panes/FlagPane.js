@@ -17,7 +17,15 @@ export const FlagPane = () => (
       </Grid>
 
       <Grid item xs={12} sm={6}>
-        <Flag />
+        <div>
+          <Flag
+            redshift={20}
+            planetaryRadii={70}
+            planetaryMass={20}
+            solarMass={10}
+            solarRadii={50}
+          />
+        </div>
       </Grid>
     </Grid>
   </FullScreen>
