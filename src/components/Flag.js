@@ -23,12 +23,18 @@ const radiiScale = scaleLinear()
   .domain([0, 100])
   .range([0, 100]);
 
+const massScale = scaleLinear()
+  .domain([0, 100])
+  .range([0, 1]);
+
 const bgStyle = (value) => css`
   background-color: ${colorScale(value)};
 `;
 
 // TODO: last bit is a percentage of the width - make this clearer!!!! can perhaps edit scale
 const borderWidth = (flagHeight, flagWidth, width) => `${flagHeight}px 0 0 ${flagWidth * (width/100)}px`;
+
+const borderColor = (mass) => `transparent transparent transparent rgba(0, 0, 0, ${massScale(mass)})`;
 
 const Triangle = styled.div`
   position: relative;
@@ -38,7 +44,7 @@ const Triangle = styled.div`
 
   border-style: solid;
   border-width: ${props => borderWidth(props.flagHeight, props.flagWidth, radiiScale(props.radii))};;
-  border-color: transparent transparent transparent rgba(0, 0, 0, 0.5);
+  border-color: ${props => borderColor(props.mass)};
 `;
 
 const BaseFlag = styled.div`
@@ -63,6 +69,7 @@ const Flag = () => (
         >
           <Triangle
             radii={70}
+            mass={20}
             flagHeight={flagHeight}
             flagWidth={flagWidth}
           />
