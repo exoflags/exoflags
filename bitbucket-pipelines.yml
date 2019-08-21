@@ -1,0 +1,9 @@
+image: rorysedgwick/mvinsight-build-pipeline:latest
+pipelines:
+  branches:
+    master:
+      - step:
+          script:
+            - echo $BITBUCKET_COMMIT > release
+            - zip -r app.zip .
+            - aws s3 cp app.zip s3://arup-arup-ukimea-ade-prod-code/$BITBUCKET_REPO_SLUG.zip
