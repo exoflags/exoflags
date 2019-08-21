@@ -5,7 +5,7 @@ import Grid from '@material-ui/core/Grid';
 import { FullScreen } from '../Layout';
 import Flag from '../Flag';
 
-export const FlagPane = () => (
+export const FlagPane = ({ userFlag }) => (
   <FullScreen bg="steelblue" center>
     <Grid container spacing={4}>
       <Grid item xs={12} sm={6}>
@@ -19,11 +19,7 @@ export const FlagPane = () => (
       <Grid item xs={12} sm={6}>
         <div>
           <Flag
-            redshift={20}
-            planetaryRadii={70}
-            planetaryMass={20}
-            solarMass={10}
-            solarRadii={50}
+            {...userFlag}
           />
         </div>
       </Grid>
