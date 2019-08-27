@@ -6,11 +6,6 @@ import { Forward, Back } from './Icons';
 
 import { FLAG_BUILDER_STEPS } from '../const';
 
-/*
-  TODO:
-  - should register own keyboard events and remove them when unmounted
-*/
-
 const hideStyle = css`
   visibility: hidden;
 `;
@@ -61,8 +56,7 @@ const Dot = styled(Link)`
   background-color: ${props => props.theme.colors.grey.medium};
 `;
 
-const ArrowNav = ({ stepId }) => {
-  const stepIdx = stepId - 1;
+const ArrowNav = ({ stepId, stepIdx }) => {
   const isFirstStep = stepIdx === 0;
   const isLastStep = stepIdx === FLAG_BUILDER_STEPS.length - 1;
 
@@ -70,7 +64,7 @@ const ArrowNav = ({ stepId }) => {
     <Wrapper>
       <ArrowContainer
         hide={isFirstStep}
-        onClick={() => navigate(`/flag-builder/${+stepId - 1}`)}
+        onClick={() => navigate(`/flag-builder/${stepId - 1}`)}
       >
         <Back />
       </ArrowContainer>
@@ -86,7 +80,7 @@ const ArrowNav = ({ stepId }) => {
 
       <ArrowContainer
         hide={isLastStep}
-        onClick={() => navigate(`/flag-builder/${+stepId + 1}`)}
+        onClick={() => navigate(`/flag-builder/${stepId + 1}`)}
       >
         <Forward />
       </ArrowContainer>
