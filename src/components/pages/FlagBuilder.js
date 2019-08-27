@@ -2,11 +2,12 @@ import React from 'react';
 import styled from '@emotion/styled';
 import Grid from '@material-ui/core/Grid';
 
-import { FullScreen } from '../Layout';
+import { Page } from '../Layout';
 import Flag from '../Flag';
+import ArrowNav from '../ArrowNav';
 
-export const FlagPane = ({ userFlag }) => (
-  <FullScreen bg="steelblue" center>
+export const FlagBuilder = ({ userFlag, stepId }) => (
+  <Page>
     <Grid container spacing={4}>
       <Grid item xs={12} sm={6}>
         <h3>Ut sint excepteur Lorem aliqua occaecat ea nostrud et.</h3>
@@ -24,5 +25,7 @@ export const FlagPane = ({ userFlag }) => (
         </div>
       </Grid>
     </Grid>
-  </FullScreen>
+
+    <ArrowNav stepId={stepId} />
+  </Page>
 );

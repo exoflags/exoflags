@@ -5,12 +5,12 @@ import styled from '@emotion/styled';
 import Header from './Header';
 import {
   Home,
-  FlagPane,
   About,
   Credits,
   Examples,
   Resources,
   Search,
+  FlagBuilder,
   NotFound
 } from './pages';
 
@@ -38,6 +38,8 @@ const ContentContainer = styled.div`
   height: calc(100% - ${props => props.theme.headerHeight});
   width: 100%;
   flex: 1;
+  position: relative;
+  background-color: ${props => props.theme.colors.grey.dark};
 `;
 
 const App = () => {
@@ -66,6 +68,11 @@ const App = () => {
         <Router>
           <Home path="/" />
 
+          <FlagBuilder
+            path="/flag-builder/:stepId"
+            userFlag={userFlag}
+          />
+
           <About path="/about" />
           <Credits path="/credits" />
           <Examples path="/examples" />
@@ -73,7 +80,6 @@ const App = () => {
           <Search path="/search" />
 
           <NotFound default />
-          {/* <FlagPane userFlag={userFlag} /> */}
         </Router>
       </ContentContainer>
     </AppContainer>
