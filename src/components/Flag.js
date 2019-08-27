@@ -39,12 +39,11 @@ const bgStyle = (value) => css`
   background-color: ${distanceScale(value)};
 `;
 
-// TODO: last bit is a percentage of the width - make this clearer!!!! can perhaps edit scale
 const planetaryBorderWidth = (flagHeight, flagWidth, width) => `
   ${flagHeight}px
   0
   0
-  ${flagWidth * (width/100)}px
+  ${flagWidth * (width / 100)}px
 `;
 
 const planetaryBorderColor = (opacity) => `
@@ -54,10 +53,9 @@ const planetaryBorderColor = (opacity) => `
   rgba(0, 0, 0, ${opacity})
 `;
 
-// TODO: last bit is a percentage of the width - make this clearer!!!! can perhaps edit scale
-const stellarBorderWidth = (flagHeight, flagWidth, width) => `
-  ${flagHeight}px
-  ${flagWidth * (width / 100)}px
+const stellarBorderHeight = (flagHeight, flagWidth, height) => `
+  ${flagHeight * (height / 100)}px
+  ${flagWidth}px
   0
   0
 `;
@@ -84,32 +82,12 @@ const StellarTriangle = styled.div`
   position: absolute;
   bottom: 0;
   right: 0;
-  height: 100%;
-  width: ${props => stellarRadiusScale(props.stellarRadius)}%;
+  height: ${props => stellarRadiusScale(props.stellarRadius)}%;
+  width: 100%;
   border-style: solid;
-  border-width: ${props => stellarBorderWidth(props.flagHeight, props.flagWidth,stellarRadiusScale(props.stellarRadius))};
+  border-width: ${props => stellarBorderHeight(props.flagHeight, props.flagWidth,stellarRadiusScale(props.stellarRadius))};
   border-color: ${props => stellarBorderColor(stellarMassScale(props.stellarMass))};
 `;
-
-// StellarTriangle
-// swap height and width values
-// bottom: 0;
-// right: 0;
-// border - width: ${ props => stellarBorderHeight(props.flagHeight, props.flagWidth,stellarRadiusScale(props.stellarRadius)) };
-
-// const stellarBorderHeight = (flagHeight, flagWidth, height) => `
-//   ${flagHeight * (height / 100)}px
-//   ${flagWidth}px
-//   0
-//   0
-// `;
-
-// const stellarBorderColor = (opacity) => `
-//   transparent
-//   rgba(255, 255, 255, ${opacity})
-//   transparent
-//   transparent
-// `;
 
 const BaseFlag = styled.div`
   position: relative;
