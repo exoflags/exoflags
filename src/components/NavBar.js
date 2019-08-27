@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from '@reach/router';
 import styled from '@emotion/styled';
+import theme from '../theme';
 
 const Wrapper = styled.nav`
   height: 100%;
@@ -18,13 +19,26 @@ const Wrapper = styled.nav`
   }
 `;
 
+const NavLink = (props) => (
+  <Link
+    {...props}
+    getProps={({ isCurrent }) => {
+      return {
+        style: {
+          color: isCurrent ? theme.colors.grey.medium : theme.colors.white
+        }
+      };
+    }}
+  />
+);
+
 const NavBar = () => (
   <Wrapper>
-    <Link to="/about">ABOUT</Link>
-    <Link to="/examples">EXAMPLES</Link>
-    <Link to="/search">SEARCH</Link>
-    <Link to="/resources">RESOURCES</Link>
-    <Link to="/credits">CREDITS</Link>
+    <NavLink to="/about">ABOUT</NavLink>
+    <NavLink to="/examples">EXAMPLES</NavLink>
+    <NavLink to="/search">SEARCH</NavLink>
+    <NavLink to="/resources">RESOURCES</NavLink>
+    <NavLink to="/credits">CREDITS</NavLink>
   </Wrapper>
 );
 

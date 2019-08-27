@@ -2,9 +2,10 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 import { Link, navigate } from '@reach/router';
-import { Forward, Back } from './Icons';
 
+import { Forward, Back } from './Icons';
 import { FLAG_BUILDER_STEPS } from '../const';
+import theme from '../theme';
 
 const hideStyle = css`
   visibility: hidden;
@@ -53,8 +54,20 @@ const Dot = styled(Link)`
   height: 0.75rem;
   width: 0.75rem;
   border-radius: 50%;
-  background-color: ${props => props.theme.colors.grey.medium};
 `;
+
+const NavDot = (props) => (
+  <Dot
+    {...props}
+    getProps={({ isCurrent }) => {
+      return {
+        style: {
+          backgroundColor: isCurrent ? theme.colors.white : theme.colors.grey.medium
+        }
+      };
+    }}
+  />
+);
 
 const ArrowNav = ({ stepId, stepIdx }) => {
   const isFirstStep = stepIdx === 0;
@@ -71,7 +84,7 @@ const ArrowNav = ({ stepId, stepIdx }) => {
 
       <Dots>
         {FLAG_BUILDER_STEPS.map(step => (
-          <Dot
+          <NavDot
             to={step.path}
             key={step.displayName}
           />
