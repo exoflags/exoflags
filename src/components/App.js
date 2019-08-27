@@ -43,6 +43,10 @@ const ContentContainer = styled.div`
   background-color: ${props => props.theme.colors.grey.dark};
 `;
 
+const routerStyle = {
+  height: '100%'
+};
+
 const App = () => {
   const [userFlag, setUserFlag] = useState(initialUserFlag);
 
@@ -53,7 +57,7 @@ const App = () => {
       </HeaderContainer>
       
       <ContentContainer>
-        <Router>
+        <Router style={routerStyle}>
           <Home path="/" />
 
           <FlagBuilder

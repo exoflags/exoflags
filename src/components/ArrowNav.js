@@ -11,7 +11,7 @@ const hideStyle = css`
 `;
 
 const Wrapper = styled.div`
-  height: 60px;
+  height: ${props => props.theme.arrowNavHeight};
   width: 100%;
   z-index: 1;
   position: absolute;
