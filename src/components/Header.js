@@ -15,10 +15,15 @@ const Wrapper = styled.header`
   background-color: #3d3d3d;
 `;
 
+const logoStyle = {
+  display: 'block',
+  alignSelf: 'flex-end'
+}
+
 const Header = () => (
   <Wrapper>
     <Link to="/">
-      <Logo>Exoflags</Logo>
+      <Logo height="30px" style={logoStyle} />
     </Link>
     <NavBar />
   </Wrapper>
