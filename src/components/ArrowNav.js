@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 import { Link, navigate } from '@reach/router';
@@ -73,11 +73,31 @@ const ArrowNav = ({ stepId, stepIdx }) => {
   const isFirstStep = stepIdx === 0;
   const isLastStep = stepIdx === FLAG_BUILDER_STEPS.length - 1;
 
+  const prev = () => navigate(`/flag-builder/${stepId - 1}`);
+  const next = () => navigate(`/flag-builder/${stepId + 1}`);
+
+  useEffect(() => {
+    function handleKeyDown(e) {
+      if (e.code === 'ArrowLeft' && !isFirstStep) {
+        prev();
+      }
+      if (e.code === 'ArrowRight' && !isLastStep) {
+        next();
+      }
+    }
+
+    window.addEventListener('keydown', handleKeyDown);
+
+    return function cleanup() {
+      window.removeEventListener('keydown', handleKeyDown);
+    }
+  }, [stepId])
+
   return (
     <Wrapper>
       <ArrowContainer
         hide={isFirstStep}
-        onClick={() => navigate(`/flag-builder/${stepId - 1}`)}
+        onClick={prev}
       >
         <Back />
       </ArrowContainer>
@@ -93,7 +113,7 @@ const ArrowNav = ({ stepId, stepIdx }) => {
 
       <ArrowContainer
         hide={isLastStep}
-        onClick={() => navigate(`/flag-builder/${stepId + 1}`)}
+        onClick={next}
       >
         <Forward />
       </ArrowContainer>
