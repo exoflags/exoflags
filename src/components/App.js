@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Router } from '@reach/router';
 import styled from '@emotion/styled';
 
@@ -13,13 +13,14 @@ import {
   FlagBuilder,
   NotFound
 } from './pages';
+import { FLAG_PROPERTIES } from '../const';
 
 const initialUserFlag = {
-  redshift: 0,
-  planetaryMass: 0,
-  planetaryRadii: 0,
-  solarMass: 0,
-  solarRadii: 0
+  [FLAG_PROPERTIES.distance]: 0,
+  [FLAG_PROPERTIES.planetaryMass]: 10,
+  [FLAG_PROPERTIES.planetaryRadius]: 20,
+  [FLAG_PROPERTIES.stellarMass]: 30,
+  [FLAG_PROPERTIES.stellarRadius]: 40
 }
 
 const AppContainer = styled.div`
@@ -44,19 +45,6 @@ const ContentContainer = styled.div`
 
 const App = () => {
   const [userFlag, setUserFlag] = useState(initialUserFlag);
-  const randomNum = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
-
-  useEffect(() => {
-    setInterval(() => {
-      setUserFlag({
-        redshift: randomNum(0, 100),
-        planetaryMass: randomNum(0, 100),
-        planetaryRadii: randomNum(0, 100),
-        solarMass: randomNum(0, 100),
-        solarRadii: randomNum(0, 100)
-      })
-    }, 1500)
-  }, [])
 
   return (
     <AppContainer>
@@ -71,6 +59,7 @@ const App = () => {
           <FlagBuilder
             path="/flag-builder/:stepId"
             userFlag={userFlag}
+            setUserFlag={setUserFlag}
           />
 
           <About path="/about" />

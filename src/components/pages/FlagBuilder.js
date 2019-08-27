@@ -11,6 +11,15 @@ export const FlagBuilder = ({ userFlag, stepId }) => {
   const stepIdx = +stepId - 1;
   const { title, body } = FLAG_BUILDER_STEPS[stepIdx]
 
+  // Get flag properties and values up until current step
+  const flagProperties = FLAG_BUILDER_STEPS
+    .slice(0, stepIdx + 1)
+    .map(step => step.flagProperty)
+    .reduce((memo, flagProperty) => {
+      memo[flagProperty] = userFlag[flagProperty];
+      return memo;
+    }, {});
+
   return (
     <Page>
       <Grid container spacing={4}>
@@ -22,9 +31,7 @@ export const FlagBuilder = ({ userFlag, stepId }) => {
 
         <Grid item xs={12} sm={6}>
           <div>
-            <Flag
-              {...userFlag}
-            />
+            <Flag {...flagProperties} />
           </div>
         </Grid>
       </Grid>

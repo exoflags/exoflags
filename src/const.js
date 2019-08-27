@@ -1,7 +1,16 @@
+export const FLAG_PROPERTIES = {
+  distance: 'distance',
+  planetaryMass: 'planetaryMass',
+  planetaryRadius: 'planetaryRadius',
+  stellarMass: 'stellarMass',
+  stellarRadius: 'stellarRadius'
+}
+
 export const FLAG_BUILDER_STEPS = [
   {
     path: '/flag-builder/1',
     displayName: 'Step 1',
+    flagProperty: FLAG_PROPERTIES.distance,
     title: 'Distance',
     body: [
       'Reprehenderit mollit magna mollit proident.',
@@ -12,6 +21,7 @@ export const FLAG_BUILDER_STEPS = [
   {
     path: '/flag-builder/2',
     displayName: 'Step 2',
+    flagProperty: FLAG_PROPERTIES.planetaryMass,
     title: 'Planetary Mass',
     body: [
       'Esse qui non non cupidatat fugiat proident.',
@@ -22,6 +32,7 @@ export const FLAG_BUILDER_STEPS = [
   {
     path: '/flag-builder/3',
     displayName: 'Step 3',
+    flagProperty: FLAG_PROPERTIES.planetaryRadius,
     title: 'Planetary Radius',
     body: [
       'Reprehenderit mollit magna labore mollit. Dolore eu excepteur id deserunt laboris proident esse sunt. Cupidatat magna cillum ea incididunt ea amet ex adipisicing voluptate pariatur fugiat do non.',
@@ -32,6 +43,7 @@ export const FLAG_BUILDER_STEPS = [
   {
     path: '/flag-builder/4',
     displayName: 'Step 4',
+    flagProperty: FLAG_PROPERTIES.stellarMass,
     title: 'Stellar Mass',
     body: [
       'Excepteur ipsum ipsum irure officia elit laborum aliqua est aute ad occaecat nulla mollit consequat. Aliqua dolor nisi aliquip nulla laboris sint. Pariatur veniam occaecat et ex eu commodo aliquip nostrud occaecat nisi labore.',
@@ -42,6 +54,7 @@ export const FLAG_BUILDER_STEPS = [
   {
     path: '/flag-builder/5',
     displayName: 'Step 5',
+    flagProperty: FLAG_PROPERTIES.stellarRadius,
     title: 'Stellar Radius',
     body: [
       'Cupidatat ut sunt mollit officia ex nisi proident id.',
