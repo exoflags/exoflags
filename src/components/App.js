@@ -1,22 +1,18 @@
 import React, { useState, useEffect } from 'react';
+import { Router } from '@reach/router';
+import styled from '@emotion/styled';
 
 import Header from './Header';
-import { FullScreen } from './Layout';
-import { TitlePane, FlagPane } from './Panes';
-import { Slider } from 'antd';
-import Flag from './Flag';
-
-const marks = {
-  0: '0°C',
-  26: '26°C',
-  37: '37°C',
-  100: {
-    style: {
-      color: '#f50',
-    },
-    label: <strong>100°C</strong>,
-  },
-};
+import {
+  Home,
+  FlagPane,
+  About,
+  Credits,
+  Examples,
+  Resources,
+  Search,
+  NotFound
+} from './pages';
 
 const initialUserFlag = {
   redshift: 0,
@@ -25,6 +21,24 @@ const initialUserFlag = {
   solarMass: 0,
   solarRadii: 0
 }
+
+const AppContainer = styled.div`
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+`;
+
+const HeaderContainer = styled.div`
+  height: ${props => props.theme.headerHeight};
+  width: 100%;
+`;
+
+const ContentContainer = styled.div`
+  height: calc(100% - ${props => props.theme.headerHeight});
+  width: 100%;
+  flex: 1;
+`;
 
 const App = () => {
   const [userFlag, setUserFlag] = useState(initialUserFlag);
@@ -43,13 +57,26 @@ const App = () => {
   }, [])
 
   return (
-    <>
-      <Header />
+    <AppContainer>
+      <HeaderContainer>
+        <Header />
+      </HeaderContainer>
+      
+      <ContentContainer>
+        <Router>
+          <Home path="/" />
 
-      <TitlePane />
+          <About path="/about" />
+          <Credits path="/credits" />
+          <Examples path="/examples" />
+          <Resources path="/resources" />
+          <Search path="/search" />
 
-      <FlagPane userFlag={userFlag} />
-    </>
+          <NotFound default />
+          {/* <FlagPane userFlag={userFlag} /> */}
+        </Router>
+      </ContentContainer>
+    </AppContainer>
   );
 }
 
