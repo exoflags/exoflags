@@ -2,7 +2,7 @@
   "name": "exoflags",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://exoflags.github.io/exoflags/",
+  "homepage": "https://exoflags.github.io",
   "dependencies": {
     "@emotion/core": "^10.0.15",
     "@emotion/styled": "^10.0.15",
@@ -21,7 +21,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d build -b master -r https://github.com/exoflags/exoflags.github.io.git",
     "start": "arup-scripts start",
     "build": "arup-scripts build",
     "test": "arup-scripts test",
