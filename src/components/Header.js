@@ -1,45 +1,31 @@
 import React from 'react';
+import { Link } from '@reach/router';
 import styled from '@emotion/styled';
 
 import Logo from './Logo';
+import NavBar from './NavBar';
 
 const Wrapper = styled.header`
-  position: fixed;
-  top: 0;
-  left: 0;
+  height: 100%;
   width: 100%;
-  z-index: 2;
-`;
-
-const Upper = styled.div`
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   background-color: #3d3d3d;
-  height: 60px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 2rem;
 `;
 
-const Lower = styled.div`
-  background-color: #1a1a1a;
-  height: 30px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 2rem;
-`;
+const logoStyle = {
+  display: 'block',
+  alignSelf: 'flex-end'
+}
 
 const Header = () => (
   <Wrapper>
-    <Upper>
-      <Logo>Origin</Logo>
-    </Upper>
-
-    <Lower>
-
-    </Lower>
+    <Link to="/">
+      <Logo height="30px" style={logoStyle} />
+    </Link>
+    <NavBar />
   </Wrapper>
 );
 

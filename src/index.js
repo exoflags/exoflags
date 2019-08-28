@@ -7,6 +7,7 @@ import * as serviceWorker from './serviceWorker';
 import theme from './theme';
 import typography from './typography';
 
+import './fonts/fonts.css';
 import './index.scss';
 // BUG: antd css is messing with our global styles...
 // import 'antd/dist/antd.css';

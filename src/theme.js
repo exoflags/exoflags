@@ -3,6 +3,8 @@ const theme = {
   transitionDuration: {
     short: '0.3s'
   },
+  headerHeight: '60px',
+  arrowNavHeight: '60px',
   colors: {
     white: '#FFFFFF',
     black: '#000000',
