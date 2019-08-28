@@ -2,6 +2,7 @@
   "name": "exoflags",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://exoflags.github.io/exoflags/",
   "dependencies": {
     "@emotion/core": "^10.0.15",
     "@emotion/styled": "^10.0.15",
