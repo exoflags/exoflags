@@ -5,6 +5,7 @@ import Grid from '@material-ui/core/Grid';
 import { Page } from '../Layout';
 import Flag from '../Flag';
 import ArrowNav from '../ArrowNav';
+import Slider from '../Slider';
 import { FLAG_BUILDER_STEPS } from '../../const';
 
 // Center content between header and ArrowNav, but allow background to fill
@@ -35,6 +36,10 @@ export const FlagBuilder = ({ userFlag, stepId }) => {
     <Page>
       <ContentContainer>
         <Grid container spacing={4}>
+          <Grid item xs={12} sm={12}>
+            <Slider />
+          </Grid>
+
           <Grid item xs={12} sm={6}>
             <h3>{title}</h3>
 
