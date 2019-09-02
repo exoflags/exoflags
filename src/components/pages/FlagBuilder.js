@@ -1,4 +1,5 @@
 import React from 'react';
+import AutoSizer from 'react-virtualized-auto-sizer';
 import styled from '@emotion/styled';
 import Grid from '@material-ui/core/Grid';
 
@@ -37,7 +38,11 @@ export const FlagBuilder = ({ userFlag, stepId }) => {
       <ContentContainer>
         <Grid container spacing={4}>
           <Grid item xs={12} sm={12}>
-            <Slider />
+            <AutoSizer disableHeight>
+              {({ width }) => (
+                <Slider width={width} />
+              )}
+            </AutoSizer>
           </Grid>
 
           <Grid item xs={12} sm={6}>
