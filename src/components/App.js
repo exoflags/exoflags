@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Router } from '@reach/router';
 import styled from '@emotion/styled';
+import { extent } from 'd3-array';
 
 import Header from './Header';
 import {
@@ -14,6 +15,7 @@ import {
   NotFound
 } from './pages';
 import { FLAG_PROPERTIES } from '../const';
+import exoplanets from '../data/exoplanets.json';
 
 const initialUserFlag = {
   [FLAG_PROPERTIES.distance]: 0,
@@ -21,7 +23,7 @@ const initialUserFlag = {
   [FLAG_PROPERTIES.planetaryRadius]: 20,
   [FLAG_PROPERTIES.stellarMass]: 30,
   [FLAG_PROPERTIES.stellarRadius]: 40
-}
+};
 
 const AppContainer = styled.div`
   height: 100vh;
@@ -49,13 +51,18 @@ const routerStyle = {
 
 const App = () => {
   const [userFlag, setUserFlag] = useState(initialUserFlag);
+  const [planetData] = useState(exoplanets);
+  const pl_bmassj = extent(planetData, planet => planet.pl_bmassj);
+  const pl_radj = extent(planetData, planet => planet.pl_radj);
+  const st_mass = extent(planetData, planet => planet.st_mass);
+  const pl_pnum = extent(planetData, planet => planet.pl_pnum);
 
   return (
     <AppContainer>
       <HeaderContainer>
         <Header />
       </HeaderContainer>
-      
+
       <ContentContainer>
         <Router style={routerStyle}>
           <Home path="/" />
@@ -70,13 +77,12 @@ const App = () => {
           <Credits path="/credits" />
           <Examples path="/examples" />
           <Resources path="/resources" />
-          <Search path="/search" />
-
+          <Search path="/search" data={planetData} />
           <NotFound default />
         </Router>
       </ContentContainer>
     </AppContainer>
   );
-}
+};
 
 export default App;
