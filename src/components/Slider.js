@@ -84,16 +84,17 @@ class Slider extends Component {
 
   render() {
     const {
-      extent = [1, 100],
+      extents,
       width,
       userFlag,
       flagProperty
     } = this.props;
 
     const value = userFlag[flagProperty];
-    const sliderWidth = getSliderWidth(width)
+    const extent = extents[flagProperty] || [1, 100];
+    const sliderWidth = getSliderWidth(width);
 
-    this.xScale.domain(extent).range([0, sliderWidth])
+    this.xScale.domain(extent).range([0, sliderWidth]);
 
     return (
       <SVG height={sliderHeight} width={width}>

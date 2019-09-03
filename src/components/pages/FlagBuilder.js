@@ -20,7 +20,7 @@ const ContentContainer = styled.div`
   padding: 0 4rem;
 `;
 
-export const FlagBuilder = ({ userFlag, setUserFlag, stepId }) => {
+export const FlagBuilder = ({ userFlag, setUserFlag, extents, stepId }) => {
   const stepIdx = +stepId - 1;
   const { title, body, flagProperty } = FLAG_BUILDER_STEPS[stepIdx];
 
@@ -41,6 +41,7 @@ export const FlagBuilder = ({ userFlag, setUserFlag, stepId }) => {
             <AutoSizer disableHeight>
               {({ width }) => (
                 <Slider
+                  extents={extents}
                   width={width}
                   flagProperty={flagProperty}
                   userFlag={userFlag}

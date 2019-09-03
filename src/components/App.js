@@ -52,10 +52,15 @@ const routerStyle = {
 const App = () => {
   const [userFlag, setUserFlag] = useState(initialUserFlag);
   const [planetData] = useState(exoplanets);
-  const pl_bmassj = extent(planetData, planet => planet.pl_bmassj);
-  const pl_radj = extent(planetData, planet => planet.pl_radj);
-  const st_mass = extent(planetData, planet => planet.st_mass);
-  const pl_pnum = extent(planetData, planet => planet.pl_pnum);
+
+  // TODO: add extents for distance and num planets (?)
+  const EXTENTS = {
+    [FLAG_PROPERTIES.distance]: [1, 100],
+    [FLAG_PROPERTIES.planetaryMass]: extent(planetData, planet => planet.pl_bmassj),
+    [FLAG_PROPERTIES.planetaryRadius]: extent(planetData, planet => planet.pl_radj),
+    [FLAG_PROPERTIES.stellarMass]: extent(planetData, planet => planet.st_mass),
+    [FLAG_PROPERTIES.stellarRadius]: extent(planetData, planet => planet.st_rad),
+  }
 
   return (
     <AppContainer>
@@ -71,6 +76,7 @@ const App = () => {
             path="/flag-builder/:stepId"
             userFlag={userFlag}
             setUserFlag={setUserFlag}
+            extents={EXTENTS}
           />
 
           <About path="/about" />
