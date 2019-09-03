@@ -3,11 +3,17 @@ import styled from '@emotion/styled';
 import { scaleLinear } from 'd3-scale';
 import { select, event as d3Event } from 'd3-selection';
 import { drag } from 'd3-drag';
+import throttle from 'lodash.throttle';
 
 import { ReactComponent as SliderThumb} from '../assets/SliderNode.svg';
 
 /*
   TODO:
+  - flag property will be used to
+    - get scale
+    - update state
+
+
   - slider scale needs to be the same as the active flag property
     - perhaps these need to live up a level...
   - we want an *instance* of that scale however, as the range will be different (flag vs fullscreen)
@@ -48,34 +54,43 @@ class Slider extends Component {
   xScale = scaleLinear().clamp(true)
   thumbRef = React.createRef()
 
-  state = {
-    value: 50
+  constructor(props) {
+    super(props);
+
+    this.handleChange = throttle(this.handleChange, 15);
   }
 
   componentDidMount() {
     this.initSlider();
   }
 
+  handleChange = (value) => {
+    const { setUserFlag, userFlag, flagProperty } = this.props;
+    setUserFlag({
+      ...userFlag,
+      [flagProperty]: value
+    });
+  }
+
   initSlider() {
     this.thumb = select(this.thumbRef.current);
-
     this.thumb.call(
       drag().on('drag', () => {
         const position = this.xScale.invert(d3Event.x)
-        // TODO: should set state at level above later (i.e. flag page)
-        // as value will also come from props
-        this.setState(state => ({ value: position }))
+        this.handleChange(position)
       })
     )
   }
 
   render() {
-    const { value } = this.state;
     const {
       extent = [1, 100],
-      width = 400
+      width,
+      userFlag,
+      flagProperty
     } = this.props;
 
+    const value = userFlag[flagProperty];
     const sliderWidth = getSliderWidth(width)
 
     this.xScale.domain(extent).range([0, sliderWidth])

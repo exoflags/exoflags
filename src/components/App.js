@@ -16,11 +16,11 @@ import {
 import { FLAG_PROPERTIES } from '../const';
 
 const initialUserFlag = {
-  [FLAG_PROPERTIES.distance]: 0,
-  [FLAG_PROPERTIES.planetaryMass]: 10,
-  [FLAG_PROPERTIES.planetaryRadius]: 20,
-  [FLAG_PROPERTIES.stellarMass]: 30,
-  [FLAG_PROPERTIES.stellarRadius]: 40
+  [FLAG_PROPERTIES.distance]: 50,
+  [FLAG_PROPERTIES.planetaryMass]: 50,
+  [FLAG_PROPERTIES.planetaryRadius]: 50,
+  [FLAG_PROPERTIES.stellarMass]: 50,
+  [FLAG_PROPERTIES.stellarRadius]: 50
 }
 
 const AppContainer = styled.div`

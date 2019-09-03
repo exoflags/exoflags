@@ -20,9 +20,9 @@ const ContentContainer = styled.div`
   padding: 0 4rem;
 `;
 
-export const FlagBuilder = ({ userFlag, stepId }) => {
+export const FlagBuilder = ({ userFlag, setUserFlag, stepId }) => {
   const stepIdx = +stepId - 1;
-  const { title, body } = FLAG_BUILDER_STEPS[stepIdx]
+  const { title, body, flagProperty } = FLAG_BUILDER_STEPS[stepIdx];
 
   // Get flag properties and values up until current step
   const flagProperties = FLAG_BUILDER_STEPS
@@ -40,7 +40,12 @@ export const FlagBuilder = ({ userFlag, stepId }) => {
           <Grid item xs={12} sm={12}>
             <AutoSizer disableHeight>
               {({ width }) => (
-                <Slider width={width} />
+                <Slider
+                  width={width}
+                  flagProperty={flagProperty}
+                  userFlag={userFlag}
+                  setUserFlag={setUserFlag}
+                />
               )}
             </AutoSizer>
           </Grid>
