@@ -87,6 +87,15 @@ class Flag extends Component {
     this.stellarMassScale = scaleLinear()
       .domain(extents[FLAG_PROPERTIES.stellarMass])
       .range([0, 1]);
+
+    // TODO: set up actual ranges for the scales below
+    this.planetaryNeighboursScale = scaleLinear()
+      .domain(extents[FLAG_PROPERTIES.planetaryNeighbours])
+      .range([1, 100]);
+
+    this.constellationScale = scaleLinear()
+      .domain(extents[FLAG_PROPERTIES.constellation])
+      .range([1, 100]);
   }
 
   render() {
@@ -105,7 +114,9 @@ class Flag extends Component {
       planetaryMass = extents[FLAG_PROPERTIES.planetaryMass][0],
       planetaryRadius = extents[FLAG_PROPERTIES.planetaryRadius][0],
       stellarMass = extents[FLAG_PROPERTIES.stellarMass][0],
-      stellarRadius = extents[FLAG_PROPERTIES.stellarRadius][0]
+      stellarRadius = extents[FLAG_PROPERTIES.stellarRadius][0],
+      planetaryNeighbours = extents[FLAG_PROPERTIES.planetaryNeighbours][0],
+      constellation = extents[FLAG_PROPERTIES.constellation][0]
     } = this.props;
 
     const flagWidth = width; //width > 400 ? 400 : width;

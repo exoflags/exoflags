@@ -3,8 +3,10 @@ export const FLAG_PROPERTIES = {
   planetaryMass: 'planetaryMass',
   planetaryRadius: 'planetaryRadius',
   stellarMass: 'stellarMass',
-  stellarRadius: 'stellarRadius'
-}
+  stellarRadius: 'stellarRadius',
+  planetaryNeighbours: 'planetaryNeighbours',
+  constellation: 'constellation'
+};
 
 export const FLAG_BUILDER_STEPS = [
   {
@@ -60,6 +62,28 @@ export const FLAG_BUILDER_STEPS = [
       'Cupidatat ut sunt mollit officia ex nisi proident id.',
       'Anim ad elit deserunt occaecat et ad non velit ullamco nulla aliqua consequat eu irure.',
       'Reprehenderit ullamco veniam minim non irure ut consequat veniam in. In culpa sit occaecat ex dolor velit consequat reprehenderit quis est do do. Occaecat id enim velit ad consectetur sint. Ea nisi id incididunt laboris cillum sunt. Lorem non irure in ad aute id eiusmod ipsum commodo fugiat aliquip pariatur ea incididunt. Eu sit laboris proident tempor. Laborum enim in qui exercitation dolore do tempor mollit sint.'
+    ]
+  },
+  {
+    path: '/flag-builder/6',
+    displayName: 'Step 6',
+    flagProperty: FLAG_PROPERTIES.planetaryNeighbours,
+    title: 'Planetary Neighbours',
+    body: [
+      'Reprehenderit sunt aliquip occaecat esse non velit qui eiusmod dolore labore voluptate ea anim.',
+      'Labore sit ullamco amet amet. Minim fugiat cillum elit amet cillum. Qui minim ad duis non laborum. Nulla enim mollit commodo qui aliqua sint aliqua cillum incididunt elit laboris. Consectetur ut quis amet est.',
+      'Sint cupidatat cupidatat est proident. Ad irure mollit excepteur exercitation Lorem veniam consectetur. Voluptate velit cupidatat non anim sit consectetur nisi consequat nostrud labore.'
+    ]
+  },
+  {
+    path: '/flag-builder/7',
+    displayName: 'Step 7',
+    flagProperty: FLAG_PROPERTIES.constellation,
+    title: 'Constellation',
+    body: [
+      'Culpa laboris in reprehenderit enim pariatur quis adipisicing. Aliquip elit pariatur in commodo veniam nisi nulla excepteur enim deserunt excepteur mollit occaecat. Culpa veniam incididunt laboris do ad amet nulla. Sit qui esse nulla incididunt sunt nisi minim dolor nisi in. Ipsum cillum exercitation ipsum ad nisi laborum tempor exercitation aliqua amet amet consequat id. Cupidatat esse consectetur elit in culpa. Cupidatat quis nostrud sunt et veniam et anim reprehenderit Lorem pariatur enim deserunt Lorem enim.',
+      'Proident voluptate incididunt aliquip excepteur in reprehenderit eiusmod adipisicing cillum aute eiusmod anim. Quis commodo ex dolor veniam qui consectetur sint nostrud tempor irure ad eiusmod tempor aute. Est adipisicing quis culpa deserunt veniam dolor nisi cupidatat esse deserunt. Adipisicing incididunt aliqua non proident duis culpa ullamco.',
+      'Aute ea exercitation cillum qui et sint in sunt pariatur non quis et.'
     ]
   }
 ];

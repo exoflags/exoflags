@@ -49,19 +49,38 @@ const App = () => {
   // TODO: add extents for distance and num planets (?)
   const EXTENTS = {
     [FLAG_PROPERTIES.distance]: [1, 100],
-    [FLAG_PROPERTIES.planetaryMass]: extent(planetData, planet => planet.pl_bmassj),
-    [FLAG_PROPERTIES.planetaryRadius]: extent(planetData, planet => planet.pl_radj),
+    [FLAG_PROPERTIES.planetaryMass]: extent(
+      planetData,
+      planet => planet.pl_bmassj
+    ),
+    [FLAG_PROPERTIES.planetaryRadius]: extent(
+      planetData,
+      planet => planet.pl_radj
+    ),
     [FLAG_PROPERTIES.stellarMass]: extent(planetData, planet => planet.st_mass),
-    [FLAG_PROPERTIES.stellarRadius]: extent(planetData, planet => planet.st_rad),
-  }
+    [FLAG_PROPERTIES.stellarRadius]: extent(
+      planetData,
+      planet => planet.st_rad
+    ),
+    [FLAG_PROPERTIES.planetaryNeighbours]: extent(
+      planetData,
+      planet => planet.pl_pnum
+    ),
+    [FLAG_PROPERTIES.constellation]: [1, 100]
+  };
+
+  console.log(EXTENTS);
 
   useEffect(() => {
-    const initialUserFlag = Object.entries(EXTENTS).reduce((memo, [key, extent]) => {
-      memo[key] = (extent[0] + extent[1]) / 2;
-      return memo;
-    }, {})
-    setUserFlag(initialUserFlag)
-  }, [])
+    const initialUserFlag = Object.entries(EXTENTS).reduce(
+      (memo, [key, extent]) => {
+        memo[key] = (extent[0] + extent[1]) / 2;
+        return memo;
+      },
+      {}
+    );
+    setUserFlag(initialUserFlag);
+  }, []);
 
   return (
     <AppContainer>
