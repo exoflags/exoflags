@@ -47,14 +47,6 @@ export const FlagBuilder = ({ userFlag, setUserFlag, extents, stepId }) => {
   const stepIdx = +stepId - 1;
   const { title, body, flagProperty } = FLAG_BUILDER_STEPS[stepIdx];
 
-  // Get flag properties and values up until current step
-  const flagProperties = FLAG_BUILDER_STEPS.slice(0, stepIdx + 1)
-    .map(step => step.flagProperty)
-    .reduce((memo, flagProperty) => {
-      memo[flagProperty] = userFlag[flagProperty];
-      return memo;
-    }, {});
-
   return (
     <Page>
       <ContentContainer>
@@ -87,7 +79,8 @@ export const FlagBuilder = ({ userFlag, setUserFlag, extents, stepId }) => {
                 <Flag
                   width={width}
                   extents={extents}
-                  flagProperties={flagProperties}
+                  stepIdx={stepIdx}
+                  flagProperties={userFlag}
                 />
               )}
             </AutoSizer>

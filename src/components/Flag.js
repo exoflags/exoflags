@@ -99,20 +99,23 @@ class Flag extends Component {
   }
 
   render() {
-    const { width, extents, flagProperties } = this.props;
+    const { width, extents, flagProperties, stepIdx } = this.props;
 
     const flagWidth = width;
     const flagHeight = flagWidth * (2 / 3);
 
-    // Set up defaults in case we need them
+    // N.B. from FLAG_BUILDER_STEPS
+    const planetaryMassIdx = 1;
+    const stellarMassIdx = 3;
+
     const {
-      distance = extents[FLAG_PROPERTIES.distance][0],
-      planetaryMass = extents[FLAG_PROPERTIES.planetaryMass][0],
-      planetaryRadius = extents[FLAG_PROPERTIES.planetaryRadius][0],
-      stellarMass = extents[FLAG_PROPERTIES.stellarMass][0],
-      stellarRadius = extents[FLAG_PROPERTIES.stellarRadius][0],
-      planetaryNeighbours = extents[FLAG_PROPERTIES.planetaryNeighbours][0],
-      constellation = extents[FLAG_PROPERTIES.constellation][0]
+      distance,
+      planetaryMass,
+      planetaryRadius,
+      stellarMass,
+      stellarRadius,
+      planetaryNeighbours,
+      constellation
     } = flagProperties;
 
     return (
@@ -122,10 +125,9 @@ class Flag extends Component {
         backgroundColor={this.distanceScale(distance)}
       >
         {/*
-          Check for planetaryMass as this is the first thing needed
-          to render triangle. We can use default for planetaryRadius.
+          Only show this if we're at/past the planetary mass step
         */}
-        {flagProperties.planetaryMass !== undefined && (
+        {stepIdx >= planetaryMassIdx && (
           <PlanetaryTriangle
             width={this.planetaryRadiusScale(planetaryRadius)}
             borderWidth={planetaryBorderWidth(
@@ -140,10 +142,9 @@ class Flag extends Component {
         )}
 
         {/*
-          Check for stellarMass as this is the first thing needed
-          to render triangle. We can use default for stellarRadius.
+          Only show this if we're at/past the stellar mass step
         */}
-        {flagProperties.stellarMass !== undefined && (
+        {stepIdx >= stellarMassIdx && (
           <StellarTriangle
             height={this.stellarRadiusScale(stellarRadius)}
             borderWidth={stellarBorderHeight(
