@@ -90,12 +90,21 @@ class Flag extends Component {
   }
 
   render() {
+    /*
+      Use lower bound of extent as the default value for flag properties.
+      This means that if a property isn't passed in (as we haven't reached
+      that step yet) it will default to the minimum value on the scale
+      and not draw.
+
+      TL;DR Thing won't draw until a value is passed in for said thing.
+    */
     const {
-      distance = 0,
-      planetaryMass = 0,
-      planetaryRadius = 0,
-      stellarMass = 0,
-      stellarRadius = 0
+      extents,
+      distance = extents[FLAG_PROPERTIES.distance][0],
+      planetaryMass = extents[FLAG_PROPERTIES.planetaryMass][0],
+      planetaryRadius = extents[FLAG_PROPERTIES.planetaryRadius][0],
+      stellarMass = extents[FLAG_PROPERTIES.stellarMass][0],
+      stellarRadius = extents[FLAG_PROPERTIES.stellarRadius][0]
     } = this.props;
     
     return (
