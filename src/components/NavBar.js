@@ -8,7 +8,7 @@ const Wrapper = styled.nav`
   display: flex;
   align-items: center;
   font-size: 0.75rem;
-  
+
   a {
     color: ${props => props.theme.colors.white};
     text-decoration: none;
@@ -19,7 +19,7 @@ const Wrapper = styled.nav`
   }
 `;
 
-const NavLink = (props) => (
+const NavLink = props => (
   <Link
     {...props}
     getProps={({ isCurrent }) => {
