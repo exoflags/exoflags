@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Router } from '@reach/router';
 import styled from '@emotion/styled';
 import { extent } from 'd3-array';
@@ -16,14 +16,6 @@ import {
 } from './pages';
 import { FLAG_PROPERTIES } from '../const';
 import exoplanets from '../data/exoplanets.json';
-
-const initialUserFlag = {
-  [FLAG_PROPERTIES.distance]: 50,
-  [FLAG_PROPERTIES.planetaryMass]: 50,
-  [FLAG_PROPERTIES.planetaryRadius]: 50,
-  [FLAG_PROPERTIES.stellarMass]: 50,
-  [FLAG_PROPERTIES.stellarRadius]: 50
-}
 
 const AppContainer = styled.div`
   height: 100vh;
@@ -50,9 +42,10 @@ const routerStyle = {
 };
 
 const App = () => {
-  const [userFlag, setUserFlag] = useState(initialUserFlag);
+  // TODO: consider doing this outside of component, in a const file or something, or just above
+  // No time to dynamically load in data
+  const [userFlag, setUserFlag] = useState({});
   const [planetData] = useState(exoplanets);
-
   // TODO: add extents for distance and num planets (?)
   const EXTENTS = {
     [FLAG_PROPERTIES.distance]: [1, 100],
@@ -61,6 +54,14 @@ const App = () => {
     [FLAG_PROPERTIES.stellarMass]: extent(planetData, planet => planet.st_mass),
     [FLAG_PROPERTIES.stellarRadius]: extent(planetData, planet => planet.st_rad),
   }
+
+  useEffect(() => {
+    const initialUserFlag = Object.entries(EXTENTS).reduce((memo, [key, extent]) => {
+      memo[key] = (extent[0] + extent[1]) / 2;
+      return memo;
+    }, {})
+    setUserFlag(initialUserFlag)
+  }, [])
 
   return (
     <AppContainer>

@@ -61,7 +61,7 @@ export const FlagBuilder = ({ userFlag, setUserFlag, extents, stepId }) => {
 
           <Grid item xs={12} sm={6}>
             <div>
-              <Flag {...flagProperties} />
+              <Flag extents={extents} {...flagProperties} />
             </div>
           </Grid>
         </Grid>
