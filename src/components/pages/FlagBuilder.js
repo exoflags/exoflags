@@ -10,6 +10,7 @@ import { FLAG_BUILDER_STEPS } from '../../const';
 // Center content between header and ArrowNav, but allow background to fill
 // below ArrowNav
 const ContentContainer = styled.div`
+  position: absolute;
   height: calc(100% - ${props => props.theme.arrowNavHeight});
   width: 100%;
   display: flex;
@@ -20,11 +21,10 @@ const ContentContainer = styled.div`
 
 export const FlagBuilder = ({ userFlag, stepId }) => {
   const stepIdx = +stepId - 1;
-  const { title, body } = FLAG_BUILDER_STEPS[stepIdx]
+  const { title, body } = FLAG_BUILDER_STEPS[stepIdx];
 
   // Get flag properties and values up until current step
-  const flagProperties = FLAG_BUILDER_STEPS
-    .slice(0, stepIdx + 1)
+  const flagProperties = FLAG_BUILDER_STEPS.slice(0, stepIdx + 1)
     .map(step => step.flagProperty)
     .reduce((memo, flagProperty) => {
       memo[flagProperty] = userFlag[flagProperty];
@@ -38,7 +38,9 @@ export const FlagBuilder = ({ userFlag, stepId }) => {
           <Grid item xs={12} sm={6}>
             <h3>{title}</h3>
 
-            {body.map((text, i) => <p key={`${stepId}-body-${i}`}>{text}</p>)}
+            {body.map((text, i) => (
+              <p key={`${stepId}-body-${i}`}>{text}</p>
+            ))}
           </Grid>
 
           <Grid item xs={12} sm={6}>
@@ -51,5 +53,5 @@ export const FlagBuilder = ({ userFlag, stepId }) => {
 
       <ArrowNav stepId={+stepId} stepIdx={stepIdx} />
     </Page>
-  )
-}
+  );
+};
