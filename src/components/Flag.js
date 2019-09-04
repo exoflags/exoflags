@@ -94,11 +94,11 @@ const BaseFlag = styled.div`
   width: ${props => props.width}px;
   height: ${props => props.height}px;
 
-  ${props => props.redshift !== undefined && bgStyle(props.redshift)};
+  ${props => props.distance !== undefined && bgStyle(props.distance)};
 `;
 
 const Flag = ({
-  redshift = 0,
+  distance = 0,
   planetaryMass = 0,
   planetaryRadius = 0,
   stellarMass = 0,
@@ -113,7 +113,7 @@ const Flag = ({
         <BaseFlag
           width={flagWidth}
           height={flagHeight}
-          redshift={redshift}
+          distance={distance}
         >
           <PlanetaryTriangle
             planetaryMass={planetaryMass}

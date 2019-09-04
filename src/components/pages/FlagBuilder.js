@@ -1,10 +1,12 @@
 import React from 'react';
+import AutoSizer from 'react-virtualized-auto-sizer';
 import styled from '@emotion/styled';
 import Grid from '@material-ui/core/Grid';
 
 import { Page } from '../Layout';
 import Flag from '../Flag';
 import ArrowNav from '../ArrowNav';
+import Slider from '../Slider';
 import { FLAG_BUILDER_STEPS } from '../../const';
 
 // Center content between header and ArrowNav, but allow background to fill
@@ -19,9 +21,9 @@ const ContentContainer = styled.div`
   padding: 0 4rem;
 `;
 
-export const FlagBuilder = ({ userFlag, stepId }) => {
+export const FlagBuilder = ({ userFlag, setUserFlag, extents, stepId }) => {
   const stepIdx = +stepId - 1;
-  const { title, body } = FLAG_BUILDER_STEPS[stepIdx];
+  const { title, body, flagProperty } = FLAG_BUILDER_STEPS[stepIdx];
 
   // Get flag properties and values up until current step
   const flagProperties = FLAG_BUILDER_STEPS.slice(0, stepIdx + 1)
@@ -35,6 +37,20 @@ export const FlagBuilder = ({ userFlag, stepId }) => {
     <Page>
       <ContentContainer>
         <Grid container spacing={4}>
+          <Grid item xs={12} sm={12}>
+            <AutoSizer disableHeight>
+              {({ width }) => (
+                <Slider
+                  extents={extents}
+                  width={width}
+                  flagProperty={flagProperty}
+                  userFlag={userFlag}
+                  setUserFlag={setUserFlag}
+                />
+              )}
+            </AutoSizer>
+          </Grid>
+
           <Grid item xs={12} sm={6}>
             <h3>{title}</h3>
 
