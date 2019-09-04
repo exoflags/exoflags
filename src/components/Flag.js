@@ -70,23 +70,23 @@ class Flag extends Component {
 
     this.distanceScale = scaleLinear()
       .domain(extents[FLAG_PROPERTIES.distance])
-      .range(['#0000FF', '#FF0000']);
+      .range(['#0000FF', '#FF0000']); // background colours
 
     this.planetaryRadiusScale = scaleLinear()
       .domain(extents[FLAG_PROPERTIES.planetaryRadius])
-      .range([0, 100]);
+      .range([5, 100]); // width percentages
 
     this.planetaryMassScale = scaleLinear()
       .domain(extents[FLAG_PROPERTIES.planetaryMass])
-      .range([0, 1]);
+      .range([0.15, 1]); // opacity values
 
     this.stellarRadiusScale = scaleLinear()
       .domain(extents[FLAG_PROPERTIES.stellarRadius])
-      .range([0, 100]);
+      .range([8.333, 100]); // width percentages
 
     this.stellarMassScale = scaleLinear()
       .domain(extents[FLAG_PROPERTIES.stellarMass])
-      .range([0, 1]);
+      .range([0.05, 0.8]); // opacity values
 
     // TODO: set up actual ranges for the scales below
     this.planetaryNeighboursScale = scaleLinear()
@@ -99,17 +99,13 @@ class Flag extends Component {
   }
 
   render() {
-    /*
-      Use lower bound of extent as the default value for flag properties.
-      This means that if a property isn't passed in (as we haven't reached
-      that step yet) it will default to the minimum value on the scale
-      and not draw.
+    const { width, extents, flagProperties } = this.props;
 
-      TL;DR Thing won't draw until a value is passed in for said thing.
-    */
+    const flagWidth = width;
+    const flagHeight = flagWidth * (2 / 3);
+
+    // Set up defaults in case we need them
     const {
-      width,
-      extents,
       distance = extents[FLAG_PROPERTIES.distance][0],
       planetaryMass = extents[FLAG_PROPERTIES.planetaryMass][0],
       planetaryRadius = extents[FLAG_PROPERTIES.planetaryRadius][0],
@@ -117,10 +113,7 @@ class Flag extends Component {
       stellarRadius = extents[FLAG_PROPERTIES.stellarRadius][0],
       planetaryNeighbours = extents[FLAG_PROPERTIES.planetaryNeighbours][0],
       constellation = extents[FLAG_PROPERTIES.constellation][0]
-    } = this.props;
-
-    const flagWidth = width; //width > 400 ? 400 : width;
-    const flagHeight = flagWidth * (2 / 3);
+    } = flagProperties;
 
     return (
       <BaseFlag
@@ -128,27 +121,39 @@ class Flag extends Component {
         height={flagHeight}
         backgroundColor={this.distanceScale(distance)}
       >
-        <PlanetaryTriangle
-          width={this.planetaryRadiusScale(planetaryRadius)}
-          borderWidth={planetaryBorderWidth(
-            flagHeight,
-            flagWidth,
-            this.planetaryRadiusScale(planetaryRadius)
-          )}
-          borderColor={planetaryBorderColor(
-            this.planetaryMassScale(planetaryMass)
-          )}
-        />
+        {/*
+          Check for planetaryMass as this is the first thing needed
+          to render triangle. We can use default for planetaryRadius.
+        */}
+        {flagProperties.planetaryMass !== undefined && (
+          <PlanetaryTriangle
+            width={this.planetaryRadiusScale(planetaryRadius)}
+            borderWidth={planetaryBorderWidth(
+              flagHeight,
+              flagWidth,
+              this.planetaryRadiusScale(planetaryRadius)
+            )}
+            borderColor={planetaryBorderColor(
+              this.planetaryMassScale(planetaryMass)
+            )}
+          />
+        )}
 
-        <StellarTriangle
-          height={this.stellarRadiusScale(stellarRadius)}
-          borderWidth={stellarBorderHeight(
-            flagHeight,
-            flagWidth,
-            this.stellarRadiusScale(stellarRadius)
-          )}
-          borderColor={stellarBorderColor(this.stellarMassScale(stellarMass))}
-        />
+        {/*
+          Check for stellarMass as this is the first thing needed
+          to render triangle. We can use default for stellarRadius.
+        */}
+        {flagProperties.stellarMass !== undefined && (
+          <StellarTriangle
+            height={this.stellarRadiusScale(stellarRadius)}
+            borderWidth={stellarBorderHeight(
+              flagHeight,
+              flagWidth,
+              this.stellarRadiusScale(stellarRadius)
+            )}
+            borderColor={stellarBorderColor(this.stellarMassScale(stellarMass))}
+          />
+        )}
       </BaseFlag>
     );
   }

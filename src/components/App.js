@@ -46,7 +46,8 @@ const App = () => {
   // No time to dynamically load in data
   const [userFlag, setUserFlag] = useState({});
   const [planetData] = useState(exoplanets);
-  // TODO: add extents for distance and num planets (?)
+
+  // TODO: add extent for constellation (is this an extent, or just unique values?)
   const EXTENTS = {
     [FLAG_PROPERTIES.distance]: extent(planetData, planet => planet.st_dist),
     [FLAG_PROPERTIES.planetaryMass]: extent(

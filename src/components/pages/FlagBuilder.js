@@ -84,7 +84,11 @@ export const FlagBuilder = ({ userFlag, setUserFlag, extents, stepId }) => {
           <FlagContainer>
             <AutoSizer disableHeight>
               {({ width }) => (
-                <Flag width={width} extents={extents} {...flagProperties} />
+                <Flag
+                  width={width}
+                  extents={extents}
+                  flagProperties={flagProperties}
+                />
               )}
             </AutoSizer>
           </FlagContainer>
