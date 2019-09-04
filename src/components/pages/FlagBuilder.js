@@ -1,7 +1,6 @@
 import React from 'react';
 import AutoSizer from 'react-virtualized-auto-sizer';
 import styled from '@emotion/styled';
-import Grid from '@material-ui/core/Grid';
 
 import { Page } from '../Layout';
 import Flag from '../Flag';
@@ -16,9 +15,32 @@ const ContentContainer = styled.div`
   height: calc(100% - ${props => props.theme.arrowNavHeight});
   width: 100%;
   display: flex;
+  flex-direction: column;
+`;
+
+const SliderContainer = styled.div`
+  padding: 2rem 4rem;
+`;
+
+const InfoContainer = styled.div`
+  padding: 2rem 4rem 0;
+  flex: 1;
+  display: flex;
+`;
+
+const TextContainer = styled.div`
+  width: 60%;
+  padding-right: 3rem;
+`;
+
+const SectionTitle = styled.h3`
+  font-size: 3rem;
+`;
+
+const FlagContainer = styled.div`
+  width: 40%;
+  display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 0 4rem;
 `;
 
 export const FlagBuilder = ({ userFlag, setUserFlag, extents, stepId }) => {
@@ -36,35 +58,37 @@ export const FlagBuilder = ({ userFlag, setUserFlag, extents, stepId }) => {
   return (
     <Page>
       <ContentContainer>
-        <Grid container spacing={4}>
-          <Grid item xs={12} sm={12}>
-            <AutoSizer disableHeight>
-              {({ width }) => (
-                <Slider
-                  extents={extents}
-                  width={width}
-                  flagProperty={flagProperty}
-                  userFlag={userFlag}
-                  setUserFlag={setUserFlag}
-                />
-              )}
-            </AutoSizer>
-          </Grid>
+        <SliderContainer>
+          <AutoSizer disableHeight>
+            {({ width }) => (
+              <Slider
+                extents={extents}
+                width={width}
+                flagProperty={flagProperty}
+                userFlag={userFlag}
+                setUserFlag={setUserFlag}
+              />
+            )}
+          </AutoSizer>
+        </SliderContainer>
 
-          <Grid item xs={12} sm={6}>
-            <h3>{title}</h3>
+        <InfoContainer>
+          <TextContainer>
+            <SectionTitle>{title}</SectionTitle>
 
             {body.map((text, i) => (
               <p key={`${stepId}-body-${i}`}>{text}</p>
             ))}
-          </Grid>
+          </TextContainer>
 
-          <Grid item xs={12} sm={6}>
-            <div>
-              <Flag extents={extents} {...flagProperties} />
-            </div>
-          </Grid>
-        </Grid>
+          <FlagContainer>
+            <AutoSizer disableHeight>
+              {({ width }) => (
+                <Flag width={width} extents={extents} {...flagProperties} />
+              )}
+            </AutoSizer>
+          </FlagContainer>
+        </InfoContainer>
       </ContentContainer>
 
       <ArrowNav stepId={+stepId} stepIdx={stepIdx} />
