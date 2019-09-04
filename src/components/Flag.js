@@ -33,18 +33,15 @@ const stellarBorderColor = opacity => `
   transparent
 `;
 
-const PlanetaryTriangle = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: ${props => props.width}%;
-  border-style: solid;
-  border-width: ${props => props.borderWidth};
-  border-color: ${props => props.borderColor};
+const BaseFlag = styled.div`
+  position: relative;
+  width: ${props => props.width}px;
+  height: ${props => props.height}px;
+  background-color: ${props => props.backgroundColor};
 `;
 
 const StellarTriangle = styled.div`
+  z-index: 1;
   position: absolute;
   bottom: 0;
   right: 0;
@@ -55,11 +52,37 @@ const StellarTriangle = styled.div`
   border-color: ${props => props.borderColor};
 `;
 
-const BaseFlag = styled.div`
-  position: relative;
-  width: ${props => props.width}px;
-  height: ${props => props.height}px;
-  background-color: ${props => props.backgroundColor};
+const PlanetaryTriangle = styled.div`
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: ${props => props.width}%;
+  border-style: solid;
+  border-width: ${props => props.borderWidth};
+  border-color: ${props => props.borderColor};
+`;
+
+const PlanetaryNeighbours = styled.div`
+  border: 1px solid red;
+  z-index: 3;
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  height: 33%;
+  width: 20%;
+`;
+
+const Constellation = styled.div`
+  border: 1px solid blue;
+  z-index: 4;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  height: 30%;
+  width: 30%;
 `;
 
 class Flag extends Component {
@@ -89,6 +112,10 @@ class Flag extends Component {
       .range([0.15, 1]); // opacity values
 
     // TODO: set up actual ranges for the scales below
+    // Perhaps these don't need to be scales, just image refs
+    // or functions to dynamically get image paths.
+    // Will need to ensure image names match constellations in data,
+    // or create a mapping.
     this.planetaryNeighboursScale = scaleLinear()
       .domain(extents[FLAG_PROPERTIES.planetaryNeighbours])
       .range([1, 100]);
@@ -107,6 +134,8 @@ class Flag extends Component {
     // N.B. from FLAG_BUILDER_STEPS
     const stellarMassIdx = 1;
     const planetaryMassIdx = 3;
+    const planetaryNeighboursIdx = 5;
+    const constellationIdx = 6;
 
     const {
       distance,
@@ -155,6 +184,9 @@ class Flag extends Component {
             )}
           />
         )}
+
+        {stepIdx >= planetaryNeighboursIdx && <PlanetaryNeighbours />}
+        {stepIdx >= constellationIdx && <Constellation />}
       </BaseFlag>
     );
   }
