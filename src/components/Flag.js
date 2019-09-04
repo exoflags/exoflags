@@ -72,14 +72,6 @@ class Flag extends Component {
       .domain(extents[FLAG_PROPERTIES.distance])
       .range(['#0000FF', '#FF0000']); // background colours
 
-    this.planetaryRadiusScale = scaleLinear()
-      .domain(extents[FLAG_PROPERTIES.planetaryRadius])
-      .range([5, 100]); // width percentages
-
-    this.planetaryMassScale = scaleLinear()
-      .domain(extents[FLAG_PROPERTIES.planetaryMass])
-      .range([0.15, 1]); // opacity values
-
     this.stellarRadiusScale = scaleLinear()
       .domain(extents[FLAG_PROPERTIES.stellarRadius])
       .range([8.333, 100]); // width percentages
@@ -87,6 +79,14 @@ class Flag extends Component {
     this.stellarMassScale = scaleLinear()
       .domain(extents[FLAG_PROPERTIES.stellarMass])
       .range([0.05, 0.8]); // opacity values
+
+    this.planetaryRadiusScale = scaleLinear()
+      .domain(extents[FLAG_PROPERTIES.planetaryRadius])
+      .range([5, 100]); // width percentages
+
+    this.planetaryMassScale = scaleLinear()
+      .domain(extents[FLAG_PROPERTIES.planetaryMass])
+      .range([0.15, 1]); // opacity values
 
     // TODO: set up actual ranges for the scales below
     this.planetaryNeighboursScale = scaleLinear()
@@ -105,15 +105,15 @@ class Flag extends Component {
     const flagHeight = flagWidth * (2 / 3);
 
     // N.B. from FLAG_BUILDER_STEPS
-    const planetaryMassIdx = 1;
-    const stellarMassIdx = 3;
+    const stellarMassIdx = 1;
+    const planetaryMassIdx = 3;
 
     const {
       distance,
-      planetaryMass,
-      planetaryRadius,
       stellarMass,
       stellarRadius,
+      planetaryMass,
+      planetaryRadius,
       planetaryNeighbours,
       constellation
     } = flagProperties;
@@ -124,6 +124,21 @@ class Flag extends Component {
         height={flagHeight}
         backgroundColor={this.distanceScale(distance)}
       >
+        {/*
+          Only show this if we're at/past the stellar mass step
+        */}
+        {stepIdx >= stellarMassIdx && (
+          <StellarTriangle
+            height={this.stellarRadiusScale(stellarRadius)}
+            borderWidth={stellarBorderHeight(
+              flagHeight,
+              flagWidth,
+              this.stellarRadiusScale(stellarRadius)
+            )}
+            borderColor={stellarBorderColor(this.stellarMassScale(stellarMass))}
+          />
+        )}
+
         {/*
           Only show this if we're at/past the planetary mass step
         */}
@@ -138,21 +153,6 @@ class Flag extends Component {
             borderColor={planetaryBorderColor(
               this.planetaryMassScale(planetaryMass)
             )}
-          />
-        )}
-
-        {/*
-          Only show this if we're at/past the stellar mass step
-        */}
-        {stepIdx >= stellarMassIdx && (
-          <StellarTriangle
-            height={this.stellarRadiusScale(stellarRadius)}
-            borderWidth={stellarBorderHeight(
-              flagHeight,
-              flagWidth,
-              this.stellarRadiusScale(stellarRadius)
-            )}
-            borderColor={stellarBorderColor(this.stellarMassScale(stellarMass))}
           />
         )}
       </BaseFlag>

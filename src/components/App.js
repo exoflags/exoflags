@@ -50,6 +50,11 @@ const App = () => {
   // TODO: add extent for constellation (is this an extent, or just unique values?)
   const EXTENTS = {
     [FLAG_PROPERTIES.distance]: extent(planetData, planet => planet.st_dist),
+    [FLAG_PROPERTIES.stellarMass]: extent(planetData, planet => planet.st_mass),
+    [FLAG_PROPERTIES.stellarRadius]: extent(
+      planetData,
+      planet => planet.st_rad
+    ),
     [FLAG_PROPERTIES.planetaryMass]: extent(
       planetData,
       planet => planet.pl_bmassj
@@ -57,11 +62,6 @@ const App = () => {
     [FLAG_PROPERTIES.planetaryRadius]: extent(
       planetData,
       planet => planet.pl_radj
-    ),
-    [FLAG_PROPERTIES.stellarMass]: extent(planetData, planet => planet.st_mass),
-    [FLAG_PROPERTIES.stellarRadius]: extent(
-      planetData,
-      planet => planet.st_rad
     ),
     [FLAG_PROPERTIES.planetaryNeighbours]: extent(
       planetData,
