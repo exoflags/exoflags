@@ -48,7 +48,7 @@ const App = () => {
   const [planetData] = useState(exoplanets);
   // TODO: add extents for distance and num planets (?)
   const EXTENTS = {
-    [FLAG_PROPERTIES.distance]: [1, 100],
+    [FLAG_PROPERTIES.distance]: extent(planetData, planet => planet.st_dist),
     [FLAG_PROPERTIES.planetaryMass]: extent(
       planetData,
       planet => planet.pl_bmassj
@@ -68,8 +68,6 @@ const App = () => {
     ),
     [FLAG_PROPERTIES.constellation]: [1, 100]
   };
-
-  console.log(EXTENTS);
 
   useEffect(() => {
     const initialUserFlag = Object.entries(EXTENTS).reduce(
