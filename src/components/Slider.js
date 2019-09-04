@@ -7,23 +7,6 @@ import throttle from 'lodash.throttle';
 
 import { ReactComponent as SliderThumb} from '../assets/SliderNode.svg';
 
-/*
-  TODO:
-  - flag property will be used to
-    - get scale
-    - update state
-
-
-  - slider scale needs to be the same as the active flag property
-    - perhaps these need to live up a level...
-  - we want an *instance* of that scale however, as the range will be different (flag vs fullscreen)
-  - different optional ticks for different properties
-    - can make separate components for these, they'll always be in the same place
-
-  - needs some sort of handleChange function
-  - this can be something like () => setUserFlagValue('type', value)
-*/
-
 const sliderHeight = 40;
 const trackHeight = 2;
 const thumbSize = 30;
@@ -32,7 +15,6 @@ const getSliderWidth = (width) => width - (2 * padding)
 
 const SVG = styled.svg`
   display: block;
-  border: 1px solid blue;
 `;
 
 const Track = styled.rect`
