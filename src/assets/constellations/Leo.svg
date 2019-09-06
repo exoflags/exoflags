@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120px" height="120px" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Leo</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Leo" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Clipped" transform="translate(33.000000, 26.000000)" stroke="#FFFFFF" stroke-width="9">
+            <g id="Group">
+                <path d="M21.8242188,44.4492188 C21.8242188,50.2477263 17.1227263,54.9492188 11.3242188,54.9492188 C5.52571134,54.9492188 0.8242188,50.2477263 0.8242188,44.4492188 C0.8242188,38.6507113 5.52571134,33.9492188 11.3242188,33.9492188 C17.1227263,33.9492188 21.8242188,38.6507113 21.8242188,44.4492188 Z" id="Path" transform="translate(11.324219, 44.449219) scale(-1, 1) rotate(-180.000000) translate(-11.324219, -44.449219) "></path>
+                <path d="M21.375,25.125 C21.375,33.5 13,41.875 13,50.25 C13,59.5 20.5,67 29.75,67 C39,67 46.5,59.5 46.5,50.25 C46.5,33.5 38.125,25.125 38.125,8.375 C38.125,3.75 41.875,0 46.5,0 C51.125,0 54.875,3.75 54.875,8.375" id="Path" transform="translate(33.937500, 33.500000) scale(-1, 1) rotate(-180.000000) translate(-33.937500, -33.500000) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

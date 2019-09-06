@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120px" height="120px" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Draco</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Draco" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(35.000000, 23.000000)" stroke="#FFFFFF" stroke-width="9">
+            <path d="M5,2 L51,2" id="Path" transform="translate(28.000000, 2.000000) scale(-1, 1) rotate(-180.000000) translate(-28.000000, -2.000000) "></path>
+            <g id="Clipped" transform="translate(1.000000, 0.000000)">
+                <path d="M27.7779256,70.6905005 L27.7779256,24.7278081 C19.4042553,24.5911459 13.3085106,28.8437501 13.3085106,35.1905005 C13.3085106,41.537251 18.4148936,46.6821785 24.7140958,46.6821785 C37.3124999,46.6821785 47.5212766,36.3923235 47.5212766,23.6988226 C47.5212766,11.0093411 37.3124999,0.719486012 24.7140958,0.719486012 L0.885638298,0.719486012" id="Path" transform="translate(24.203457, 35.704993) scale(-1, 1) rotate(-180.000000) translate(-24.203457, -35.704993) "></path>
+            </g>
+            <g id="Clipped" transform="translate(13.448977, 62.962022) rotate(18.000000) translate(-13.448977, -62.962022) translate(1.948977, 56.462022)">
+                <g id="Path">
+                    <path d="M0.960044643,12.0287743 L22.565413,0.546214789" transform="translate(11.762729, 6.287495) scale(-1, 1) rotate(-180.000000) translate(-11.762729, -6.287495) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

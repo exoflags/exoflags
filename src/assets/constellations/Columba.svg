@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120px" height="120px" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Columba</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Columba" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Clipped" transform="translate(37.000000, 26.000000)" stroke="#FFFFFF" stroke-width="9">
+            <path d="M45.96875,61.4101564 C41.9414062,65.4375001 36.4804688,67.6992188 30.7890625,67.6992188 C25.0976562,67.6992188 19.6367188,65.4375001 15.609375,61.4101564 L0.4335938,46.2343751 C8.8164062,46.2343751 15.609375,39.4375001 15.609375,31.0546876 C15.609375,14.2890626 29.203125,0.6992188 45.96875,0.6992188" id="Path" transform="translate(23.201172, 34.199219) scale(-1, 1) rotate(-180.000000) translate(-23.201172, -34.199219) "></path>
+        </g>
+    </g>
+</svg>

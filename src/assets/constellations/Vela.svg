@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120px" height="120px" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Vela</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Vela" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(26.000000, 33.000000)" stroke="#FFFFFF" stroke-width="9">
+            <g id="Clipped">
+                <path d="M67,53.6015624 L7.1835937,53.6015624 C2.4765624,45.453125 0,36.2109374 0,26.8007812 C0,17.390625 2.4765624,8.1484374 7.1835937,7.81597009e-14 L67,7.81597009e-14 C62.296875,8.1484374 59.8203124,17.390625 59.8203124,26.8007812 C59.8203124,36.2109374 62.296875,45.453125 67,53.6015624 Z" id="Path" transform="translate(33.500000, 26.800781) scale(-1, 1) rotate(-180.000000) translate(-33.500000, -26.800781) "></path>
+            </g>
+            <path d="M33.5,0 L33.5,67" id="Path" transform="translate(33.500000, 33.500000) scale(-1, 1) rotate(-180.000000) translate(-33.500000, -33.500000) "></path>
+        </g>
+    </g>
+</svg>

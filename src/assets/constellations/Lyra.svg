@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120px" height="120px" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Lyra</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Lyra" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(24.000000, 28.000000)" stroke="#FFFFFF" stroke-width="9">
+            <g id="Clipped">
+                <path d="M0,56.8898424 C0,60.8160912 3.22375102,64 7.19913112,64 C11.178856,64 14.4026069,60.8160912 14.4026069,56.8898424 C14.4026069,42.6695274 7.19913112,42.6695274 7.19913112,28.4449212 C7.19913112,12.7356353 20.0941347,-3.55271368e-15 36,-3.55271368e-15 C51.9058654,-3.55271368e-15 64.800869,12.7356353 64.800869,28.4449212 C64.800869,42.6695274 57.601738,42.6695274 57.601738,56.8898424 C57.601738,60.8160912 60.8254888,64 64.800869,64 C68.7762492,64 72,60.8160912 72,56.8898424" id="Path" transform="translate(36.000000, 32.000000) scale(-1, 1) rotate(-180.000000) translate(-36.000000, -32.000000) "></path>
+            </g>
+            <path d="M16.78125,11.5429688 L55.6210938,11.5429688" id="Path" transform="translate(36.201172, 11.542969) scale(-1, 1) rotate(-180.000000) translate(-36.201172, -11.542969) "></path>
+            <path d="M13.7773438,50.3828125 L58.625,50.3828125" id="Path" transform="translate(36.201172, 50.382812) scale(-1, 1) rotate(-180.000000) translate(-36.201172, -50.382812) "></path>
+            <path d="M24.546875,50.3828125 L24.546875,11.5429688" id="Path" transform="translate(24.546875, 30.962891) scale(-1, 1) rotate(-180.000000) translate(-24.546875, -30.962891) "></path>
+            <path d="M36.1992188,50.3828125 L36.1992188,11.5429688" id="Path" transform="translate(36.199219, 30.962891) scale(-1, 1) rotate(-180.000000) translate(-36.199219, -30.962891) "></path>
+            <path d="M47.8515625,50.3828125 L47.8515625,11.5429688" id="Path" transform="translate(47.851562, 30.962891) scale(-1, 1) rotate(-180.000000) translate(-47.851562, -30.962891) "></path>
+        </g>
+    </g>
+</svg>

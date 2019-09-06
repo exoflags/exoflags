@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React, { Component, Suspense, lazy } from 'react';
 import AutoSizer from 'react-virtualized-auto-sizer';
 import { scaleLinear } from 'd3-scale';
-import { FLAG_PROPERTIES, PLANETARY_NEIGHBOUR_IMGS } from '../../const';
+import { FLAG_PROPERTIES } from '../../const';
 import {
   BaseFlag,
   StellarTriangle,
@@ -9,6 +9,11 @@ import {
   PlanetaryNeighbours,
   Constellation
 } from './Elements';
+
+const PLANETARY_NEIGHBOURS_CTX = require.context(
+  '../../assets/planetaryNeighbours'
+);
+const CONSTELLATION_CTX = require.context('../../assets/constellations');
 
 const planetaryBorderWidth = (flagHeight, flagWidth, width) => `
   ${flagHeight}px
@@ -78,6 +83,28 @@ class Flag extends Component {
       .range([1, 100]);
   }
 
+  getConstellation() {
+    const { extents, flagProperties } = this.props;
+    const { constellation } = flagProperties;
+
+    if (constellation) {
+      return constellation;
+    }
+    const constellations = extents[FLAG_PROPERTIES.constellation];
+    const randomIdx = Math.floor(Math.random() * constellations.length);
+
+    return constellations[randomIdx];
+  }
+
+  getPlanetaryNeighboursFilename() {
+    const { flagProperties } = this.props;
+    const { planetaryNeighbours } = flagProperties;
+
+    return `${planetaryNeighbours}Planet${
+      planetaryNeighbours === 1 ? '' : 's'
+    }`;
+  }
+
   render() {
     const { width, extents, flagProperties, stepIdx } = this.props;
 
@@ -100,8 +127,8 @@ class Flag extends Component {
       constellation
     } = flagProperties;
 
-    const planetaryNeighboursSrc =
-      PLANETARY_NEIGHBOUR_IMGS[planetaryNeighbours];
+    const constellationName = this.getConstellation();
+    const planetaryNeighboursFilename = this.getPlanetaryNeighboursFilename();
 
     return (
       <BaseFlag
@@ -109,9 +136,6 @@ class Flag extends Component {
         height={flagHeight}
         backgroundColor={this.distanceScale(distance)}
       >
-        {/*
-          Only show this if we're at/past the stellar mass step
-        */}
         {stepIdx >= stellarMassIdx && (
           <StellarTriangle
             height={this.stellarRadiusScale(stellarRadius)}
@@ -124,9 +148,6 @@ class Flag extends Component {
           />
         )}
 
-        {/*
-          Only show this if we're at/past the planetary mass step
-        */}
         {stepIdx >= planetaryMassIdx && (
           <PlanetaryTriangle
             width={this.planetaryRadiusScale(planetaryRadius)}
@@ -143,11 +164,23 @@ class Flag extends Component {
 
         {stepIdx >= planetaryNeighboursIdx && (
           <PlanetaryNeighbours
-            src={planetaryNeighboursSrc}
+            src={PLANETARY_NEIGHBOURS_CTX(
+              `./${planetaryNeighboursFilename}.svg`
+            )}
             alt={`${planetaryNeighbours} planetary neighbours`}
           />
         )}
-        {stepIdx >= constellationIdx && <Constellation />}
+
+        {stepIdx >= constellationIdx && (
+          <Suspense fallback={<div>loading...</div>}>
+            <Constellation
+              src={CONSTELLATION_CTX(
+                `./${constellationName.replace(/ /g, '_')}.svg`
+              )}
+              alt={constellationName}
+            />
+          </Suspense>
+        )}
       </BaseFlag>
     );
   }

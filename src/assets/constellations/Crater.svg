@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120px" height="120px" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Crater</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Crater" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Clipped" transform="translate(26.000000, 30.000000)" stroke="#FFFFFF" stroke-width="9">
+            <g id="Group">
+                <path d="M0.6992188,34.4453125 C0.6992188,15.9453125 15.6992188,0.9453125 34.1992188,0.9453125 C52.703125,0.9453125 67.6992188,15.9453125 67.6992188,34.4453125" id="Path" transform="translate(34.199219, 17.695312) scale(-1, 1) rotate(-180.000000) translate(-34.199219, -17.695312) "></path>
+                <polyline id="Path" transform="translate(34.199219, 44.462891) scale(-1, 1) rotate(-180.000000) translate(-34.199219, -44.462891) " points="17.4492188 58.96875 0.6992188 29.9570312 67.6992188 29.9570312 50.9492188 58.96875"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>

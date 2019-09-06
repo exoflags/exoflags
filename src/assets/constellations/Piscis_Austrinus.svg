@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120px" height="120px" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Piscis_Austrinus</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Piscis_Austrinus" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(35.000000, 26.000000)" stroke="#FFFFFF" stroke-width="9">
+            <g id="Clipped" transform="translate(8.000000, 0.000000)">
+                <path d="M26.8710938,67.6992188 L1.4609375,23.1757814 C0.7929688,21.3398438 0.4492188,19.4023438 0.4492188,17.4492188 C0.4492188,8.1992188 7.9492188,0.6992188 17.1992188,0.6992188 C26.4492188,0.6992188 33.9492188,8.1992188 33.9492188,17.4492188 C33.9492188,20.3867188 33.1757812,23.2773438 31.7070312,25.8242188 L7.53125,67.6992188" id="Path" transform="translate(17.199219, 34.199219) scale(-1, 1) rotate(-180.000000) translate(-17.199219, -34.199219) "></path>
+            </g>
+            <path d="M0.0742188,39.1992188 L50.3242188,39.1992188" id="Path" transform="translate(25.199219, 39.199219) scale(-1, 1) rotate(-180.000000) translate(-25.199219, -39.199219) "></path>
+        </g>
+    </g>
+</svg>

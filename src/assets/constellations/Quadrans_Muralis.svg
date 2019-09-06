@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120px" height="120px" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Quadrans_Muralis</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Quadrans_Muralis" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(23.000000, 30.000000)" stroke="#FFFFFF" stroke-width="9">
+            <path d="M36.8507812,59.34375 L36.8507812,0.34375" id="Path" transform="translate(37.000000, 30.000000) scale(-1, 1) rotate(-180.000000) translate(-37.000000, -30.000000) "></path>
+            <path d="M35.5,59 L18.5,6.34375" id="Path" transform="translate(27.000000, 32.500000) scale(-1, 1) rotate(-180.000000) translate(-27.000000, -32.500000) "></path>
+            <g id="Clipped" transform="translate(0.000000, 3.000000)">
+                <g id="Group">
+                    <polyline id="Path" transform="translate(36.837865, 17.113281) scale(-1, 1) rotate(-180.000000) translate(-36.837865, -17.113281) " points="0.33786526 0.1132812 36.8353618 34.1132812 73.3378653 0.1132812"></polyline>
+                    <path d="M0.33786526,44.1132812 C9.39721208,33.9693768 22.7665699,28.1132812 36.8573458,28.1132812 C50.9481217,28.1132812 64.3221039,33.9693768 73.3768263,44.1132812" id="Path" transform="translate(36.857346, 36.113281) scale(-1, 1) rotate(-180.000000) translate(-36.857346, -36.113281) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

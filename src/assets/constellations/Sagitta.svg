@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120px" height="120px" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Sagitta</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Sagitta" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Clipped" transform="translate(26.000000, 26.000000)" stroke="#FFFFFF" stroke-width="9">
+            <g id="Group">
+                <polyline id="Path" transform="translate(34.199219, 25.824219) scale(-1, 1) rotate(-180.000000) translate(-34.199219, -25.824219) " points="0.6992188 50.9492188 34.1992188 17.4492188 67.6992188 0.6992188"></polyline>
+                <polyline id="Path" transform="translate(25.824219, 34.199219) scale(-1, 1) rotate(-180.000000) translate(-25.824219, -34.199219) " points="0.6992188 67.6992188 34.1992188 34.1992188 50.9492188 0.6992188"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>

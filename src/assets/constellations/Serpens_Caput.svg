@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120px" height="120px" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Serpens_Caput</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Serpens_Caput" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(35.000000, 22.000000)" stroke="#FFFFFF" stroke-width="9">
+            <g id="Clipped" transform="translate(22.000000, 0.000000)">
+                <path d="M18.96875,23.4428132 C12.9609374,26.9115632 5.2773437,24.8529694 1.8085937,18.845157 C-1.6601563,12.8373444 0.3984374,5.15375067 6.40625,1.68500067 C12.4140624,-1.78374933 20.0976562,0.274844374 23.5664062,6.28265697 C27.0351562,12.2904694 24.9765624,19.9740632 18.96875,23.4428132 Z" id="Path" transform="translate(12.687500, 12.563907) scale(-1, 1) rotate(-180.000000) translate(-12.687500, -12.563907) "></path>
+            </g>
+            <g id="Clipped" transform="translate(13.000000, 26.000000)">
+                <g id="Path">
+                    <path d="M1.4507812,49.1225007 L1.4507812,0.622500655" transform="translate(1.925781, 24.622501) scale(-1, 1) rotate(-180.000000) translate(-1.925781, -24.622501) "></path>
+                </g>
+            </g>
+            <g id="Clipped" transform="translate(0.000000, 19.000000)">
+                <g id="Path">
+                    <path d="M-3.55271368e-15,25.2475007 C-3.55271368e-15,11.3725007 11.25,0.122500655 25.125,0.122500655 C29.5351562,0.122500655 33.8671874,1.28265696 37.6875,3.48578196 C45.4609374,7.97406326 50.25,16.2709383 50.25,25.2475007 C50.25,34.2240633 49.1992186,38.1459382 41.4257812,42.6342195" transform="translate(25.125000, 21.378360) scale(-1, 1) rotate(-180.000000) translate(-25.125000, -21.378360) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

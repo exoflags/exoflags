@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120px" height="120px" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Triangulum_Australe</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Triangulum_Australe" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(27.000000, 31.000000)" stroke="#FFFFFF" stroke-width="9">
+            <g id="Clipped">
+                <polygon id="Path" transform="translate(33.500000, 29.011719) scale(-1, 1) rotate(-180.000000) translate(-33.500000, -29.011719) " points="33.5 58.0234375 67 0 0 0"></polygon>
+            </g>
+            <g id="Clipped" transform="translate(8.000000, 36.000000)">
+                <g id="Path">
+                    <path d="M50.625,0.7851562 C42.9882812,5.1953124 34.3203124,7.5195312 25.5,7.5195312 C16.6796874,7.5195312 8.015625,5.1953124 0.375,0.7851562" transform="translate(25.500000, 4.152344) scale(-1, 1) rotate(-180.000000) translate(-25.500000, -4.152344) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -32,7 +32,6 @@ export const PlanetaryTriangle = styled.div`
 `;
 
 export const PlanetaryNeighbours = styled.img`
-  border: 1px solid red;
   z-index: 3;
   display: block;
   margin: 0;
@@ -43,13 +42,12 @@ export const PlanetaryNeighbours = styled.img`
   width: 20%;
 `;
 
-export const Constellation = styled.div`
-  border: 1px solid blue;
+export const Constellation = styled.img`
   z-index: 4;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate3d(-50%, -50%, 0);
-  height: 30%;
-  width: 30%;
+  height: 50%;
+  width: 50%;
 `;
