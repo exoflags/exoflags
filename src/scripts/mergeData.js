@@ -6,23 +6,26 @@ const outPath = path.join(__dirname, '../data/data.json');
 
 const exoplanetsPath = path.join(__dirname, '../data/exoplanets.json');
 const exoplanetsFile = fs.readFileSync(exoplanetsPath);
-// Nest by id for faster lookup, avoid keeping 2 representations of same data
-const exoplanets = indexBy(JSON.parse(exoplanetsFile), d => d.pl_name);
+const exoplanets = JSON.parse(exoplanetsFile);
 
 const constellationsPath = path.join(__dirname, '../data/constellations.csv');
 
 csv()
   .fromFile(constellationsPath)
   .then(data => {
-    data.forEach(d => {
-      const planetaryName = d['Planetary Name'];
-      const constellation = d['Constellation'];
+    const constellations = indexBy(data, d => d['Planetary Name']);
 
-      const exoplanet = exoplanets[planetaryName];
+    exoplanets.forEach(exoplanet => {
+      const joinData = constellations[exoplanet.pl_name];
+      const constellation = joinData && joinData.Constellation;
+
       exoplanet.constellation = constellation || null;
     });
 
-    fs.writeFileSync(outPath, JSON.stringify(exoplanets, null, 4));
+    fs.writeFileSync(
+      outPath,
+      JSON.stringify(Object.values(exoplanets), null, 4)
+    );
 
     console.log('Success!');
   })

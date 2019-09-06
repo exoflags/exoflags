@@ -15,7 +15,8 @@ import {
   NotFound
 } from './pages';
 import { FLAG_PROPERTIES } from '../const';
-import exoplanets from '../data/exoplanets.json';
+import exoplanets from '../data/data.json';
+import { uniq } from '../utils/uniq';
 
 const AppContainer = styled.div`
   height: 100vh;
@@ -67,25 +68,30 @@ const App = () => {
       planetData,
       planet => planet.pl_pnum
     ),
-    [FLAG_PROPERTIES.constellation]: [1, 100]
+    [FLAG_PROPERTIES.constellation]: uniq(
+      planetData.map(d => d.constellation).filter(Boolean)
+    ).sort()
   };
 
   useEffect(() => {
-    const integerProperties = [FLAG_PROPERTIES.planetaryNeighbours];
+    // Define default and special accessors for initial user flag values
+    const midPoint = extent => (extent[0] + extent[1]) / 2;
+    const accessors = {
+      [FLAG_PROPERTIES.planetaryNeighbours]: extent =>
+        Math.round(midPoint(extent)),
+      [FLAG_PROPERTIES.constellation]: extent => extent[0]
+    };
 
     const initialUserFlag = Object.entries(EXTENTS).reduce(
       (memo, [key, extent]) => {
-        // TODO: find a nicer way to do this once we understand constellation extent/values
-        // perhaps it's just unique values
-        let value = (extent[0] + extent[1]) / 2;
-        if (integerProperties.indexOf(key) > -1) {
-          value = Math.round(value);
-        }
+        const accessor = accessors[key] || midPoint;
+        const value = accessor(extent);
         memo[key] = value;
         return memo;
       },
       {}
     );
+
     setUserFlag(initialUserFlag);
   }, []);
 
