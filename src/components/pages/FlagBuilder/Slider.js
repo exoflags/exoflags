@@ -33,7 +33,7 @@ const Thumb = styled(SliderThumb)`
   }
 `;
 
-const ORDINAL_SCALES = [
+const POINT_SCALES = [
   FLAG_PROPERTIES.planetaryNeighbours,
   FLAG_PROPERTIES.constellation
 ];
@@ -67,11 +67,11 @@ class Slider extends Component {
   getScale() {
     const { flagProperty, extents, width } = this.props;
 
-    const isOrdinalScale = ORDINAL_SCALES.indexOf(flagProperty) > -1;
+    const isPointScale = POINT_SCALES.indexOf(flagProperty) > -1;
     const sliderWidth = getSliderWidth(width);
     const extent = extents[flagProperty] || [1, 100];
 
-    if (isOrdinalScale) {
+    if (isPointScale) {
       const scale = scalePoint()
         .domain(extent)
         .range([0, sliderWidth]);
@@ -119,15 +119,14 @@ class Slider extends Component {
             trackHeight / 2})`}
         >
           <Track width={sliderWidth} height={trackHeight} />
+
           {value && (
             <Thumb
               ref={this.thumbRef}
               x={scale(value) - thumbSize / 2}
               y={-(thumbSize / 2) + 2}
-              strokeWidth={trackHeight}
               width={thumbSize}
               height={thumbSize}
-              fill="blueviolet"
             />
           )}
         </g>
