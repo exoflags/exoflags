@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120px" height="120px" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Serpens_Cauda</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Serpens_Cauda" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(30.000000, 22.000000)">
+            <g id="Group-9" stroke="#FFFFFF" stroke-width="9">
+                <path d="M38.1857383,75.40625 L38.1857383,0" id="Path" transform="translate(38.125934, 38.000000) scale(-1, 1) rotate(-180.000000) translate(-38.125934, -38.000000) "></path>
+                <path d="M15.0257353,19.3107911 C5.72809424,24.6406251 -3.55271368e-15,34.4931642 -3.55271368e-15,45.152832 C-3.55271368e-15,55.8125001 5.72809424,65.6604005 15.0257353,70.9902345 C19.5951286,73.611084 24.7765778,74.9887695 30.0514706,74.9887695 C46.6470588,74.9887695 60.1029412,61.6293945 60.1029412,45.152832" id="Path" transform="translate(30.051471, 47.149780) scale(-1, 1) rotate(-180.000000) translate(-30.051471, -47.149780) "></path>
+            </g>
+            <g id="Clipped" transform="translate(0.000000, 19.000000)"></g>
+        </g>
+    </g>
+</svg>

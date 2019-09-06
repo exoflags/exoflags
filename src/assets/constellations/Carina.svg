@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120px" height="120px" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Carina</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Carina" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(19.000000, 24.000000)" stroke="#FFFFFF" stroke-width="9">
+            <g id="Clipped">
+                <path d="M20.75,38 L0,0 L41.5,0 C64.4227495,0 83,17.0104945 83,38 L20.75,38 Z" id="Path" transform="translate(41.500000, 19.000000) scale(-1, 1) rotate(-180.000000) translate(-41.500000, -19.000000) "></path>
+            </g>
+            <path d="M23.4492188,71.6992188 L23.4492188,21.4492188" id="Path" transform="translate(23.449219, 46.574219) scale(-1, 1) rotate(-180.000000) translate(-23.449219, -46.574219) "></path>
+            <path d="M40.1992188,70.8984376 L40.1992188,14.6992188" id="Path" transform="translate(40.149219, 43.199219) scale(-1, 1) rotate(-180.000000) translate(-40.149219, -43.199219) "></path>
+            <path d="M56.9492188,71.6992188 L56.9492188,21.4492188" id="Path" transform="translate(56.949219, 46.574219) scale(-1, 1) rotate(-180.000000) translate(-56.949219, -46.574219) "></path>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120px" height="120px" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Lepus</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Lepus" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-7" transform="translate(43.000000, 26.000000)" stroke="#FFFFFF" stroke-width="9">
+            <g id="Group" transform="translate(0.000000, 32.519548)">
+                <g id="Clipped">
+                    <path d="M33.9492188,16.9492188 C33.9492188,26.1992188 26.4492188,33.6992188 17.1992188,33.6992188 C7.9492188,33.6992188 0.4492188,26.1992188 0.4492188,16.9492188 C0.4492188,7.6992188 7.9492188,0.1992188 17.1992188,0.1992188 C26.4492188,0.1992188 33.9492188,7.6992188 33.9492188,16.9492188 Z" id="Path" transform="translate(17.199219, 16.949219) scale(-1, 1) rotate(-180.000000) translate(-17.199219, -16.949219) "></path>
+                </g>
+            </g>
+            <path d="M7,0.404761905 L7,33.5635885" id="Line-8" stroke-linecap="square"></path>
+            <path d="M27,0.404761905 L27,33.5635885" id="Line-8" stroke-linecap="square"></path>
+        </g>
+    </g>
+</svg>

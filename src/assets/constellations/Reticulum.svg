@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120px" height="120px" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Reticulum</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Reticulum" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(22.000000, 22.000000)" stroke="#FFFFFF" stroke-width="9">
+            <g id="Clipped">
+                <path d="M76.6594095,38.725586 C76.6594095,59.6741154 59.6785386,76.6594095 38.725586,76.6594095 C17.7770566,76.6594095 0.791762465,59.6741154 0.791762465,38.725586 C0.791762465,17.7726334 17.7770566,0.791762465 38.725586,0.791762465 C59.6785386,0.791762465 76.6594095,17.7726334 76.6594095,38.725586 Z" id="Path" transform="translate(38.725586, 38.725586) scale(-1, 1) rotate(-180.000000) translate(-38.725586, -38.725586) "></path>
+            </g>
+            <g id="Clipped" transform="translate(39.000000, 51.000000)">
+                <g id="Path">
+                    <path d="M0.1992188,0.415081522 L0.1992188,25.6599865" transform="translate(0.199219, 13.037534) scale(-1, 1) rotate(-180.000000) translate(-0.199219, -13.037534) "></path>
+                </g>
+            </g>
+            <g id="Clipped" transform="translate(0.000000, 26.000000)">
+                <g id="Path">
+                    <polygon transform="translate(38.725586, 12.659986) scale(-1, 1) rotate(-180.000000) translate(-38.725586, -12.659986) " points="0.791762465 12.6599864 38.725586 25.2846467 76.6594095 12.6599864 38.725586 0.035326087"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

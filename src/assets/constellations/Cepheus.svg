@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120px" height="120px" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Cepheus</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Cepheus" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(37.000000, 21.000000)" stroke="#FFFFFF" stroke-width="9">
+            <g id="Clipped">
+                <polygon id="Path" transform="translate(23.199219, 14.365234) scale(-1, 1) rotate(-180.000000) translate(-23.199219, -14.365234) " points="0.8671875 23.03125 12.03125 15.8632813 23.1992188 28.03125 34.3671875 15.8632813 45.53125 23.03125 45.53125 0.6992188 0.8671875 0.6992188"></polygon>
+            </g>
+            <path d="M23.1992188,32.03125 L23.1992188,76.6992188" id="Path" transform="translate(23.199219, 54.365234) scale(-1, 1) rotate(-180.000000) translate(-23.199219, -54.365234) "></path>
+            <g id="Clipped" transform="translate(1.000000, 38.000000)">
+                <polyline id="Path" transform="translate(8.302734, 16.367187) scale(-1, 1) rotate(-180.000000) translate(-8.302734, -16.367187) " points="0.40625 32.1601562 16.1992188 16.3671875 0.40625 0.5742188"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>

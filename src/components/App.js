@@ -15,7 +15,8 @@ import {
   NotFound
 } from './pages';
 import { FLAG_PROPERTIES } from '../const';
-import exoplanets from '../data/exoplanets.json';
+import exoplanets from '../data/data.json';
+import { uniq } from '../utils/uniq';
 
 const AppContainer = styled.div`
   height: 100vh;
@@ -46,22 +47,53 @@ const App = () => {
   // No time to dynamically load in data
   const [userFlag, setUserFlag] = useState({});
   const [planetData] = useState(exoplanets);
-  // TODO: add extents for distance and num planets (?)
+
+  // TODO: add extent for constellation (is this an extent, or just unique values?)
   const EXTENTS = {
-    [FLAG_PROPERTIES.distance]: [1, 100],
-    [FLAG_PROPERTIES.planetaryMass]: extent(planetData, planet => planet.pl_bmassj),
-    [FLAG_PROPERTIES.planetaryRadius]: extent(planetData, planet => planet.pl_radj),
+    [FLAG_PROPERTIES.distance]: extent(planetData, planet => planet.st_dist),
     [FLAG_PROPERTIES.stellarMass]: extent(planetData, planet => planet.st_mass),
-    [FLAG_PROPERTIES.stellarRadius]: extent(planetData, planet => planet.st_rad),
-  }
+    [FLAG_PROPERTIES.stellarRadius]: extent(
+      planetData,
+      planet => planet.st_rad
+    ),
+    [FLAG_PROPERTIES.planetaryMass]: extent(
+      planetData,
+      planet => planet.pl_bmassj
+    ),
+    [FLAG_PROPERTIES.planetaryRadius]: extent(
+      planetData,
+      planet => planet.pl_radj
+    ),
+    [FLAG_PROPERTIES.planetaryNeighbours]: extent(
+      planetData,
+      planet => planet.pl_pnum
+    ),
+    [FLAG_PROPERTIES.constellation]: uniq(
+      planetData.map(d => d.constellation).filter(Boolean)
+    ).sort()
+  };
 
   useEffect(() => {
-    const initialUserFlag = Object.entries(EXTENTS).reduce((memo, [key, extent]) => {
-      memo[key] = (extent[0] + extent[1]) / 2;
-      return memo;
-    }, {})
-    setUserFlag(initialUserFlag)
-  }, [])
+    // Define default and special accessors for initial user flag values
+    const midPoint = extent => (extent[0] + extent[1]) / 2;
+    const accessors = {
+      [FLAG_PROPERTIES.planetaryNeighbours]: extent =>
+        Math.round(midPoint(extent)),
+      [FLAG_PROPERTIES.constellation]: extent => extent[0]
+    };
+
+    const initialUserFlag = Object.entries(EXTENTS).reduce(
+      (memo, [key, extent]) => {
+        const accessor = accessors[key] || midPoint;
+        const value = accessor(extent);
+        memo[key] = value;
+        return memo;
+      },
+      {}
+    );
+
+    setUserFlag(initialUserFlag);
+  }, []);
 
   return (
     <AppContainer>

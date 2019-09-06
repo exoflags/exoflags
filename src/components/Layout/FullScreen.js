@@ -7,8 +7,8 @@ const flexCenter = css`
   justify-content: center;
 `;
 
-const bgImg = (imgPath) => css`
-  background: url(${imgPath}) no-repeat center center; 
+const bgImg = imgPath => css`
+  background: url(${imgPath}) no-repeat center center;
   background-size: cover;
 `;
 

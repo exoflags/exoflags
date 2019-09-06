@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120px" height="120px" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Horologium</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Horologium" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(24.000000, 25.000000)" stroke="#FFFFFF" stroke-width="9">
+            <g id="Clipped">
+                <path d="M71.6815258,35.2050782 C71.6815258,54.2491958 55.8033088,69.6903723 36.2109376,69.6903723 C16.6227023,69.6903723 0.740349318,54.2491958 0.740349318,35.2050782 C0.740349318,16.1569394 16.6227023,0.719784059 36.2109376,0.719784059 C55.8033088,0.719784059 71.6815258,16.1569394 71.6815258,35.2050782 Z" id="Path" transform="translate(36.210938, 35.205078) scale(-1, 1) rotate(-180.000000) translate(-36.210938, -35.205078) "></path>
+            </g>
+            <polyline id="Path" transform="translate(52.000000, 18.000000) scale(-1, 1) rotate(-180.000000) translate(-52.000000, -18.000000) " points="36 35 36 1 68 1.20219221"></polyline>
+        </g>
+    </g>
+</svg>

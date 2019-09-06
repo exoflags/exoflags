@@ -1,3 +1,3 @@
-import React from 'react'
+import React from 'react';
 
-export const Credits = () => <div>credits</div>
+export const Credits = () => <div>credits</div>;

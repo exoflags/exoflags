@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120px" height="120px" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Chamaeleon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Chamaeleon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Clipped" transform="translate(20.000000, 42.000000)" stroke="#FFFFFF" stroke-width="9">
+            <path d="M35.8391632,0.4335938 L35.8391632,35.4335938 C16.4512991,35.4335938 0.7304688,19.7633759 0.7304688,0.4335938 L62.1739466,0.4335938 C71.8700536,0.4335938 79.7304688,8.26870287 79.7304688,17.9335938 C79.7304688,27.5984848 71.8700536,35.4335938 62.1739466,35.4335938 C54.9007788,35.4335938 49.0065548,29.5540101 49.0065548,22.3085939 C49.0065548,17.4739804 52.9389374,13.5585939 57.7848161,13.5585939 C62.6306945,13.5585939 66.5630771,17.4739804 66.5630771,22.3085939" id="Path" transform="translate(40.230469, 17.933594) scale(-1, 1) rotate(-180.000000) translate(-40.230469, -17.933594) "></path>
+        </g>
+    </g>
+</svg>

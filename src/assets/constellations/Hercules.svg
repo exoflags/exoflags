@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120px" height="120px" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Hercules</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Hercules" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(26.000000, 26.000000)" stroke="#FFFFFF" stroke-width="9">
+            <path d="M17.4492188,67.6992188 L17.4492188,0.6992188" id="Path" transform="translate(17.449219, 34.199219) scale(-1, 1) rotate(-180.000000) translate(-17.449219, -34.199219) "></path>
+            <path d="M50.9492188,67.6992188 L50.9492188,0.6992188" id="Path" transform="translate(50.949219, 34.199219) scale(-1, 1) rotate(-180.000000) translate(-50.949219, -34.199219) "></path>
+            <g id="Clipped" transform="translate(0.000000, 24.000000)">
+                <path d="M0.6992188,10.203125 C4.15625,4.21875 10.5390625,0.53125 17.4492188,0.53125 C24.359375,0.53125 30.7460938,4.21875 34.1992188,10.203125 C37.65625,16.1875 44.0390625,19.8710938 50.9492188,19.8710938 C57.859375,19.8710938 64.2460938,16.1875 67.6992188,10.203125" id="Path" transform="translate(34.199219, 10.201172) scale(-1, 1) rotate(-180.000000) translate(-34.199219, -10.201172) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

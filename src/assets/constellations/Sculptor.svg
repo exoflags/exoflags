@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120px" height="120px" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Sculptor</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polyline id="path-1" points="4.99998265e-07 45.0000002 11.1640625 0.3320312 33.5000005 0.3320312 44.6640625 45.0000002"></polyline>
+    </defs>
+    <g id="Sculptor" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-5" transform="translate(38.000000, 24.000000)">
+            <g id="Group">
+                <g id="Clipped" transform="translate(11.000000, 0.000000)" stroke="#FFFFFF" stroke-width="9">
+                    <path d="M22.5,11.1640625 C22.5,17.3320312 17.5,22.3320312 11.3320313,22.3320312 C5.1640625,22.3320312 0.1640625,17.3320312 0.1640625,11.1640625 C0.1640625,4.9960938 5.1640625,3.73034936e-14 11.3320313,3.73034936e-14 C17.5,3.73034936e-14 22.5,4.9960938 22.5,11.1640625 Z" id="Path" transform="translate(11.332031, 11.166016) scale(-1, 1) rotate(-180.000000) translate(-11.332031, -11.166016) "></path>
+                </g>
+                <g id="Clipped" transform="translate(0.000000, 27.000000)" stroke="#FFFFFF" stroke-width="9">
+                    <g id="Group">
+                        <g>
+                            <path d="M11.1640625,45 L0,0.3320312" id="Path" transform="translate(5.582031, 22.666016) scale(-1, 1) rotate(-180.000000) translate(-5.582031, -22.666016) "></path>
+                            <path d="M33.5,45 L44.6640625,0.3320312" id="Path" transform="translate(39.082031, 22.666016) scale(-1, 1) rotate(-180.000000) translate(-39.082031, -22.666016) "></path>
+                        </g>
+                    </g>
+                </g>
+                <path d="M0,27.3320312 L44.6640625,27.3320312" id="Path" stroke="#FFFFFF" stroke-width="9" transform="translate(22.332031, 27.332031) scale(-1, 1) rotate(-180.000000) translate(-22.332031, -27.332031) "></path>
+                <path d="M4.6328125,52.4320312 L39.6328125,52.4320312" id="Path" stroke="#FFFFFF" stroke-width="9" transform="translate(22.000000, 52.382031) scale(-1, 1) rotate(-180.000000) translate(-22.000000, -52.382031) "></path>
+                <g id="Clipped" transform="translate(0.000000, 27.000000)">
+                    <g>
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <g id="Path"></g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

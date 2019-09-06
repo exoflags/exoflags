@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120px" height="120px" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Mensa</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Mensa" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(21.000000, 44.000000)" stroke="#FFFFFF" stroke-width="9">
+            <g id="Clipped" transform="translate(13.000000, 6.000000)">
+                <g id="Path">
+                    <path d="M40.9021739,25.550506 L52.4599185,0.565217391 L0.999150815,0.565217391 L12.0978261,25.550506 C16.7065217,22.1592016 21.5072464,20.4635495 26.5,20.4635495 C31.4927536,20.4635495 36.2934783,22.1592016 40.9021739,25.550506 Z" transform="translate(26.729535, 13.057862) scale(-1, 1) rotate(-180.000000) translate(-26.729535, -13.057862) "></path>
+                </g>
+            </g>
+            <g id="Clipped">
+                <path d="M0.802045094,5.878125 C4.19841446,9.13515614 8.80905331,10.9699218 13.6123621,10.9699218 C18.415671,10.9699218 23.021829,9.13515614 26.4181985,5.878125 C29.8190488,2.62109364 34.4252069,0.790625 39.2285157,0.790625 C44.0318245,0.790625 48.6424632,2.62109364 52.0388327,5.878125 C55.4352022,9.13515614 60.0413603,10.9699218 64.8446691,10.9699218 C69.6524586,10.9699218 74.2586167,9.13515614 77.6549863,5.878125" id="Path" transform="translate(39.228516, 5.880273) scale(-1, 1) rotate(-180.000000) translate(-39.228516, -5.880273) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

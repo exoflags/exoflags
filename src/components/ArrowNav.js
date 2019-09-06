@@ -56,13 +56,15 @@ const Dot = styled(Link)`
   border-radius: 50%;
 `;
 
-const NavDot = (props) => (
+const NavDot = props => (
   <Dot
     {...props}
     getProps={({ isCurrent }) => {
       return {
         style: {
-          backgroundColor: isCurrent ? theme.colors.white : theme.colors.grey.medium
+          backgroundColor: isCurrent
+            ? theme.colors.white
+            : theme.colors.grey.medium
         }
       };
     }}
@@ -90,35 +92,26 @@ const ArrowNav = ({ stepId, stepIdx }) => {
 
     return function cleanup() {
       window.removeEventListener('keydown', handleKeyDown);
-    }
-  }, [stepId])
+    };
+  }, [stepId]);
 
   return (
     <Wrapper>
-      <ArrowContainer
-        hide={isFirstStep}
-        onClick={prev}
-      >
+      <ArrowContainer hide={isFirstStep} onClick={prev}>
         <Back />
       </ArrowContainer>
 
       <Dots>
         {FLAG_BUILDER_STEPS.map(step => (
-          <NavDot
-            to={step.path}
-            key={step.displayName}
-          />
+          <NavDot to={step.path} key={step.title} />
         ))}
       </Dots>
 
-      <ArrowContainer
-        hide={isLastStep}
-        onClick={next}
-      >
+      <ArrowContainer hide={isLastStep} onClick={next}>
         <Forward />
       </ArrowContainer>
     </Wrapper>
   );
-}
+};
 
 export default ArrowNav;

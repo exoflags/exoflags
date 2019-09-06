@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120px" height="120px" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Scutum</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Scutum" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(26.000000, 26.000000)" stroke="#FFFFFF" stroke-width="9">
+            <g id="Clipped">
+                <path d="M0.6992188,67.6992188 L67.6992188,67.6992188 L67.6992188,34.1992188 C67.6992188,15.6953126 52.703125,0.6992188 34.1992188,0.6992188 C15.6992188,0.6992188 0.6992188,15.6953126 0.6992188,34.1992188 L0.6992188,67.6992188 Z" id="Path" transform="translate(34.199219, 34.199219) scale(-1, 1) rotate(-180.000000) translate(-34.199219, -34.199219) "></path>
+            </g>
+            <path d="M34.1992188,67.6992188 L34.1992188,0.6992188" id="Path" transform="translate(34.199219, 34.199219) scale(-1, 1) rotate(-180.000000) translate(-34.199219, -34.199219) "></path>
+            <path d="M17.4492188,17.4492188 L50.9492188,17.4492188" id="Path" transform="translate(34.199219, 17.449219) scale(-1, 1) rotate(-180.000000) translate(-34.199219, -17.449219) "></path>
+        </g>
+    </g>
+</svg>

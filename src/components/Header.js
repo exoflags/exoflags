@@ -18,7 +18,7 @@ const Wrapper = styled.header`
 const logoStyle = {
   display: 'block',
   alignSelf: 'flex-end'
-}
+};
 
 const Header = () => (
   <Wrapper>

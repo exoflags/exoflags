@@ -5,13 +5,13 @@ import { select, event as d3Event } from 'd3-selection';
 import { drag } from 'd3-drag';
 import throttle from 'lodash.throttle';
 
-import { ReactComponent as SliderThumb} from '../assets/SliderNode.svg';
+import { ReactComponent as SliderThumb } from '../assets/SliderNode.svg';
 
 const sliderHeight = 40;
 const trackHeight = 2;
 const thumbSize = 30;
 const padding = thumbSize * 2;
-const getSliderWidth = (width) => width - (2 * padding)
+const getSliderWidth = width => width - 2 * padding;
 
 const SVG = styled.svg`
   display: block;
@@ -33,8 +33,8 @@ const Thumb = styled(SliderThumb)`
 `;
 
 class Slider extends Component {
-  xScale = scaleLinear().clamp(true)
-  thumbRef = React.createRef()
+  xScale = scaleLinear().clamp(true);
+  thumbRef = React.createRef();
 
   constructor(props) {
     super(props);
@@ -46,31 +46,26 @@ class Slider extends Component {
     this.initSlider();
   }
 
-  handleChange = (value) => {
+  handleChange = value => {
     const { setUserFlag, userFlag, flagProperty } = this.props;
     setUserFlag({
       ...userFlag,
       [flagProperty]: value
     });
-  }
+  };
 
   initSlider() {
     this.thumb = select(this.thumbRef.current);
     this.thumb.call(
       drag().on('drag', () => {
-        const position = this.xScale.invert(d3Event.x)
-        this.handleChange(position)
+        const position = this.xScale.invert(d3Event.x);
+        this.handleChange(position);
       })
-    )
+    );
   }
 
   render() {
-    const {
-      extents,
-      width,
-      userFlag,
-      flagProperty
-    } = this.props;
+    const { extents, width, userFlag, flagProperty } = this.props;
 
     const value = userFlag[flagProperty];
     const extent = extents[flagProperty] || [1, 100];
@@ -80,12 +75,15 @@ class Slider extends Component {
 
     return (
       <SVG height={sliderHeight} width={width}>
-        <g transform={`translate(${padding}, ${(sliderHeight / 2) - (trackHeight / 2)})`}>
+        <g
+          transform={`translate(${padding}, ${sliderHeight / 2 -
+            trackHeight / 2})`}
+        >
           <Track width={sliderWidth} height={trackHeight} />
           {value && (
             <Thumb
               ref={this.thumbRef}
-              x={this.xScale(value) - (thumbSize / 2)}
+              x={this.xScale(value) - thumbSize / 2}
               y={-(thumbSize / 2) + 2}
               strokeWidth={trackHeight}
               width={thumbSize}
@@ -95,7 +93,7 @@ class Slider extends Component {
           )}
         </g>
       </SVG>
-    )
+    );
   }
 }
 

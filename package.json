@@ -8,6 +8,7 @@
     "@emotion/styled": "^10.0.15",
     "@reach/router": "^1.2.1",
     "arup-scripts": "0.1.5",
+    "csvtojson": "^2.0.10",
     "d3-array": "^2.3.1",
     "d3-drag": "^1.2.4",
     "d3-scale": "^3.0.1",
@@ -29,7 +30,8 @@
     "test": "arup-scripts test",
     "eject": "arup-scripts eject",
     "prettier": "prettier --config prettier.config.js --write \"./**/*.js\"",
-    "analyze": "source-map-explorer \"build/static/js/*.js\""
+    "analyze": "source-map-explorer \"build/static/js/*.js\"",
+    "merge-data": "node src/scripts/mergeData.js"
   },
   "eslintConfig": {
     "extends": "react-app"
