@@ -1,7 +1,7 @@
 import React, { Component, Suspense, lazy } from 'react';
 import AutoSizer from 'react-virtualized-auto-sizer';
 import { scaleLinear } from 'd3-scale';
-import { FLAG_PROPERTIES } from '../../const';
+import { FLAG_PROPERTIES } from '../../../const';
 import {
   BaseFlag,
   StellarTriangle,
@@ -11,9 +11,9 @@ import {
 } from './Elements';
 
 const PLANETARY_NEIGHBOURS_CTX = require.context(
-  '../../assets/planetaryNeighbours'
+  '../../../assets/planetaryNeighbours'
 );
-const CONSTELLATION_CTX = require.context('../../assets/constellations');
+const CONSTELLATION_CTX = require.context('../../../assets/constellations');
 
 const planetaryBorderWidth = (flagHeight, flagWidth, width) => `
   ${flagHeight}px

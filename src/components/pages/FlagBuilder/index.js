@@ -2,11 +2,11 @@ import React from 'react';
 import AutoSizer from 'react-virtualized-auto-sizer';
 import styled from '@emotion/styled';
 
-import { Page } from '../Layout';
-import Flag from '../Flag';
-import FlagBuilderNav from '../FlagBuilderNav';
-import Slider from '../Slider';
-import { FLAG_BUILDER_STEPS } from '../../const';
+import { Page } from '../../shared/Layout';
+import Flag from '../../shared/Flag';
+import FlagBuilderNav from './FlagBuilderNav';
+import Slider from './Slider';
+import { FLAG_BUILDER_STEPS } from '../../../const';
 
 // Center content between header and FlagBuilderNav, but allow background to fill
 // below FlagBuilderNav

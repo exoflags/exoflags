@@ -5,7 +5,7 @@ import { select, event as d3Event } from 'd3-selection';
 import { drag } from 'd3-drag';
 import throttle from 'lodash.throttle';
 
-import { ReactComponent as SliderThumb } from '../assets/SliderNode.svg';
+import { ReactComponent as SliderThumb } from '../../../assets/SliderNode.svg';
 
 const sliderHeight = 40;
 const trackHeight = 2;
