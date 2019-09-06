@@ -48,7 +48,6 @@ const App = () => {
   const [userFlag, setUserFlag] = useState({});
   const [planetData] = useState(exoplanets);
 
-  // TODO: add extent for constellation (is this an extent, or just unique values?)
   const EXTENTS = {
     [FLAG_PROPERTIES.distance]: extent(planetData, planet => planet.st_dist),
     [FLAG_PROPERTIES.stellarMass]: extent(planetData, planet => planet.st_mass),
@@ -64,22 +63,20 @@ const App = () => {
       planetData,
       planet => planet.pl_radj
     ),
-    [FLAG_PROPERTIES.planetaryNeighbours]: extent(
-      planetData,
-      planet => planet.pl_pnum
-    ),
+    // At time of writing extent of data is [1, 8] but we want to show all 10 graphics on slider
+    [FLAG_PROPERTIES.planetaryNeighbours]: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
     [FLAG_PROPERTIES.constellation]: uniq(
-      planetData.map(d => d.constellation).filter(Boolean)
+      planetData.map(planet => planet.constellation)
     ).sort()
   };
 
   useEffect(() => {
     // Define default and special accessors for initial user flag values
     const midPoint = extent => (extent[0] + extent[1]) / 2;
+    const firstValue = extent => extent[0];
     const accessors = {
-      [FLAG_PROPERTIES.planetaryNeighbours]: extent =>
-        Math.round(midPoint(extent)),
-      [FLAG_PROPERTIES.constellation]: extent => extent[0]
+      [FLAG_PROPERTIES.planetaryNeighbours]: firstValue,
+      [FLAG_PROPERTIES.constellation]: firstValue
     };
 
     const initialUserFlag = Object.entries(EXTENTS).reduce(
