@@ -1,16 +1,10 @@
 import React, { useEffect } from 'react';
 import styled from '@emotion/styled';
-import { css } from '@emotion/core';
 import { Link, navigate } from '@reach/router';
 
-import { Forward, Back } from '../../shared/Icons';
 import Button from '../../shared/Button';
 import { FLAG_BUILDER_STEPS } from '../../../const';
 import theme from '../../../theme';
-
-const hideStyle = css`
-  visibility: hidden;
-`;
 
 const Wrapper = styled.div`
   height: ${props => props.theme.flagBuilderNavHeight};
