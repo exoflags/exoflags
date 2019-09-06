@@ -4,15 +4,15 @@ import styled from '@emotion/styled';
 
 import { Page } from '../Layout';
 import Flag from '../Flag';
-import ArrowNav from '../ArrowNav';
+import FlagBuilderNav from '../FlagBuilderNav';
 import Slider from '../Slider';
 import { FLAG_BUILDER_STEPS } from '../../const';
 
-// Center content between header and ArrowNav, but allow background to fill
-// below ArrowNav
+// Center content between header and FlagBuilderNav, but allow background to fill
+// below FlagBuilderNav
 const ContentContainer = styled.div`
   position: absolute;
-  height: calc(100% - ${props => props.theme.arrowNavHeight});
+  height: calc(100% - ${props => props.theme.flagBuilderNavHeight});
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -50,20 +50,6 @@ export const FlagBuilder = ({ userFlag, setUserFlag, extents, stepId }) => {
   return (
     <Page>
       <ContentContainer>
-        <SliderContainer>
-          <AutoSizer disableHeight>
-            {({ width }) => (
-              <Slider
-                extents={extents}
-                width={width}
-                flagProperty={flagProperty}
-                userFlag={userFlag}
-                setUserFlag={setUserFlag}
-              />
-            )}
-          </AutoSizer>
-        </SliderContainer>
-
         <InfoContainer>
           <TextContainer>
             <SectionTitle>{title}</SectionTitle>
@@ -86,9 +72,23 @@ export const FlagBuilder = ({ userFlag, setUserFlag, extents, stepId }) => {
             </AutoSizer>
           </FlagContainer>
         </InfoContainer>
+
+        <SliderContainer>
+          <AutoSizer disableHeight>
+            {({ width }) => (
+              <Slider
+                extents={extents}
+                width={width}
+                flagProperty={flagProperty}
+                userFlag={userFlag}
+                setUserFlag={setUserFlag}
+              />
+            )}
+          </AutoSizer>
+        </SliderContainer>
       </ContentContainer>
 
-      <ArrowNav stepId={+stepId} stepIdx={stepIdx} />
+      <FlagBuilderNav stepId={+stepId} stepIdx={stepIdx} />
     </Page>
   );
 };
