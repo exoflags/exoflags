@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from '@reach/router';
 
-import { Page } from '../Layout';
-import Logo from '../Logo';
+import { Page } from '../shared/Layout';
+import Logo from '../shared/Logo';
 
 export const Home = () => (
   <Page>

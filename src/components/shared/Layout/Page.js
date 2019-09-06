@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-import backgroundVideo from '../../../src/assets/ExoFlags_Space_BG.mp4';
-import backgroundImage from '../../../src/assets/ExoFlags_BG_Still.png';
+import backgroundVideo from '../../../assets/ExoFlags_Space_BG.mp4';
+import backgroundImage from '../../../assets/ExoFlags_BG_Still.png';
 
 const Video = styled.video`
   position: absolute;

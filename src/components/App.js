@@ -3,7 +3,7 @@ import { Router } from '@reach/router';
 import styled from '@emotion/styled';
 import { extent } from 'd3-array';
 
-import Header from './Header';
+import Header from './shared/Header';
 import {
   Home,
   About,

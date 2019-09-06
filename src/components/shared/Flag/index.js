@@ -1,7 +1,6 @@
-import React, { Component, Suspense, lazy } from 'react';
-import AutoSizer from 'react-virtualized-auto-sizer';
+import React, { Component } from 'react';
 import { scaleLinear } from 'd3-scale';
-import { FLAG_PROPERTIES } from '../../const';
+import { FLAG_PROPERTIES } from '../../../const';
 import {
   BaseFlag,
   StellarTriangle,
@@ -11,9 +10,9 @@ import {
 } from './Elements';
 
 const PLANETARY_NEIGHBOURS_CTX = require.context(
-  '../../assets/planetaryNeighbours'
+  '../../../assets/planetaryNeighbours'
 );
-const CONSTELLATION_CTX = require.context('../../assets/constellations');
+const CONSTELLATION_CTX = require.context('../../../assets/constellations');
 
 const planetaryBorderWidth = (flagHeight, flagWidth, width) => `
   ${flagHeight}px
@@ -106,7 +105,7 @@ class Flag extends Component {
   }
 
   render() {
-    const { width, extents, flagProperties, stepIdx } = this.props;
+    const { width, flagProperties, stepIdx } = this.props;
 
     const flagWidth = width;
     const flagHeight = flagWidth * (2 / 3);
@@ -123,8 +122,7 @@ class Flag extends Component {
       stellarRadius,
       planetaryMass,
       planetaryRadius,
-      planetaryNeighbours,
-      constellation
+      planetaryNeighbours
     } = flagProperties;
 
     const constellationName = this.getConstellation();
@@ -172,14 +170,12 @@ class Flag extends Component {
         )}
 
         {stepIdx >= constellationIdx && (
-          <Suspense fallback={<div>loading...</div>}>
-            <Constellation
-              src={CONSTELLATION_CTX(
-                `./${constellationName.replace(/ /g, '_')}.svg`
-              )}
-              alt={constellationName}
-            />
-          </Suspense>
+          <Constellation
+            src={CONSTELLATION_CTX(
+              `./${constellationName.replace(/ /g, '_')}.svg`
+            )}
+            alt={constellationName}
+          />
         )}
       </BaseFlag>
     );

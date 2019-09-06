@@ -4,8 +4,9 @@ const theme = {
     short: '0.3s'
   },
   headerHeight: '50px',
-  arrowNavHeight: '50px',
+  flagBuilderNavHeight: '50px',
   colors: {
+    blue: '#3b7cf6',
     white: '#FFFFFF',
     black: '#000000',
     grey: {
