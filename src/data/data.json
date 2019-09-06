@@ -2340,7 +2340,7 @@
     "st_rad": 1.28,
     "pl_pnum": 1,
     "st_dist": 48.52,
-    "constellation": "Scorpius"
+    "constellation": "Scorpio"
   },
   {
     "pl_name": "HD 83443 b",
@@ -2362,7 +2362,7 @@
     "st_rad": 2.13,
     "pl_pnum": 2,
     "st_dist": 55.94,
-    "constellation": "Scorpius"
+    "constellation": "Scorpio"
   },
   {
     "pl_name": "HD 159868 b",
@@ -2373,7 +2373,7 @@
     "st_rad": 2.13,
     "pl_pnum": 2,
     "st_dist": 55.94,
-    "constellation": "Scorpius"
+    "constellation": "Scorpio"
   },
   {
     "pl_name": "HD 20794 d",
@@ -2692,7 +2692,7 @@
     "st_rad": 0.75,
     "pl_pnum": 1,
     "st_dist": 30.85,
-    "constellation": "Scorpius"
+    "constellation": "Scorpio"
   },
   {
     "pl_name": "WASP-144 b",
@@ -2791,7 +2791,7 @@
     "st_rad": null,
     "pl_pnum": 1,
     "st_dist": 12.91,
-    "constellation": "Scorpius"
+    "constellation": "Scorpio"
   },
   {
     "pl_name": "WASP-121 b",
@@ -3077,7 +3077,7 @@
     "st_rad": null,
     "pl_pnum": 5,
     "st_dist": 6.8,
-    "constellation": "Scorpius"
+    "constellation": "Scorpio"
   },
   {
     "pl_name": "GJ 667 C f",
@@ -3088,7 +3088,7 @@
     "st_rad": null,
     "pl_pnum": 5,
     "st_dist": 6.8,
-    "constellation": "Scorpius"
+    "constellation": "Scorpio"
   },
   {
     "pl_name": "GJ 667 C e",
@@ -3099,7 +3099,7 @@
     "st_rad": null,
     "pl_pnum": 5,
     "st_dist": 6.8,
-    "constellation": "Scorpius"
+    "constellation": "Scorpio"
   },
   {
     "pl_name": "GJ 667 C c",
@@ -3110,7 +3110,7 @@
     "st_rad": null,
     "pl_pnum": 5,
     "st_dist": 6.8,
-    "constellation": "Scorpius"
+    "constellation": "Scorpio"
   },
   {
     "pl_name": "GJ 667 C b",
@@ -3121,7 +3121,7 @@
     "st_rad": null,
     "pl_pnum": 5,
     "st_dist": 6.8,
-    "constellation": "Scorpius"
+    "constellation": "Scorpio"
   },
   {
     "pl_name": "WASP-66 b",
@@ -3319,7 +3319,7 @@
     "st_rad": 2.29,
     "pl_pnum": 2,
     "st_dist": 109.38,
-    "constellation": "Scorpius"
+    "constellation": "Scorpio"
   },
   {
     "pl_name": "HD 147873 b",
@@ -3330,7 +3330,7 @@
     "st_rad": 2.29,
     "pl_pnum": 2,
     "st_dist": 109.38,
-    "constellation": "Scorpius"
+    "constellation": "Scorpio"
   },
   {
     "pl_name": "HATS-42 b",
@@ -3891,7 +3891,7 @@
     "st_rad": null,
     "pl_pnum": 2,
     "st_dist": 1510,
-    "constellation": "Scorpius"
+    "constellation": "Scorpio"
   },
   {
     "pl_name": "OGLE-2006-BLG-109L b",
@@ -3902,7 +3902,7 @@
     "st_rad": null,
     "pl_pnum": 2,
     "st_dist": 1510,
-    "constellation": "Scorpius"
+    "constellation": "Scorpio"
   },
   {
     "pl_name": "HATS-16 b",
@@ -3924,7 +3924,7 @@
     "st_rad": null,
     "pl_pnum": 1,
     "st_dist": null,
-    "constellation": "Ophiuchus"
+    "constellation": null
   },
   {
     "pl_name": "HATS-39 b",
@@ -4034,7 +4034,7 @@
     "st_rad": null,
     "pl_pnum": 1,
     "st_dist": 5100,
-    "constellation": "Ophiuchus"
+    "constellation": null
   },
   {
     "pl_name": "HATS-40 b",
@@ -4826,7 +4826,7 @@
     "st_rad": 1.05,
     "pl_pnum": 1,
     "st_dist": 53.57,
-    "constellation": "Scorpius"
+    "constellation": "Scorpio"
   },
   {
     "pl_name": "HATS-41 b",
@@ -5420,7 +5420,7 @@
     "st_rad": 0.93,
     "pl_pnum": 1,
     "st_dist": 516.8,
-    "constellation": "Capricornus"
+    "constellation": "Capricorn"
   },
   {
     "pl_name": "OGLE-2012-BLG-0358L b",
@@ -6102,7 +6102,7 @@
     "st_rad": null,
     "pl_pnum": 1,
     "st_dist": 145,
-    "constellation": "Scorpius"
+    "constellation": "Scorpio"
   },
   {
     "pl_name": "WASP-166 b",
@@ -6168,7 +6168,7 @@
     "st_rad": null,
     "pl_pnum": 1,
     "st_dist": 145,
-    "constellation": "Scorpius"
+    "constellation": "Scorpio"
   },
   {
     "pl_name": "WASP-53 c",
@@ -6201,7 +6201,7 @@
     "st_rad": 5.03,
     "pl_pnum": 1,
     "st_dist": 75.13,
-    "constellation": "Ophiuchus"
+    "constellation": null
   },
   {
     "pl_name": "HD 220689 b",
@@ -6399,7 +6399,7 @@
     "st_rad": 0.84,
     "pl_pnum": 4,
     "st_dist": 158.39,
-    "constellation": "Antares"
+    "constellation": null
   },
   {
     "pl_name": "K2-32 d",
@@ -6410,7 +6410,7 @@
     "st_rad": 0.84,
     "pl_pnum": 4,
     "st_dist": 158.39,
-    "constellation": "Antares"
+    "constellation": null
   },
   {
     "pl_name": "K2-32 c",
@@ -6421,7 +6421,7 @@
     "st_rad": 0.84,
     "pl_pnum": 4,
     "st_dist": 158.39,
-    "constellation": "Antares"
+    "constellation": null
   },
   {
     "pl_name": "K2-32 e",
@@ -6432,7 +6432,7 @@
     "st_rad": 0.84,
     "pl_pnum": 4,
     "st_dist": 158.39,
-    "constellation": "Antares"
+    "constellation": null
   },
   {
     "pl_name": "HD 11506 b",
@@ -6487,7 +6487,7 @@
     "st_rad": 1.9,
     "pl_pnum": 1,
     "st_dist": 47.8,
-    "constellation": "Ophiuchus"
+    "constellation": null
   },
   {
     "pl_name": "K2-33 b",
@@ -7543,7 +7543,7 @@
     "st_rad": 3.86,
     "pl_pnum": 1,
     "st_dist": 71.5,
-    "constellation": "Ophiuchus"
+    "constellation": null
   },
   {
     "pl_name": "K2-190 b",
@@ -7642,7 +7642,7 @@
     "st_rad": 0.31,
     "pl_pnum": 3,
     "st_dist": 4.31,
-    "constellation": "Ophiuchus"
+    "constellation": null
   },
   {
     "pl_name": "Wolf 1061 c",
@@ -7653,7 +7653,7 @@
     "st_rad": 0.31,
     "pl_pnum": 3,
     "st_dist": 4.31,
-    "constellation": "Ophiuchus"
+    "constellation": null
   },
   {
     "pl_name": "Wolf 1061 d",
@@ -7664,7 +7664,7 @@
     "st_rad": 0.31,
     "pl_pnum": 3,
     "st_dist": 4.31,
-    "constellation": "Ophiuchus"
+    "constellation": null
   },
   {
     "pl_name": "HD 69830 b",
@@ -7884,7 +7884,7 @@
     "st_rad": 0.52,
     "pl_pnum": 1,
     "st_dist": 27.3,
-    "constellation": "Capricornus"
+    "constellation": "Capricorn"
   },
   {
     "pl_name": "HD 109271 b",
@@ -8357,7 +8357,7 @@
     "st_rad": 15.1,
     "pl_pnum": 2,
     "st_dist": 43.38,
-    "constellation": "Ophiuchus"
+    "constellation": null
   },
   {
     "pl_name": "nu Oph b",
@@ -8368,7 +8368,7 @@
     "st_rad": 15.1,
     "pl_pnum": 2,
     "st_dist": 43.38,
-    "constellation": "Ophiuchus"
+    "constellation": null
   },
   {
     "pl_name": "K2-131 b",
@@ -10766,7 +10766,7 @@
     "st_rad": 1.11,
     "pl_pnum": 1,
     "st_dist": 53.19,
-    "constellation": "Ophiuchus"
+    "constellation": null
   },
   {
     "pl_name": "CoRoT-3 b",
@@ -11360,7 +11360,7 @@
     "st_rad": 1.44,
     "pl_pnum": 1,
     "st_dist": 73.43,
-    "constellation": "Ophiuchus"
+    "constellation": null
   },
   {
     "pl_name": "ome Ser b",
@@ -11954,7 +11954,7 @@
     "st_rad": 0.22,
     "pl_pnum": 1,
     "st_dist": 14.65,
-    "constellation": "Ophiuchus"
+    "constellation": null
   },
   {
     "pl_name": "HD 203473 b",
@@ -12031,7 +12031,7 @@
     "st_rad": 1.78,
     "pl_pnum": 1,
     "st_dist": 560,
-    "constellation": "Ophiuchus"
+    "constellation": null
   },
   {
     "pl_name": "NGTS-5 b",
@@ -12053,7 +12053,7 @@
     "st_rad": 1.12,
     "pl_pnum": 2,
     "st_dist": 73.46,
-    "constellation": "Ophiuchus"
+    "constellation": null
   },
   {
     "pl_name": "HD 159243 c",
@@ -12064,7 +12064,7 @@
     "st_rad": 1.12,
     "pl_pnum": 2,
     "st_dist": 73.46,
-    "constellation": "Ophiuchus"
+    "constellation": null
   },
   {
     "pl_name": "HAT-P-30 b",
@@ -12251,7 +12251,7 @@
     "st_rad": 0.9,
     "pl_pnum": 1,
     "st_dist": 765,
-    "constellation": "Ophiuchus"
+    "constellation": null
   },
   {
     "pl_name": "K2-217 b",
@@ -12273,7 +12273,7 @@
     "st_rad": 1.19,
     "pl_pnum": 1,
     "st_dist": 1000,
-    "constellation": "Ophiuchus"
+    "constellation": null
   },
   {
     "pl_name": "WASP-85 A b",
@@ -12295,7 +12295,7 @@
     "st_rad": 1.02,
     "pl_pnum": 1,
     "st_dist": 657.24,
-    "constellation": "Ophiuchus"
+    "constellation": null
   },
   {
     "pl_name": "HD 42618 b",
@@ -12350,7 +12350,7 @@
     "st_rad": 2.47,
     "pl_pnum": 1,
     "st_dist": 112.01,
-    "constellation": "Ophiuchus"
+    "constellation": null
   },
   {
     "pl_name": "CoRoT-26 b",
@@ -12361,7 +12361,7 @@
     "st_rad": 1.79,
     "pl_pnum": 1,
     "st_dist": 1670,
-    "constellation": "Ophiuchus"
+    "constellation": null
   },
   {
     "pl_name": "WASP-90 b",
@@ -12581,7 +12581,7 @@
     "st_rad": 12,
     "pl_pnum": 1,
     "st_dist": 56.27,
-    "constellation": "Aquilus"
+    "constellation": "Aquila"
   },
   {
     "pl_name": "WASP-65 b",
@@ -13043,7 +13043,7 @@
     "st_rad": 0.49,
     "pl_pnum": 2,
     "st_dist": 18.16,
-    "constellation": "Ophiuchus"
+    "constellation": null
   },
   {
     "pl_name": "GJ 3998 c",
@@ -13054,7 +13054,7 @@
     "st_rad": 0.49,
     "pl_pnum": 2,
     "st_dist": 18.16,
-    "constellation": "Ophiuchus"
+    "constellation": null
   },
   {
     "pl_name": "HD 196885 b",
@@ -13109,7 +13109,7 @@
     "st_rad": 1.24,
     "pl_pnum": 1,
     "st_dist": 60.28,
-    "constellation": "Ophiuchus"
+    "constellation": null
   },
   {
     "pl_name": "K2-222 b",
@@ -13230,7 +13230,7 @@
     "st_rad": 5.14,
     "pl_pnum": 1,
     "st_dist": 166.54,
-    "constellation": "Ophiuchus"
+    "constellation": null
   },
   {
     "pl_name": "HAT-P-65 b",
@@ -13714,7 +13714,7 @@
     "st_rad": 14.7,
     "pl_pnum": 1,
     "st_dist": 431.61,
-    "constellation": "Arcturus"
+    "constellation": null
   },
   {
     "pl_name": "K2-83 c",
@@ -38409,7 +38409,7 @@
     "st_rad": 0.87,
     "pl_pnum": 1,
     "st_dist": 135.08,
-    "constellation": "Ursa Major."
+    "constellation": "Ursa Major"
   },
   {
     "pl_name": "Kepler-1541 b",

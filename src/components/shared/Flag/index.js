@@ -95,13 +95,30 @@ class Flag extends Component {
     return constellations[randomIdx];
   }
 
+  // TODO: these two functions might block while loading...
   getPlanetaryNeighboursFilename() {
     const { flagProperties } = this.props;
     const { planetaryNeighbours } = flagProperties;
 
-    return `${planetaryNeighbours}Planet${
+    const filename = `${planetaryNeighbours}Planet${
       planetaryNeighbours === 1 ? '' : 's'
     }`;
+
+    // ADD!
+    return PLANETARY_NEIGHBOURS_CTX(`./${filename}.svg`);
+  }
+
+  getConstellationFilename(name) {
+    let filename;
+
+    try {
+      filename = CONSTELLATION_CTX(`./${name.replace(/ /g, '_')}.svg`);
+    } catch (error) {
+      console.log(error);
+      filename = CONSTELLATION_CTX('./Antlia.svg');
+    }
+
+    return filename;
   }
 
   render() {
@@ -127,6 +144,9 @@ class Flag extends Component {
 
     const constellationName = this.getConstellation();
     const planetaryNeighboursFilename = this.getPlanetaryNeighboursFilename();
+    const constellationFilename = this.getConstellationFilename(
+      constellationName
+    );
 
     return (
       <BaseFlag
@@ -162,20 +182,13 @@ class Flag extends Component {
 
         {stepIdx >= planetaryNeighboursIdx && (
           <PlanetaryNeighbours
-            src={PLANETARY_NEIGHBOURS_CTX(
-              `./${planetaryNeighboursFilename}.svg`
-            )}
+            src={planetaryNeighboursFilename}
             alt={`${planetaryNeighbours} planetary neighbours`}
           />
         )}
 
         {stepIdx >= constellationIdx && (
-          <Constellation
-            src={CONSTELLATION_CTX(
-              `./${constellationName.replace(/ /g, '_')}.svg`
-            )}
-            alt={constellationName}
-          />
+          <Constellation src={constellationFilename} alt={constellationName} />
         )}
       </BaseFlag>
     );

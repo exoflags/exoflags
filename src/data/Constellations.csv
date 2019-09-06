@@ -5,7 +5,7 @@
 14 Her,14 Her b,1,Hercules
 16 Cyg B,16 Cyg B b,1,Cygnus
 18 Del,18 Del b,1,Delphinus
-1RXS J160929.1-210524,1RXS J160929.1-210524 b,1,Scorpius
+1RXS J160929.1-210524,1RXS J160929.1-210524 b,1,Scorpio
 24 Boo,24 Boo b,1,Bootes
 24 Sex,24 Sex b,2,Sextans
 24 Sex,24 Sex c,2,Sextans
@@ -43,7 +43,7 @@ AB Pic,AB Pic b,1,Pictor
 BD+03 2562,BD+03 2562 b,1,Virgo
 BD+14 4559,BD+14 4559 b,1,Pegasus
 BD+15 2375,BD+15 2375 b,1,Leo
-BD+15 2940,BD+15 2940 b,1,Arcturus
+BD+15 2940,BD+15 2940 b,1,
 BD+20 2457,BD+20 2457 b,2,Leo
 BD+20 2457,BD+20 2457 c,2,Leo
 BD+20 274,BD+20 274 b,1,Cepheus
@@ -56,7 +56,7 @@ BD-06 1339,BD-06 1339 c,2,Orion
 BD-08 2823,BD-08 2823 b,2,Sextans
 BD-08 2823,BD-08 2823 c,2,Sextans
 BD-10 3166,BD-10 3166 b,1,Crater
-BD-11 4672,BD-11 4672 b,1,Capricornus
+BD-11 4672,BD-11 4672 b,1,Capricorn
 BD-13 2130,BD-13 2130 b,1,Puppis
 BD-17 63,BD-17 63 b,1,Cetus
 CFBDSIR J145829+101343,CFBDSIR J145829+101343 b,1,Bootes
@@ -81,15 +81,15 @@ CoRoT-22,CoRoT-22 b,1,Serpens
 CoRoT-23,CoRoT-23 b,1,Serpens
 CoRoT-24,CoRoT-24 b,2,Monoceros
 CoRoT-24,CoRoT-24 c,2,Monoceros
-CoRoT-25,CoRoT-25 b,1,Ophiuchus
-CoRoT-26,CoRoT-26 b,1,Ophiuchus
+CoRoT-25,CoRoT-25 b,1,
+CoRoT-26,CoRoT-26 b,1,
 CoRoT-27,CoRoT-27 b,1,Serpens
-CoRoT-28,CoRoT-28 b,1,Ophiuchus
-CoRoT-29,CoRoT-29 b,1,Ophiuchus
+CoRoT-28,CoRoT-28 b,1,
+CoRoT-29,CoRoT-29 b,1,
 CoRoT-3,CoRoT-3 b,1,Aquila
 CoRoT-4,CoRoT-4 b,1,Monoceros
 CoRoT-5,CoRoT-5 b,1,Monoceros
-CoRoT-6,CoRoT-6 b,1,Ophiuchus
+CoRoT-6,CoRoT-6 b,1,
 CoRoT-7,CoRoT-7 b,2,Monoceros
 CoRoT-7,CoRoT-7 c,2,Monoceros
 CoRoT-8,CoRoT-8 b,1,Aquila
@@ -127,7 +127,7 @@ GJ 1132,GJ 1132 b,2,Vela
 GJ 1132,GJ 1132 c,2,Vela
 GJ 1148,GJ 1148 b,2,Ursa Major
 GJ 1148,GJ 1148 c,2,Ursa Major
-GJ 1214,GJ 1214 b,1,Ophiuchus 
+GJ 1214,GJ 1214 b,1, 
 GJ 1265,GJ 1265 b,1,Capricorn
 GJ 143,GJ 143 b,2,Caelum
 GJ 143,HD 21749 c,2,Caelum
@@ -158,8 +158,8 @@ GJ 357,GJ 357 d,3,Hydra
 GJ 3634,GJ 3634 b,1,Hydra
 GJ 3779,GJ 3779 b,1,Coma Berenices
 GJ 3942,GJ 3942 b,1,Draco
-GJ 3998,GJ 3998 b,2,Ophiuchus 
-GJ 3998,GJ 3998 c,2,Ophiuchus 
+GJ 3998,GJ 3998 b,2, 
+GJ 3998,GJ 3998 c,2, 
 GJ 411,GJ 411 b,1,Ursa Minor
 GJ 4276,GJ 4276 b,1,Cepheus
 GJ 433,GJ 433 b,1,Hydra
@@ -171,11 +171,11 @@ GJ 581,GJ 581 c,3,Libra
 GJ 581,GJ 581 e,3,Libra
 GJ 625,GJ 625 b,1,Draco
 GJ 649,GJ 649 b,1,Hercules
-GJ 667 C,GJ 667 C b,5,Scorpius
-GJ 667 C,GJ 667 C c,5,Scorpius
-GJ 667 C,GJ 667 C e,5,Scorpius
-GJ 667 C,GJ 667 C f,5,Scorpius
-GJ 667 C,GJ 667 C g,5,Scorpius
+GJ 667 C,GJ 667 C b,5,Scorpio
+GJ 667 C,GJ 667 C c,5,Scorpio
+GJ 667 C,GJ 667 C e,5,Scorpio
+GJ 667 C,GJ 667 C f,5,Scorpio
+GJ 667 C,GJ 667 C g,5,Scorpio
 GJ 674,GJ 674 b,1,Ara
 GJ 676 A,GJ 676 A b,4,Ara
 GJ 676 A,GJ 676 A c,4,Ara
@@ -196,7 +196,7 @@ GJ 9827,GJ 9827 b,3,Pisces
 GJ 9827,GJ 9827 c,3,Pisces
 GJ 9827,GJ 9827 d,3,Pisces
 GQ Lup,GQ Lup b,1,Lupus
-GSC 06214-00210,GSC 06214-00210 b,1,Scorpius
+GSC 06214-00210,GSC 06214-00210 b,1,Scorpio
 GU Psc,GU Psc b,1,Pisces
 Gl 378,Gl 378 b,1,Ursa Major
 Gl 49,Gl 49 b,1,Cassiopeia
@@ -225,7 +225,7 @@ HAT-P-26,HAT-P-26 b,1,Virgo
 HAT-P-27,HAT-P-27 b,1,Virgo
 HAT-P-28,HAT-P-28 b,1,Andromeda
 HAT-P-29,HAT-P-29 b,1,Perseus
-HAT-P-3,HAT-P-3 b,1,Ursa Major.
+HAT-P-3,HAT-P-3 b,1,Ursa Major
 HAT-P-30,HAT-P-30 b,1,Hydra
 HAT-P-31,HAT-P-31 b,1,Hercules
 HAT-P-32,HAT-P-32 b,1,Andromeda
@@ -315,7 +315,7 @@ HATS-59,HATS-59 c,2,Crater
 HATS-6,HATS-6 b,1,Lepus
 HATS-60,HATS-60 b,1,Aquarius
 HATS-61,HATS-61 b,1,Eridanus
-HATS-62,HATS-62 b,1,Capricornus
+HATS-62,HATS-62 b,1,Capricorn
 HATS-63,HATS-63 b,1,Eridanus
 HATS-64,HATS-64 b,1,Antlia
 HATS-65,HATS-65 b,1,
@@ -450,7 +450,7 @@ HD 142245,HD 142245 b,1,Serpens
 HD 142415,HD 142415 b,1,Norma
 HD 143105,HD 143105 b,1,Draco
 HD 143361,HD 143361 b,1,Norma
-HD 145377,HD 145377 b,1,Scorpius
+HD 145377,HD 145377 b,1,Scorpio
 HD 145457,HD 145457 b,1,Corona Borealis
 HD 145934,HD 145934 b,1,Hercules
 HD 1461,HD 1461 b,2,Cetus
@@ -458,42 +458,42 @@ HD 1461,HD 1461 c,2,Cetus
 HD 147018,HD 147018 b,2,Triangulum Australe
 HD 147018,HD 147018 c,2,Triangulum Australe
 HD 147379,HD 147379 b,1,Draco
-HD 147513,HD 147513 b,1,Scorpius
+HD 147513,HD 147513 b,1,Scorpio
 HD 14787,HD 14787 b,1,Aries
-HD 147873,HD 147873 b,2,Scorpius
-HD 147873,HD 147873 c,2,Scorpius
+HD 147873,HD 147873 b,2,Scorpio
+HD 147873,HD 147873 c,2,Scorpio
 HD 148156,HD 148156 b,1,Norma
 HD 148164,HD 148164 b,2,Hercules
 HD 148164,HD 148164 c,2,Hercules
 HD 148284,HD 148284 b,1,Hercules
-HD 148427,HD 148427 b,1,Ophiuchus
+HD 148427,HD 148427 b,1,
 HD 149026,HD 149026 b,1,Hercules
-HD 149143,HD 149143 b,1,Ophiuchus
+HD 149143,HD 149143 b,1,
 HD 1502,HD 1502 b,1,Pisces
 HD 150706,HD 150706 b,1,Ursa Minor
 HD 152079,HD 152079 b,1,Ara
-HD 152581,HD 152581 b,1,Ophiuchus
+HD 152581,HD 152581 b,1,
 HD 15337,HD 15337 b,2,Fornax
 HD 15337,HD 15337 c,2,Fornax
-HD 153950,HD 153950 b,1,Scorpius
+HD 153950,HD 153950 b,1,Scorpio
 HD 154345,HD 154345 b,1,Hercules
 HD 154672,HD 154672 b,1,Ara
 HD 154857,HD 154857 b,2,Ara
 HD 154857,HD 154857 c,2,Ara
-HD 155233,HD 155233 b,1,Ophiuchus
+HD 155233,HD 155233 b,1,
 HD 155358,HD 155358 b,2,Hercules
 HD 155358,HD 155358 c,2,Hercules
 HD 156279,HD 156279 b,2,Draco
 HD 156279,HD 156279 c,2,Draco
 HD 156411,HD 156411 b,1,Ara
 HD 156668,HD 156668 b,1,Hercules
-HD 156846,HD 156846 b,1,Ophiuchus
+HD 156846,HD 156846 b,1,
 HD 158038,HD 158038 b,1,Hercules
 HD 158996,HD 158996 b,1,Ursa Major
-HD 159243,HD 159243 b,2,Ophiuchus
-HD 159243,HD 159243 c,2,Ophiuchus
-HD 159868,HD 159868 b,2,Scorpius
-HD 159868,HD 159868 c,2,Scorpius
+HD 159243,HD 159243 b,2,
+HD 159243,HD 159243 c,2,
+HD 159868,HD 159868 b,2,Scorpio
+HD 159868,HD 159868 c,2,Scorpio
 HD 1605,HD 1605 b,2,Andromeda
 HD 1605,HD 1605 c,2,Andromeda
 HD 160691,HD 160691 b,4,Ara
@@ -502,11 +502,11 @@ HD 160691,HD 160691 d,4,Ara
 HD 160691,HD 160691 e,4,Ara
 HD 16141,HD 16141 b,1,Cetus
 HD 16175,HD 16175 b,1,Andromeda
-HD 162020,HD 162020 b,1,Scorpius
+HD 162020,HD 162020 b,1,Scorpio
 HD 163607,HD 163607 b,2,Fornax
 HD 163607,HD 163607 c,2,Fornax
 HD 16417,HD 16417 b,1,Fornax
-HD 164509,HD 164509 b,1,Ophiuchus
+HD 164509,HD 164509 b,1,
 HD 164595,HD 164595 b,1,Hercules
 HD 164604,HD 164604 b,1,Sagittarius
 HD 164922,HD 164922 b,2,Hercules
@@ -521,9 +521,9 @@ HD 168746,HD 168746 b,1,Serpens
 HD 1690,HD 1690 b,1,Cetus
 HD 169830,HD 169830 b,2,Sagittarius
 HD 169830,HD 169830 c,2,Sagittarius
-HD 170469,HD 170469 b,1,Ophiuchus
+HD 170469,HD 170469 b,1,
 HD 17092,HD 17092 b,1,Perseus
-HD 171028,HD 171028 b,1,Ophiuchus
+HD 171028,HD 171028 b,1,
 HD 171238,HD 171238 b,1,Sagittarius
 HD 17156,HD 17156 b,1,Cassiopeia
 HD 173416,HD 173416 b,1,Lyra
@@ -1195,10 +1195,10 @@ K2-3,K2-3 c,3,
 K2-3,K2-3 d,3,
 K2-30,K2-30 b,1,
 K2-31,K2-31 b,1,
-K2-32,K2-32 b,4,Antares
-K2-32,K2-32 c,4,Antares
-K2-32,K2-32 d,4,Antares
-K2-32,K2-32 e,4,Antares
+K2-32,K2-32 b,4,
+K2-32,K2-32 c,4,
+K2-32,K2-32 d,4,
+K2-32,K2-32 e,4,
 K2-33,K2-33 b,1,
 K2-34,K2-34 b,1,
 K2-35,K2-35 b,2,
@@ -3695,8 +3695,8 @@ MOA-2013-BLG-605L,MOA-2013-BLG-605L b,1,
 MOA-2015-BLG-337L,MOA-2015-BLG-337L b,1,
 MOA-2016-BLG-227L,MOA-2016-BLG-227L b,1,
 MOA-2016-BLG-319L,MOA-2016-BLG-319L b,1,
-MOA-bin-1L,MOA-bin-1L b,1,Ophiuchus
-MXB 1658-298,MXB 1658-298 b,1,Ophiuchus
+MOA-bin-1L,MOA-bin-1L b,1,
+MXB 1658-298,MXB 1658-298 b,1,
 NGC 2682 Sand 364,NGC 2682 Sand 364 b,1,Cancer
 NGC 2682 Sand 978,NGC 2682 Sand 978 b,1,Cancer
 NGC 2682 YBP 1194,NGC 2682 YBP 1194 b,1,Cancer
@@ -3715,8 +3715,8 @@ OGLE-2003-BLG-235L,OGLE-2003-BLG-235L b,1,
 OGLE-2005-BLG-071L,OGLE-2005-BLG-071L b,1,
 OGLE-2005-BLG-169L,OGLE-2005-BLG-169L b,1,
 OGLE-2005-BLG-390L,OGLE-2005-BLG-390L b,1,
-OGLE-2006-BLG-109L,OGLE-2006-BLG-109L b,2,Scorpius
-OGLE-2006-BLG-109L,OGLE-2006-BLG-109L c,2,Scorpius
+OGLE-2006-BLG-109L,OGLE-2006-BLG-109L b,2,Scorpio
+OGLE-2006-BLG-109L,OGLE-2006-BLG-109L c,2,Scorpio
 OGLE-2007-BLG-349L A,OGLE-2007-BLG-349L AB c,1,
 OGLE-2007-BLG-368L,OGLE-2007-BLG-368L b,1,
 OGLE-2008-BLG-092L,OGLE-2008-BLG-092L b,1,
@@ -3993,9 +3993,9 @@ WD 0806-661,WD 0806-661 b,1,Volans
 WISEP J121756.91+162640.2 A,WISEP J121756.91+162640.2 A b,1,Coma Berenices
 WTS-1,WTS-1 b,1,Cygnus
 WTS-2,WTS-2 b,1,Cygnus
-Wolf 1061,Wolf 1061 b,3,Ophiuchus
-Wolf 1061,Wolf 1061 c,3,Ophiuchus
-Wolf 1061,Wolf 1061 d,3,Ophiuchus
+Wolf 1061,Wolf 1061 b,3,
+Wolf 1061,Wolf 1061 c,3,
+Wolf 1061,Wolf 1061 d,3,
 Wolf 503,Wolf 503 b,1,Virgo
 XO-1,XO-1 b,1,Corona Borealis
 XO-2 N,XO-2 N b,1,Lynx
@@ -4024,8 +4024,8 @@ iot Dra,iot Dra b,1,Draco
 kap And,kap And b,1,Andromeda
 kap CrB,kap CrB b,1,Corona Borealis
 mu Leo,mu Leo b,1,Leo
-nu Oph,nu Oph b,2,Ophiuchus
-nu Oph,nu Oph c,2,Ophiuchus
+nu Oph,nu Oph b,2,
+nu Oph,nu Oph c,2,
 ome Ser,ome Ser b,1,Serpens
 omi CrB,omi CrB b,1,Corona Borealis
 omi UMa,omi UMa b,1,Ursa Major
@@ -4041,4 +4041,4 @@ tau Gem,tau Gem b,1,Gemini
 ups And,ups And b,3,Andromeda
 ups And,ups And c,3,Andromeda
 ups And,ups And d,3,Andromeda
-xi Aql,xi Aql b,1,Aquilus
+xi Aql,xi Aql b,1,Aquila
