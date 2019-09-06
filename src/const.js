@@ -1,3 +1,31 @@
+// Import all of them as we'll need them for scale anyway...
+// (as opposed to a dynamic require in img.src)
+import neighbour0 from './assets/0Planets.svg';
+import neighbour1 from './assets/1Planet.svg';
+import neighbour2 from './assets/2Planets.svg';
+import neighbour3 from './assets/3Planets.svg';
+import neighbour4 from './assets/4Planets.svg';
+import neighbour5 from './assets/5Planets.svg';
+import neighbour6 from './assets/6Planets.svg';
+import neighbour7 from './assets/7Planets.svg';
+import neighbour8 from './assets/8Planets.svg';
+import neighbour9 from './assets/9Planets.svg';
+import neighbour10 from './assets/10Planets.svg';
+
+export const PLANETARY_NEIGHBOUR_IMGS = [
+  neighbour0,
+  neighbour1,
+  neighbour2,
+  neighbour3,
+  neighbour4,
+  neighbour5,
+  neighbour6,
+  neighbour7,
+  neighbour8,
+  neighbour9,
+  neighbour10
+];
+
 export const FLAG_PROPERTIES = {
   distance: 'distance',
   stellarMass: 'stellarMass',

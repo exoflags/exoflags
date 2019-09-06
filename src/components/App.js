@@ -71,9 +71,17 @@ const App = () => {
   };
 
   useEffect(() => {
+    const integerProperties = [FLAG_PROPERTIES.planetaryNeighbours];
+
     const initialUserFlag = Object.entries(EXTENTS).reduce(
       (memo, [key, extent]) => {
-        memo[key] = (extent[0] + extent[1]) / 2;
+        // TODO: find a nicer way to do this once we understand constellation extent/values
+        // perhaps it's just unique values
+        let value = (extent[0] + extent[1]) / 2;
+        if (integerProperties.indexOf(key) > -1) {
+          value = Math.round(value);
+        }
+        memo[key] = value;
         return memo;
       },
       {}
