@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120px" height="120px" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Telescopium</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Telescopium" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(25.000000, 25.000000)" stroke="#FFFFFF" stroke-width="9">
+            <g id="Clipped">
+                <path d="M1.5,0.8984376 L70.6992188,69.6992188" id="Path" transform="translate(35.699219, 35.199219) scale(-1, 1) rotate(-180.000000) translate(-35.699219, -35.199219) "></path>
+            </g>
+            <g id="Clipped" transform="translate(20.000000, 30.000000)">
+                <g id="Path">
+                    <path d="M0.4492188,37.6992188 L33.9492188,37.6992188" transform="translate(17.199219, 37.699219) scale(-1, 1) rotate(-180.000000) translate(-17.199219, -37.699219) "></path>
+                    <path d="M17.9492188,36.9984376 L17.9492188,0.7992188" transform="translate(17.949219, 19.249219) scale(-1, 1) rotate(-180.000000) translate(-17.949219, -19.249219) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

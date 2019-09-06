@@ -1,3 +1,3 @@
-import React from 'react'
+import React from 'react';
 
-export const Resources = () => <div>resources</div>
+export const Resources = () => <div>resources</div>;

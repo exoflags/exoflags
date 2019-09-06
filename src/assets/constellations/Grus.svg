@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120px" height="120px" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Grus</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Grus" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(39.000000, 33.000000)" stroke="#FFFFFF" stroke-width="9.45">
+            <g id="Clipped" transform="translate(12.585366, 0.000000)">
+                <path d="M0,35.252459 C0,40.119403 3.99162723,44.0655738 8.91463415,44.0655738 C13.8376411,44.0655738 17.8292683,40.119403 17.8292683,35.252459 C17.8292683,26.4393443 0,17.6262295 0,8.81311475 C0,3.94617079 3.99162723,0 8.91463415,0 C13.8376411,0 17.8292683,3.94617079 17.8292683,8.81311475" id="Path" transform="translate(8.914634, 22.032787) scale(-1, 1) rotate(-180.000000) translate(-8.914634, -22.032787) "></path>
+            </g>
+            <path d="M21.1845465,62.7663935 L21.5,42.9098362" id="Path" transform="translate(21.132108, 53.192623) scale(-1, 1) rotate(-180.000000) translate(-21.132108, -53.192623) "></path>
+            <g id="Clipped" transform="translate(0.000000, 9.442623)">
+                <path d="M0,18.8852459 C0,8.45608025 9.62686567,0 21.5,0 C33.3731343,0 43,8.45608025 43,18.8852459" id="Path" transform="translate(21.500000, 9.442623) scale(-1, 1) rotate(-180.000000) translate(-21.500000, -9.442623) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120px" height="120px" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Aries</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Aries" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Clipped" transform="translate(26.000000, 29.000000)" stroke="#FFFFFF" stroke-width="10">
+            <g id="Group">
+                <path d="M5.6054688,33.40625 C2.4648438,36.546875 0.6992188,40.8085938 0.6992188,45.25 C0.6992188,49.6914063 2.4648438,53.953125 5.6054688,57.09375 C8.7460938,60.234375 13.0078125,62 17.4492188,62 C26.6992188,62 34.1992188,54.5 34.1992188,45.25 L34,0.6992188" id="Path" transform="translate(17.449219, 31.349609) scale(-1, 1) rotate(-180.000000) translate(-17.449219, -31.349609) "></path>
+                <path d="M34.1992188,12.5429688 C34.1992188,21.7929688 41.6992188,29.2929688 50.9492188,29.2929688 C55.390625,29.2929688 59.6523438,27.5273438 62.7929688,24.3867188 C65.9335938,21.2460938 67.6992188,16.9843751 67.6992188,12.5429688 C67.6992188,8.1015626 65.9335938,3.8398438 62.7929688,0.6992188" id="Path" transform="translate(50.949219, 14.996094) scale(-1, 1) rotate(-180.000000) translate(-50.949219, -14.996094) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

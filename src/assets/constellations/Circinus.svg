@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120px" height="120px" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Circinus</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Circinus" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Clipped" transform="translate(30.000000, 23.000000)" stroke="#FFFFFF" stroke-width="9">
+            <g id="Group">
+                <path d="M59.53125,50.3632813 C59.53125,62.6992188 49.5351562,72.6992188 37.1992188,72.6992188 C24.8671875,72.6992188 14.8671875,62.6992188 14.8671875,50.3632813 C14.8671875,38.03125 24.8671875,28.03125 37.1992188,28.03125 C49.5351562,28.03125 59.53125,38.03125 59.53125,50.3632813 Z" id="Path" transform="translate(37.199219, 50.365234) scale(-1, 1) rotate(-180.000000) translate(-37.199219, -50.365234) "></path>
+                <polyline id="Path" stroke-linecap="square" transform="translate(18.500000, 25.667969) scale(-1, 1) rotate(-180.000000) translate(-18.500000, -25.667969) " points="-3.55271368e-15 0.6679687 18.496764 50.6679687 37 0.6679687"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>

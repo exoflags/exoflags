@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120px" height="120px" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Indus</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Indus" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-2" transform="translate(22.000000, 30.000000)" stroke="#FFFFFF" stroke-width="9">
+            <path d="M59.3269231,0.1132812 L4.87828382,54.6381791" id="Path" transform="translate(32.000000, 27.613281) scale(-1, 1) rotate(-180.000000) translate(-32.000000, -27.613281) "></path>
+            <path d="M59,55.1132812 L8,4.1132812" id="Path" transform="translate(33.500000, 29.613281) scale(-1, 1) rotate(-180.000000) translate(-33.500000, -29.613281) "></path>
+            <path d="M59.3269231,58.4402043 L4.87828382,3.99156502" id="Path" transform="translate(32.000000, 31.113281) scale(-1, 1) rotate(-180.000000) translate(-32.000000, -31.113281) "></path>
+            <path d="M72,30.6015623 L0.537313433,30.6015623" id="Path" transform="translate(36.000000, 30.113281) scale(-1, 1) rotate(-180.000000) translate(-36.000000, -30.113281) "></path>
+            <path d="M44.5384615,2.625 L57.9452851,2.625" id="Line-7" stroke-linecap="square"></path>
+            <path d="M65.55,19.6761719 L74.9615549,29.0748361" id="Line-7" stroke-linecap="square"></path>
+            <path d="M65.0615549,28.1431441 L74.9615549,38.0834183" id="Line-7" stroke-linecap="square" transform="translate(70.500000, 33.113281) scale(1, -1) translate(-70.500000, -33.113281) "></path>
+            <path d="M44.5384615,56.625 L57.9452851,56.625" id="Line-7" stroke-linecap="square"></path>
+        </g>
+    </g>
+</svg>

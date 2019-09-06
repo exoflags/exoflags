@@ -9,8 +9,6 @@ import typography from './typography';
 
 import './fonts/fonts.css';
 import './index.scss';
-// BUG: antd css is messing with our global styles...
-// import 'antd/dist/antd.css';
 
 // Set up typography styles for app
 typography.injectStyles();
@@ -18,8 +16,9 @@ typography.injectStyles();
 ReactDOM.render(
   <ThemeProvider theme={theme}>
     <App />
-  </ThemeProvider>
-, document.getElementById('root'));
+  </ThemeProvider>,
+  document.getElementById('root')
+);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

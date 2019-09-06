@@ -3,9 +3,10 @@ const theme = {
   transitionDuration: {
     short: '0.3s'
   },
-  headerHeight: '60px',
-  arrowNavHeight: '60px',
+  headerHeight: '50px',
+  flagBuilderNavHeight: '50px',
   colors: {
+    blue: '#3b7cf6',
     white: '#FFFFFF',
     black: '#000000',
     grey: {

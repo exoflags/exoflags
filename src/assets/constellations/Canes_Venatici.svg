@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120px" height="120px" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Canes_Venatici</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Canes_Venatici" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Clipped" transform="translate(40.000000, 23.000000)" stroke="#FFFFFF" stroke-width="9">
+            <g id="Group">
+                <polygon id="Path" transform="translate(20.201172, 17.449219) scale(-1, 1) rotate(-180.000000) translate(-20.201172, -17.449219) " points="0.859375 34.1992188 39.5429688 34.1992188 20.1992188 0.6992188"></polygon>
+                <polygon id="Path" transform="translate(20.201172, 55.949219) scale(-1, 1) rotate(-180.000000) translate(-20.201172, -55.949219) " points="0.859375 72.6992188 39.5429688 72.6992188 20.1992188 39.1992188"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

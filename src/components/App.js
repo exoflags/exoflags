@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Router } from '@reach/router';
 import styled from '@emotion/styled';
 import { extent } from 'd3-array';
 
-import Header from './Header';
+import Header from './shared/Header';
 import {
   Home,
   About,
@@ -15,15 +15,8 @@ import {
   NotFound
 } from './pages';
 import { FLAG_PROPERTIES } from '../const';
-import exoplanets from '../data/exoplanets.json';
-
-const initialUserFlag = {
-  [FLAG_PROPERTIES.distance]: 0,
-  [FLAG_PROPERTIES.planetaryMass]: 10,
-  [FLAG_PROPERTIES.planetaryRadius]: 20,
-  [FLAG_PROPERTIES.stellarMass]: 30,
-  [FLAG_PROPERTIES.stellarRadius]: 40
-};
+import exoplanets from '../data/data.json';
+import { uniq } from '../utils/uniq';
 
 const AppContainer = styled.div`
   height: 100vh;
@@ -50,12 +43,57 @@ const routerStyle = {
 };
 
 const App = () => {
-  const [userFlag, setUserFlag] = useState(initialUserFlag);
+  // TODO: consider doing this outside of component, in a const file or something, or just above
+  // No time to dynamically load in data
+  const [userFlag, setUserFlag] = useState({});
   const [planetData] = useState(exoplanets);
-  const pl_bmassj = extent(planetData, planet => planet.pl_bmassj);
-  const pl_radj = extent(planetData, planet => planet.pl_radj);
-  const st_mass = extent(planetData, planet => planet.st_mass);
-  const pl_pnum = extent(planetData, planet => planet.pl_pnum);
+
+  // TODO: add extent for constellation (is this an extent, or just unique values?)
+  const EXTENTS = {
+    [FLAG_PROPERTIES.distance]: extent(planetData, planet => planet.st_dist),
+    [FLAG_PROPERTIES.stellarMass]: extent(planetData, planet => planet.st_mass),
+    [FLAG_PROPERTIES.stellarRadius]: extent(
+      planetData,
+      planet => planet.st_rad
+    ),
+    [FLAG_PROPERTIES.planetaryMass]: extent(
+      planetData,
+      planet => planet.pl_bmassj
+    ),
+    [FLAG_PROPERTIES.planetaryRadius]: extent(
+      planetData,
+      planet => planet.pl_radj
+    ),
+    [FLAG_PROPERTIES.planetaryNeighbours]: extent(
+      planetData,
+      planet => planet.pl_pnum
+    ),
+    [FLAG_PROPERTIES.constellation]: uniq(
+      planetData.map(d => d.constellation).filter(Boolean)
+    ).sort()
+  };
+
+  useEffect(() => {
+    // Define default and special accessors for initial user flag values
+    const midPoint = extent => (extent[0] + extent[1]) / 2;
+    const accessors = {
+      [FLAG_PROPERTIES.planetaryNeighbours]: extent =>
+        Math.round(midPoint(extent)),
+      [FLAG_PROPERTIES.constellation]: extent => extent[0]
+    };
+
+    const initialUserFlag = Object.entries(EXTENTS).reduce(
+      (memo, [key, extent]) => {
+        const accessor = accessors[key] || midPoint;
+        const value = accessor(extent);
+        memo[key] = value;
+        return memo;
+      },
+      {}
+    );
+
+    setUserFlag(initialUserFlag);
+  }, []);
 
   return (
     <AppContainer>
@@ -71,6 +109,7 @@ const App = () => {
             path="/flag-builder/:stepId"
             userFlag={userFlag}
             setUserFlag={setUserFlag}
+            extents={EXTENTS}
           />
 
           <About path="/about" />

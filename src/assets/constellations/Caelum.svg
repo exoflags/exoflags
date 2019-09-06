@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120px" height="120px" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Caelum</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Caelum" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(27.000000, 27.000000)" stroke="#FFFFFF" stroke-width="9.5">
+            <g id="Clipped" transform="translate(20.760563, 20.100000)">
+                <g id="Path">
+                    <polyline transform="translate(23.307714, 23.640681) scale(-1, 1) rotate(-180.000000) translate(-23.307714, -23.640681) " points="45.9556008 24.3769446 45.9556008 0.66925228 0.659826192 46.6121094"></polyline>
+                </g>
+            </g>
+            <g id="Clipped">
+                <polygon id="Path" transform="translate(13.683099, 13.878571) scale(-1, 1) rotate(-180.000000) translate(-13.683099, -13.878571) " points="20.0317948 27.7571429 27.3661972 0 0 7.43917954"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

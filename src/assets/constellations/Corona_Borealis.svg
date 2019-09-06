@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120px" height="120px" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Corona_Borealis</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Corona_Borealis" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(18.000000, 40.000000)" stroke="#FFFFFF" stroke-width="9">
+            <g id="Clipped" transform="translate(0.000000, 4.000000)">
+                <g id="Group">
+                    <path d="M42.0482198,6.16992188 L42.0482198,20.746582 C42.0482198,28.7929688 34.9161117,35.3188476 26.1222465,35.3188476 C17.3235784,35.3188476 10.1914703,28.7929688 10.1914703,20.746582 L10.1914703,6.16992188 L73.9049693,6.16992188" id="Path" transform="translate(42.048220, 20.744385) scale(-1, 1) rotate(-180.000000) translate(-42.048220, -20.744385) "></path>
+                    <path d="M10.1914703,0.131835938 C10.1914703,7.86181646 6.83433664,15.2753906 0.859695246,20.7421875" id="Path" transform="translate(5.525583, 10.437012) scale(-1, 1) rotate(-180.000000) translate(-5.525583, -10.437012) "></path>
+                </g>
+            </g>
+            <g id="Clipped" transform="translate(10.000000, 4.000000)">
+                <g id="Group">
+                    <path d="M32.3123699,6.16992188 L32.3123699,20.746582 C32.3123699,28.7929688 39.4666667,35.3188476 48.2927083,35.3188476 C57.1139324,35.3188476 64.2682292,28.7929688 64.2682292,20.746582 L64.2682292,6.16992188 L0.356510417,6.16992188" id="Path" transform="translate(32.312370, 20.744385) scale(-1, 1) rotate(-180.000000) translate(-32.312370, -20.744385) "></path>
+                    <path d="M64.2682292,0.131835938 C64.2682292,7.86181646 67.6358074,15.2753906 73.6290365,20.7421875" id="Path" transform="translate(68.948633, 10.437012) scale(-1, 1) rotate(-180.000000) translate(-68.948633, -10.437012) "></path>
+                </g>
+            </g>
+            <path d="M42.05,0 L42.05,38.8824776" id="Path" transform="translate(42.000000, 19.500000) scale(-1, 1) rotate(-180.000000) translate(-42.000000, -19.500000) "></path>
+        </g>
+    </g>
+</svg>

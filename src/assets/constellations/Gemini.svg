@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120px" height="120px" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Gemini</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Gemini" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(26.000000, 26.000000)" stroke="#FFFFFF" stroke-width="9">
+            <g id="Clipped">
+                <g id="Group">
+                    <path d="M67.6992188,58.7226562 C57.515625,64.6015625 45.9609375,67.6992188 34.1992188,67.6992188 C22.4375,67.6992188 10.8867188,64.6015625 0.6992188,58.7226562" id="Path" transform="translate(34.199219, 63.210938) scale(-1, 1) rotate(-180.000000) translate(-34.199219, -63.210938) "></path>
+                    <path d="M67.6992188,9.6757812 C57.515625,3.7929688 45.9609375,0.6992188 34.1992188,0.6992188 C22.4375,0.6992188 10.8867188,3.7929688 0.6992188,9.6757812" id="Path" transform="translate(34.199219, 5.187500) scale(-1, 1) rotate(-180.000000) translate(-34.199219, -5.187500) "></path>
+                </g>
+            </g>
+            <path d="M50.9492188,60.8515625 L50.9492188,7.546875" id="Path" transform="translate(50.949219, 34.199219) scale(-1, 1) rotate(-180.000000) translate(-50.949219, -34.199219) "></path>
+            <path d="M17.4492188,60.8515625 L17.4492188,7.546875" id="Path" transform="translate(17.449219, 34.199219) scale(-1, 1) rotate(-180.000000) translate(-17.449219, -34.199219) "></path>
+        </g>
+    </g>
+</svg>
