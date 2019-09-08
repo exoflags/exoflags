@@ -23,7 +23,6 @@ const PageView = styled.div`
 `;
 
 export const Page = props => {
-  console.log('props: ', props);
   return (
     <PageView>
       <Video

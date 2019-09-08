@@ -1,13 +1,13 @@
 export function uniq(array) {
-  let seen = {};
+  let out = [];
 
   for (let i = 0; i < array.length; i++) {
     const el = array[i];
 
-    if (!seen[el]) {
-      seen[el] = true;
+    if (out.indexOf(el) === -1) {
+      out.push(el);
     }
   }
 
-  return Object.keys(seen);
+  return out;
 }

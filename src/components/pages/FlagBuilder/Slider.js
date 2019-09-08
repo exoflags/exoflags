@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import styled from '@emotion/styled';
-import { scaleLinear } from 'd3-scale';
+import { scaleLinear, scalePoint, scaleQuantize } from 'd3-scale';
 import { select, event as d3Event } from 'd3-selection';
 import { drag } from 'd3-drag';
 import throttle from 'lodash.throttle';
 
 import { ReactComponent as SliderThumb } from '../../../assets/SliderNode.svg';
+import { FLAG_PROPERTIES } from '../../../const';
 
 const sliderHeight = 40;
 const trackHeight = 2;
@@ -32,8 +33,12 @@ const Thumb = styled(SliderThumb)`
   }
 `;
 
+const POINT_SCALES = [
+  FLAG_PROPERTIES.planetaryNeighbours,
+  FLAG_PROPERTIES.constellation
+];
+
 class Slider extends Component {
-  xScale = scaleLinear().clamp(true);
   thumbRef = React.createRef();
 
   constructor(props) {
@@ -46,6 +51,52 @@ class Slider extends Component {
     this.initSlider();
   }
 
+  initSlider() {
+    this.thumb = select(this.thumbRef.current);
+    this.thumb.call(
+      drag().on('drag', () => {
+        const { flagProperty } = this.props;
+        const scale = this.getScale();
+        const position = scale.invert(d3Event.x);
+
+        this.handleChange(position);
+      })
+    );
+  }
+
+  getScale() {
+    const { flagProperty, extents, width } = this.props;
+
+    const isPointScale = POINT_SCALES.indexOf(flagProperty) > -1;
+    const sliderWidth = getSliderWidth(width);
+    const extent = extents[flagProperty] || [1, 100];
+
+    if (isPointScale) {
+      const scale = scalePoint()
+        .domain(extent)
+        .range([0, sliderWidth]);
+
+      scale.invert = (function() {
+        const domain = scale.domain();
+        const range = scale.range();
+        const quantScale = scaleQuantize()
+          .domain(range)
+          .range(domain);
+
+        return function(value) {
+          return quantScale(value);
+        };
+      })();
+
+      return scale;
+    }
+
+    return scaleLinear()
+      .clamp(true)
+      .domain(extent)
+      .range([0, sliderWidth]);
+  }
+
   handleChange = value => {
     const { setUserFlag, userFlag, flagProperty } = this.props;
     setUserFlag({
@@ -54,24 +105,12 @@ class Slider extends Component {
     });
   };
 
-  initSlider() {
-    this.thumb = select(this.thumbRef.current);
-    this.thumb.call(
-      drag().on('drag', () => {
-        const position = this.xScale.invert(d3Event.x);
-        this.handleChange(position);
-      })
-    );
-  }
-
   render() {
     const { extents, width, userFlag, flagProperty } = this.props;
 
     const value = userFlag[flagProperty];
-    const extent = extents[flagProperty] || [1, 100];
     const sliderWidth = getSliderWidth(width);
-
-    this.xScale.domain(extent).range([0, sliderWidth]);
+    const scale = this.getScale();
 
     return (
       <SVG height={sliderHeight} width={width}>
@@ -80,15 +119,14 @@ class Slider extends Component {
             trackHeight / 2})`}
         >
           <Track width={sliderWidth} height={trackHeight} />
-          {value && (
+
+          {value !== undefined && (
             <Thumb
               ref={this.thumbRef}
-              x={this.xScale(value) - thumbSize / 2}
+              x={scale(value) - thumbSize / 2}
               y={-(thumbSize / 2) + 2}
-              strokeWidth={trackHeight}
               width={thumbSize}
               height={thumbSize}
-              fill="blueviolet"
             />
           )}
         </g>
