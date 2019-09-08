@@ -6,12 +6,17 @@ import { drag } from 'd3-drag';
 import throttle from 'lodash.throttle';
 
 import { ReactComponent as SliderThumb } from '../../../assets/SliderNode.svg';
-import { FLAG_PROPERTIES } from '../../../const';
+import {
+  FLAG_PROPERTIES,
+  PLANETARY_NEIGHBOURS_CTX,
+  CONSTELLATION_CTX
+} from '../../../const';
 
-const sliderHeight = 100;
+const sliderHeight = 140;
 const trackHeight = 2;
 const thumbSize = 30;
 const padding = thumbSize * 2;
+const labelPadding = 20;
 const getSliderWidth = width => width - 2 * padding;
 
 const SVG = styled.svg`
@@ -216,6 +221,68 @@ class Slider extends Component {
     );
   }
 
+  renderLabels() {
+    const { flagProperty, extents } = this.props;
+
+    /*
+      For point scales, render labels for each point
+      specific type of render method for each
+      null for rest
+    */
+
+    if (flagProperty === FLAG_PROPERTIES.planetaryNeighbours) {
+      const scale = this.getScale();
+      const values = extents[flagProperty];
+      const height = 40;
+
+      return (
+        <g>
+          {values.map(value => {
+            const filename = `${value}Planet${value === 1 ? '' : 's'}`;
+            const href = PLANETARY_NEIGHBOURS_CTX(`./${filename}.svg`);
+
+            return (
+              <image
+                key={href}
+                height={height}
+                x={scale(value) - height / 2}
+                y={-height - labelPadding}
+                xlinkHref={href}
+              />
+            );
+          })}
+        </g>
+      );
+    }
+
+    if (flagProperty === FLAG_PROPERTIES.constellation) {
+      const scale = this.getScale();
+      const values = extents[flagProperty];
+
+      return (
+        <g>
+          {values.map(value => {
+            return (
+              <text
+                key={value}
+                fill="white"
+                fontSize={10}
+                alignmentBaseline="middle"
+                transform={`translate(${scale(
+                  value
+                )}, -${labelPadding}) rotate(-90)`}
+              >
+                {value}
+              </text>
+            );
+          })}
+        </g>
+      );
+    }
+
+    return null;
+  }
+
   render() {
     const { extents, width, userFlag, flagProperty } = this.props;
 
@@ -229,6 +296,8 @@ class Slider extends Component {
           transform={`translate(${padding}, ${sliderHeight / 2 -
             trackHeight / 2})`}
         >
+          {this.renderLabels()}
+
           <Track width={sliderWidth} height={trackHeight} />
 
           {this.renderMarks(scale)}
