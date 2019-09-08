@@ -62,9 +62,41 @@ const MARKS = {
     }
   ],
   [FLAG_PROPERTIES.stellarMass]: [],
-  [FLAG_PROPERTIES.stellarRadius]: [],
+  [FLAG_PROPERTIES.stellarRadius]: [
+    {
+      id: 1,
+      value: 0.01906968,
+      renderer: () => <circle r={8} fill="white" />
+    },
+    {
+      id: 2,
+      value: 1,
+      renderer: () => <circle r={12} fill="#3b7cf6" />
+    },
+    {
+      id: 3,
+      value: 17668.05852,
+      renderer: () => <circle r={40} fill="white" />
+    }
+  ],
   [FLAG_PROPERTIES.planetaryMass]: [],
-  [FLAG_PROPERTIES.planetaryRadius]: [],
+  [FLAG_PROPERTIES.planetaryRadius]: [
+    {
+      id: 1,
+      value: 0.33626999999999996,
+      renderer: () => <circle r={8} fill="white" />
+    },
+    {
+      id: 2,
+      value: 1,
+      renderer: () => <circle r={12} fill="#3b7cf6" />
+    },
+    {
+      id: 3,
+      value: 77.3421,
+      renderer: () => <circle r={40} fill="white" />
+    }
+  ],
   [FLAG_PROPERTIES.planetaryNeighbours]: [],
   [FLAG_PROPERTIES.constellation]: []
 };
