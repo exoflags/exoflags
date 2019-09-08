@@ -1,3 +1,9 @@
+export const PLANETARY_NEIGHBOURS_CTX = require.context(
+  './assets/planetaryNeighbours'
+);
+
+export const CONSTELLATION_CTX = require.context('./assets/constellations');
+
 export const FLAG_PROPERTIES = {
   distance: 'distance',
   stellarMass: 'stellarMass',

@@ -48,8 +48,14 @@ const App = () => {
   const [userFlag, setUserFlag] = useState({});
   const [planetData] = useState(exoplanets);
 
+  const distanceExtent = () => {
+    const values = extent(planetData, planet => planet.st_dist);
+    values[1] = Math.max(values[1], 10000);
+    return values;
+  };
+
   const EXTENTS = {
-    [FLAG_PROPERTIES.distance]: extent(planetData, planet => planet.st_dist),
+    [FLAG_PROPERTIES.distance]: distanceExtent(),
     [FLAG_PROPERTIES.stellarMass]: extent(planetData, planet => planet.st_mass),
     [FLAG_PROPERTIES.stellarRadius]: extent(
       planetData,
@@ -69,6 +75,8 @@ const App = () => {
       planetData.map(planet => planet.constellation).filter(Boolean)
     ).sort()
   };
+
+  console.log('extents', EXTENTS);
 
   useEffect(() => {
     // Define default and special accessors for initial user flag values

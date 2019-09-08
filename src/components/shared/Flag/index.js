@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import { scaleLinear } from 'd3-scale';
-import { FLAG_PROPERTIES } from '../../../const';
+import {
+  FLAG_PROPERTIES,
+  PLANETARY_NEIGHBOURS_CTX,
+  CONSTELLATION_CTX
+} from '../../../const';
 import {
   BaseFlag,
   StellarTriangle,
@@ -8,11 +12,6 @@ import {
   PlanetaryNeighbours,
   Constellation
 } from './Elements';
-
-const PLANETARY_NEIGHBOURS_CTX = require.context(
-  '../../../assets/planetaryNeighbours'
-);
-const CONSTELLATION_CTX = require.context('../../../assets/constellations');
 
 const planetaryBorderWidth = (flagHeight, flagWidth, width) => `
   ${flagHeight}px
