@@ -120,7 +120,7 @@ class Slider extends Component {
         >
           <Track width={sliderWidth} height={trackHeight} />
 
-          {value && (
+          {value !== undefined && (
             <Thumb
               ref={this.thumbRef}
               x={scale(value) - thumbSize / 2}

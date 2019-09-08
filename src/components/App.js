@@ -66,7 +66,7 @@ const App = () => {
     // At time of writing extent of data is [1, 8] but we want to show all 10 graphics on slider
     [FLAG_PROPERTIES.planetaryNeighbours]: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
     [FLAG_PROPERTIES.constellation]: uniq(
-      planetData.map(planet => planet.constellation)
+      planetData.map(planet => planet.constellation).filter(Boolean)
     ).sort()
   };
 
