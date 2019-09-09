@@ -4,13 +4,6 @@ import styled from '@emotion/styled';
 import backgroundVideo from '../../../assets/ExoFlags_Space_BG.mp4';
 import backgroundImage from '../../../assets/ExoFlags_BG_Still.png';
 
-const Video = styled.video`
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-`;
-
 const PageView = styled.div`
   position: absolute;
   height: 100%;
@@ -20,6 +13,21 @@ const PageView = styled.div`
   background-image: url(${backgroundImage});
   background-position: center center;
   background-size: cover;
+`;
+
+const Video = styled.video`
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: 1;
+`;
+
+const Children = styled.div`
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
 `;
 
 export const Page = props => {
@@ -33,7 +41,8 @@ export const Page = props => {
         type="video/mp4"
         poster={backgroundImage}
       />
-      {props.children}
+
+      <Children>{props.children}</Children>
     </PageView>
   );
 };
