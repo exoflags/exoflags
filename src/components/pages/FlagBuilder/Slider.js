@@ -53,12 +53,21 @@ const MARKS = {
     {
       id: 2,
       value: 7659,
-      renderer: () => <rect x={-9} y={-8} height={18} width={18} fill="white" />
+      renderer: () => (
+        <ellipse
+          rx={10}
+          ry={20}
+          stroke="black"
+          strokeWidth={2}
+          fill="none"
+          style={{ filter: 'drop-shadow( 3px 3px 2px rgba(0, 0, 0, .7))' }}
+        />
+      )
     },
     {
       id: 3,
       value: 8495.92,
-      renderer: () => <rect x={-9} y={-8} height={18} width={18} fill="white" />
+      renderer: () => <circle r={8} fill="#63986c" />
     },
     {
       id: 4,
@@ -71,7 +80,7 @@ const MARKS = {
     {
       id: 1,
       value: 0.01906968,
-      renderer: () => <circle r={8} fill="white" />
+      renderer: () => <circle r={6} fill="white" />
     },
     {
       id: 2,
@@ -89,7 +98,7 @@ const MARKS = {
     {
       id: 1,
       value: 0.33626999999999996,
-      renderer: () => <circle r={8} fill="white" />
+      renderer: () => <circle r={6} fill="white" />
     },
     {
       id: 2,

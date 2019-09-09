@@ -54,8 +54,8 @@ const NavDot = props => (
       return {
         style: {
           backgroundColor: isCurrent
-            ? theme.colors.white
-            : theme.colors.grey.medium
+            ? theme.colors.blue
+            : theme.colors.grey.light
         }
       };
     }}
