@@ -7,6 +7,12 @@ const primaryStyles = theme => css`
   color: ${theme.colors.white};
 `;
 
+const primaryInvertedStyles = theme => css`
+  border-radius: 35px;
+  background-color: ${theme.colors.white};
+  color: ${theme.colors.black};
+`;
+
 const secondaryStyles = theme => css`
   color: ${theme.colors.blue};
 `;
@@ -21,6 +27,7 @@ const Button = styled.button`
   cursor: pointer;
 
   ${props => props.primary && primaryStyles(props.theme)};
+  ${props => props.primaryInverted && primaryInvertedStyles(props.theme)};
   ${props => props.secondary && secondaryStyles(props.theme)};
 `;
 

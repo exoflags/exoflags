@@ -1,8 +1,26 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-import backgroundVideo from '../../../assets/ExoFlags_Space_BG.mp4';
-import backgroundImage from '../../../assets/ExoFlags_BG_Still.png';
+import aboutBackgroundImage from '../../../assets/ExoFlags_BG_Still.png';
+import aboutBackgroundVideo from '../../../assets/ExoFlags_BG1.mp4';
+import defaultBackgroundImage from '../../../assets/ExoFlags_BG1_Still.png';
+import defaultBackgroundVideo from '../../../assets/ExoFlags_Space_BG.mp4';
+import exploreBackgroundVideo from '../../../assets/Exoflags_Temp_BG2a.mp4';
+
+const backgrounds = {
+  about: {
+    video: aboutBackgroundVideo,
+    image: aboutBackgroundImage
+  },
+  explore: {
+    video: exploreBackgroundVideo,
+    image: defaultBackgroundImage
+  },
+  default: {
+    video: defaultBackgroundVideo,
+    image: defaultBackgroundImage
+  }
+};
 
 const PageView = styled.div`
   position: absolute;
@@ -10,7 +28,7 @@ const PageView = styled.div`
   width: 100%;
   color: ${props => props.theme.colors.white};
   background-color: #04040a;
-  background-image: url(${backgroundImage});
+  background-image: url(${defaultBackgroundImage});
   background-position: center center;
   background-size: cover;
 `;
@@ -30,19 +48,23 @@ const Children = styled.div`
   width: 100%;
 `;
 
-export const Page = props => {
+export const Page = ({
+  video = backgrounds.default.backgroundVideo,
+  fallbackImg = backgrounds.default.backgroundImage,
+  children
+}) => {
   return (
     <PageView>
       <Video
         autoPlay
         muted
         loop
-        src={backgroundVideo}
+        src={video ? backgrounds[video].video : backgrounds.default.video}
         type="video/mp4"
-        poster={backgroundImage}
+        poster={fallbackImg}
       />
 
-      <Children>{props.children}</Children>
+      <Children>{children}</Children>
     </PageView>
   );
 };
