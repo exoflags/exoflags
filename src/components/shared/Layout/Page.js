@@ -30,19 +30,23 @@ const Children = styled.div`
   width: 100%;
 `;
 
-export const Page = props => {
+export const Page = ({
+  video = backgroundVideo,
+  fallbackImg = backgroundImage,
+  children
+}) => {
   return (
     <PageView>
       <Video
         autoPlay
         muted
         loop
-        src={backgroundVideo}
+        src={video}
         type="video/mp4"
-        poster={backgroundImage}
+        poster={fallbackImg}
       />
 
-      <Children>{props.children}</Children>
+      <Children>{children}</Children>
     </PageView>
   );
 };
