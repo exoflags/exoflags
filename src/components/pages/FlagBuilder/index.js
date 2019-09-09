@@ -12,7 +12,7 @@ import { FLAG_BUILDER_STEPS, FLAG_PROPERTIES } from '../../../const';
 // below FlagBuilderNav
 const ContentContainer = styled.div`
   position: absolute;
-  height: calc(100% - ${props => props.theme.flagBuilderNavHeight});
+  /* height: calc(100% - ${props => props.theme.flagBuilderNavHeight}); */
   width: 100%;
   display: flex;
   flex-direction: column;

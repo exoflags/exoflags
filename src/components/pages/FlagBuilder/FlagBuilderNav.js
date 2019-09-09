@@ -10,7 +10,7 @@ const Wrapper = styled.div`
   height: ${props => props.theme.flagBuilderNavHeight};
   width: 100%;
   z-index: 1;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.5);

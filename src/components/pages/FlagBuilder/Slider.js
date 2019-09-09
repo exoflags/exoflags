@@ -498,9 +498,8 @@ class Slider extends Component {
     return null;
   }
 
-  renderAxisLabels(scale, hasAxis) {
+  renderAxisLabels(scale, labels, hasAxis) {
     const { flagProperty } = this.props;
-    const labels = AXIS_LABELS[flagProperty];
 
     const translateY = hasAxis ? tickHeight * 3 : 0;
 
@@ -533,6 +532,7 @@ class Slider extends Component {
     const hasAxis =
       flagProperty !== FLAG_PROPERTIES.planetaryNeighbours &&
       flagProperty !== FLAG_PROPERTIES.constellation;
+    const labels = AXIS_LABELS[flagProperty];
 
     return (
       <div>
@@ -551,13 +551,15 @@ class Slider extends Component {
           </g>
         </SVG>
 
-        <SVG height={axisHeight} width={width}>
-          <g transform={`translate(${padding}, 20)`}>
-            {hasAxis && <Axis flagProperty={flagProperty} scale={scale} />}
+        {labels.length > 0 && (
+          <SVG height={axisHeight} width={width}>
+            <g transform={`translate(${padding}, 20)`}>
+              {hasAxis && <Axis flagProperty={flagProperty} scale={scale} />}
 
-            {this.renderAxisLabels(scale, hasAxis)}
-          </g>
-        </SVG>
+              {this.renderAxisLabels(scale, labels, hasAxis)}
+            </g>
+          </SVG>
+        )}
       </div>
     );
   }

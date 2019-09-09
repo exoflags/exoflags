@@ -30,6 +30,7 @@ const AppContainer = styled.div`
 const HeaderContainer = styled.div`
   height: ${props => props.theme.headerHeight};
   width: 100%;
+  z-index: 2;
 `;
 
 const ContentContainer = styled.div`
@@ -38,6 +39,7 @@ const ContentContainer = styled.div`
   flex: 1;
   position: relative;
   background-color: ${props => props.theme.colors.grey.dark};
+  z-index: 1;
 `;
 
 const routerStyle = {
