@@ -72,7 +72,19 @@ const MARKS = {
     {
       id: 4,
       value: 10000,
-      renderer: () => <rect x={-9} y={-8} height={18} width={18} fill="white" />
+      renderer: () => (
+        <g
+          stroke="none"
+          stroke-width="1"
+          fill="none"
+          fillRule="evenodd"
+          transform={`translate(0, -12)`}
+        >
+          <g transform="translate(-1762.000000, -732.000000)" fill="#FFFFFF">
+            <polygon points="1762 732 1787 744.5 1762 757"></polygon>
+          </g>
+        </g>
+      )
     }
   ],
   [FLAG_PROPERTIES.stellarMass]: [],
