@@ -90,6 +90,10 @@ const App = () => {
   // No time to dynamically load in data
   const [userFlag, setUserFlag] = useState(initialUserFlag);
 
+  const resetUserFlag = () => {
+    setUserFlag(initialUserFlag);
+  };
+
   console.log('extents', EXTENTS);
 
   return (
@@ -112,7 +116,7 @@ const App = () => {
           <ClosestMatch
             path="/flag-builder/closest-match"
             userFlag={userFlag}
-            setUserFlag={setUserFlag}
+            resetUserFlag={resetUserFlag}
             data={planetData}
             extents={EXTENTS}
           />

@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import { navigate } from '@reach/router';
 
 import { Page } from '../shared/Layout';
 import Flag from '../shared/Flag';
@@ -51,8 +52,13 @@ function getsimilarPlanets(flag, data) {
   return data.slice(0, 3);
 }
 
-const ClosestMatch = ({ userFlag, setUserFlag, extents, data }) => {
+const ClosestMatch = ({ userFlag, resetUserFlag, extents, data }) => {
   const similarPlanets = getsimilarPlanets(userFlag, data);
+
+  const handleStartAgain = () => {
+    resetUserFlag();
+    navigate('/flag-builder/1');
+  };
 
   return (
     <Page>
@@ -137,7 +143,9 @@ const ClosestMatch = ({ userFlag, setUserFlag, extents, data }) => {
             ))}
           </Flags>
 
-          <Button primary>START AGAIN</Button>
+          <Button primary onClick={handleStartAgain}>
+            START AGAIN
+          </Button>
         </Bottom>
       </ContentContainer>
     </Page>
