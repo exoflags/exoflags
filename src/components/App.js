@@ -50,17 +50,20 @@ const distanceExtent = () => {
 };
 
 const EXTENTS = {
-  [FLAG_PROPERTIES.distance]: distanceExtent(),
-  [FLAG_PROPERTIES.stellarMass]: extent(planetData, planet => planet.st_mass),
-  [FLAG_PROPERTIES.stellarRadius]: extent(planetData, planet => planet.st_rad),
+  [FLAG_PROPERTIES.distance]: [0, 10000], //distanceExtent(),
+  [FLAG_PROPERTIES.stellarMass]: [0, 350], //extent(planetData, planet => planet.st_mass),
+  [FLAG_PROPERTIES.stellarRadius]: [0, 2600], //extent(planetData, planet => planet.st_rad),
   [FLAG_PROPERTIES.planetaryMass]: extent(
     planetData,
     planet => planet.pl_bmassj
   ),
-  [FLAG_PROPERTIES.planetaryRadius]: extent(
+  [FLAG_PROPERTIES.planetaryRadius]: [
+    0,
+    168.134
+  ] /* extent(
     planetData,
     planet => planet.pl_radj
-  ),
+  ), */,
   // At time of writing extent of data is [1, 8] but we want to show all 10 graphics on slider
   [FLAG_PROPERTIES.planetaryNeighbours]: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
   [FLAG_PROPERTIES.constellation]: uniq(
