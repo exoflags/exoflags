@@ -1,3 +1,9 @@
+export const PLANETARY_NEIGHBOURS_CTX = require.context(
+  './assets/planetaryNeighbours'
+);
+
+export const CONSTELLATION_CTX = require.context('./assets/constellations');
+
 export const FLAG_PROPERTIES = {
   distance: 'distance',
   stellarMass: 'stellarMass',
@@ -10,7 +16,7 @@ export const FLAG_PROPERTIES = {
 
 export const FLAG_BUILDER_STEPS = [
   {
-    path: '/flag-builder/1',
+    path: '/explore/1',
     flagProperty: FLAG_PROPERTIES.distance,
     title: 'Distance',
     body: [
@@ -20,7 +26,7 @@ export const FLAG_BUILDER_STEPS = [
     ]
   },
   {
-    path: '/flag-builder/2',
+    path: '/explore/2',
     flagProperty: FLAG_PROPERTIES.stellarMass,
     title: 'Stellar Mass',
     body: [
@@ -30,7 +36,7 @@ export const FLAG_BUILDER_STEPS = [
     ]
   },
   {
-    path: '/flag-builder/3',
+    path: '/explore/3',
     flagProperty: FLAG_PROPERTIES.stellarRadius,
     title: 'Stellar Radius',
     body: [
@@ -40,7 +46,7 @@ export const FLAG_BUILDER_STEPS = [
     ]
   },
   {
-    path: '/flag-builder/4',
+    path: '/explore/4',
     flagProperty: FLAG_PROPERTIES.planetaryMass,
     title: 'Planetary Mass',
     body: [
@@ -50,7 +56,7 @@ export const FLAG_BUILDER_STEPS = [
     ]
   },
   {
-    path: '/flag-builder/5',
+    path: '/explore/5',
     flagProperty: FLAG_PROPERTIES.planetaryRadius,
     title: 'Planetary Radius',
     body: [
@@ -60,7 +66,7 @@ export const FLAG_BUILDER_STEPS = [
     ]
   },
   {
-    path: '/flag-builder/6',
+    path: '/explore/6',
     flagProperty: FLAG_PROPERTIES.planetaryNeighbours,
     title: 'Planetary Neighbours',
     body: [
@@ -70,7 +76,7 @@ export const FLAG_BUILDER_STEPS = [
     ]
   },
   {
-    path: '/flag-builder/7',
+    path: '/explore/7',
     flagProperty: FLAG_PROPERTIES.constellation,
     title: 'Constellation',
     body: [

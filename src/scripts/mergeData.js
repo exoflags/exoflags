@@ -20,6 +20,11 @@ csv()
       const constellation = joinData && joinData.Constellation;
 
       exoplanet.constellation = constellation || null;
+      // Convert jupiter mass to earth mass (Mj/Me)
+      exoplanet.pl_bmassj =
+        exoplanet.pl_bmassj && exoplanet.pl_bmassj * 317.828;
+      // Convert jupiter radius to earth radius (Rj/Re)
+      exoplanet.pl_radj = exoplanet.pl_radj && exoplanet.pl_radj * 11.209;
     });
 
     fs.writeFileSync(

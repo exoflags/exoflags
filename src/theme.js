@@ -10,9 +10,10 @@ const theme = {
     white: '#FFFFFF',
     black: '#000000',
     grey: {
-      light: '#EEEEEE',
+      light: '#d8d8d8',
       medium: '#7F8FA4',
-      dark: '#354052'
+      dark: '#354052',
+      warm: '#979797'
     }
   }
 };

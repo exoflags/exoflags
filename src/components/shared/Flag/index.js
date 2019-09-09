@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import { scaleLinear } from 'd3-scale';
-import { FLAG_PROPERTIES } from '../../../const';
+import {
+  FLAG_PROPERTIES,
+  PLANETARY_NEIGHBOURS_CTX,
+  CONSTELLATION_CTX
+} from '../../../const';
 import {
   BaseFlag,
   StellarTriangle,
@@ -8,11 +12,6 @@ import {
   PlanetaryNeighbours,
   Constellation
 } from './Elements';
-
-const PLANETARY_NEIGHBOURS_CTX = require.context(
-  '../../../assets/planetaryNeighbours'
-);
-const CONSTELLATION_CTX = require.context('../../../assets/constellations');
 
 const planetaryBorderWidth = (flagHeight, flagWidth, width) => `
   ${flagHeight}px
@@ -99,13 +98,34 @@ class Flag extends Component {
     const { flagProperties } = this.props;
     const { planetaryNeighbours } = flagProperties;
 
-    return `${planetaryNeighbours}Planet${
+    const filename = `${planetaryNeighbours}Planet${
       planetaryNeighbours === 1 ? '' : 's'
     }`;
+
+    return PLANETARY_NEIGHBOURS_CTX(`./${filename}.svg`);
+  }
+
+  getConstellationFilename(name) {
+    let filename;
+
+    try {
+      filename = CONSTELLATION_CTX(`./${name.replace(/ /g, '_')}.svg`);
+    } catch (error) {
+      console.log(error);
+      filename = CONSTELLATION_CTX('./Antlia.svg');
+    }
+
+    return filename;
   }
 
   render() {
-    const { width, flagProperties, stepIdx } = this.props;
+    const {
+      width,
+      flagProperties,
+      stepIdx,
+      extents,
+      basicFlag = false
+    } = this.props;
 
     const flagWidth = width;
     const flagHeight = flagWidth * (2 / 3);
@@ -117,16 +137,19 @@ class Flag extends Component {
     const constellationIdx = 6;
 
     const {
-      distance,
-      stellarMass,
-      stellarRadius,
-      planetaryMass,
-      planetaryRadius,
-      planetaryNeighbours
+      distance = extents[FLAG_PROPERTIES.distance][0],
+      stellarMass = extents[FLAG_PROPERTIES.stellarMass][0],
+      stellarRadius = extents[FLAG_PROPERTIES.stellarRadius][0],
+      planetaryMass = extents[FLAG_PROPERTIES.planetaryMass][0],
+      planetaryRadius = extents[FLAG_PROPERTIES.planetaryRadius][0],
+      planetaryNeighbours = extents[FLAG_PROPERTIES.planetaryNeighbours][0]
     } = flagProperties;
 
     const constellationName = this.getConstellation();
     const planetaryNeighboursFilename = this.getPlanetaryNeighboursFilename();
+    const constellationFilename = this.getConstellationFilename(
+      constellationName
+    );
 
     return (
       <BaseFlag
@@ -134,7 +157,7 @@ class Flag extends Component {
         height={flagHeight}
         backgroundColor={this.distanceScale(distance)}
       >
-        {stepIdx >= stellarMassIdx && (
+        {(basicFlag || stepIdx >= stellarMassIdx) && (
           <StellarTriangle
             height={this.stellarRadiusScale(stellarRadius)}
             borderWidth={stellarBorderHeight(
@@ -146,7 +169,7 @@ class Flag extends Component {
           />
         )}
 
-        {stepIdx >= planetaryMassIdx && (
+        {(basicFlag || stepIdx >= planetaryMassIdx) && (
           <PlanetaryTriangle
             width={this.planetaryRadiusScale(planetaryRadius)}
             borderWidth={planetaryBorderWidth(
@@ -160,22 +183,15 @@ class Flag extends Component {
           />
         )}
 
-        {stepIdx >= planetaryNeighboursIdx && (
+        {(basicFlag || stepIdx >= planetaryNeighboursIdx) && (
           <PlanetaryNeighbours
-            src={PLANETARY_NEIGHBOURS_CTX(
-              `./${planetaryNeighboursFilename}.svg`
-            )}
+            src={planetaryNeighboursFilename}
             alt={`${planetaryNeighbours} planetary neighbours`}
           />
         )}
 
-        {stepIdx >= constellationIdx && (
-          <Constellation
-            src={CONSTELLATION_CTX(
-              `./${constellationName.replace(/ /g, '_')}.svg`
-            )}
-            alt={constellationName}
-          />
+        {(basicFlag || stepIdx >= constellationIdx) && (
+          <Constellation src={constellationFilename} alt={constellationName} />
         )}
       </BaseFlag>
     );

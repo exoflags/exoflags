@@ -6,7 +6,7 @@ import { Page } from '../../shared/Layout';
 import Flag from '../../shared/Flag';
 import FlagBuilderNav from './FlagBuilderNav';
 import Slider from './Slider';
-import { FLAG_BUILDER_STEPS } from '../../../const';
+import { FLAG_BUILDER_STEPS, FLAG_PROPERTIES } from '../../../const';
 
 // Center content between header and FlagBuilderNav, but allow background to fill
 // below FlagBuilderNav
@@ -20,6 +20,10 @@ const ContentContainer = styled.div`
 
 const SliderContainer = styled.div`
   padding: 2rem 4rem;
+`;
+
+const SliderLabel = styled.p`
+  font-weight: bold;
 `;
 
 const InfoContainer = styled.div`
@@ -42,6 +46,18 @@ const FlagContainer = styled.div`
   display: flex;
   align-items: center;
 `;
+
+const sliderLabelRef = {
+  [FLAG_PROPERTIES.distance]: 'set a distance',
+  [FLAG_PROPERTIES.stellarMass]: "set the mass of the exoplanet's host star",
+  [FLAG_PROPERTIES.stellarRadius]: "set the host star's radius",
+  [FLAG_PROPERTIES.planetaryMass]: 'set the mass of the exoplanet',
+  [FLAG_PROPERTIES.planetaryRadius]: 'set the radius of the exoplanet',
+  [FLAG_PROPERTIES.planetaryNeighbours]:
+    'set the amount of exoplanets in the host system',
+  [FLAG_PROPERTIES.constellation]:
+    'choose the constellation in which the planet can be found'
+};
 
 export const FlagBuilder = ({ userFlag, setUserFlag, extents, stepId }) => {
   const stepIdx = +stepId - 1;
@@ -74,6 +90,9 @@ export const FlagBuilder = ({ userFlag, setUserFlag, extents, stepId }) => {
         </InfoContainer>
 
         <SliderContainer>
+          <SliderLabel>
+            Drag the red pin to {sliderLabelRef[flagProperty]}
+          </SliderLabel>
           <AutoSizer disableHeight>
             {({ width }) => (
               <Slider
