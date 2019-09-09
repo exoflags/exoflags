@@ -8,6 +8,6 @@ export const Home = () => (
   <Page>
     <Logo>Project Origin</Logo>
 
-    <Link to="/flag-builder/1">Go!</Link>
+    <Link to="/explore">Go!</Link>
   </Page>
 );

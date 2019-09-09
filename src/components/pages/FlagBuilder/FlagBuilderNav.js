@@ -66,14 +66,14 @@ const FlagBuilderNav = ({ stepId, stepIdx }) => {
   const isFirstStep = stepIdx === 0;
   const isLastStep = stepIdx === FLAG_BUILDER_STEPS.length - 1;
 
-  const prev = () => navigate(`/flag-builder/${stepId - 1}`);
+  const prev = () => navigate(`/explore/${stepId - 1}`);
   const next = () => {
     if (isLastStep) {
-      navigate('/flag-builder/closest-match');
+      navigate('/explore/closest-match');
       return;
     }
 
-    navigate(`/flag-builder/${stepId + 1}`);
+    navigate(`/explore/${stepId + 1}`);
   };
 
   useEffect(() => {

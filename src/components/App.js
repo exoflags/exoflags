@@ -18,6 +18,7 @@ import { FLAG_PROPERTIES } from '../const';
 import planetData from '../data/data.json';
 import { uniq } from '../utils/uniq';
 import ClosestMatch from './pages/ClosestMatch';
+import Explore from './pages/Explore';
 
 const AppContainer = styled.div`
   height: 100vh;
@@ -106,15 +107,17 @@ const App = () => {
         <Router style={routerStyle}>
           <Home path="/" />
 
+          <Explore path="/explore" />
+
           <FlagBuilder
-            path="/flag-builder/:stepId"
+            path="/explore/:stepId"
             userFlag={userFlag}
             setUserFlag={setUserFlag}
             extents={EXTENTS}
           />
 
           <ClosestMatch
-            path="/flag-builder/closest-match"
+            path="/explore/closest-match"
             userFlag={userFlag}
             resetUserFlag={resetUserFlag}
             data={planetData}
