@@ -5,7 +5,6 @@ import { extent } from 'd3-array';
 
 import Header from './shared/Header';
 import {
-  Home,
   About,
   Credits,
   Examples,
@@ -105,8 +104,6 @@ const App = () => {
 
       <ContentContainer>
         <Router style={routerStyle}>
-          <Home path="/" />
-
           <Explore path="/explore" />
 
           <FlagBuilder
@@ -124,7 +121,7 @@ const App = () => {
             extents={EXTENTS}
           />
 
-          <About path="/about" />
+          <About path="/" />
           <Credits path="/credits" />
           <Resources path="/resources" />
           <Search path="/search" />

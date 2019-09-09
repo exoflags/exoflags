@@ -6,11 +6,11 @@ import { Page } from '../shared/Layout';
 import ExoFlagsLogo from '../Logos/ExoFlagsLogo';
 
 const ImgContainer = styled.div`
-  padding: 2rem 0 0 8rem;
+  padding: 8rem 0 0 0;
 `;
 
 const ContentContainer = styled.div`
-  padding: 2rem 4rem;
+  padding: 2rem 8rem;
   height: 100%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.7);
@@ -18,13 +18,21 @@ const ContentContainer = styled.div`
 const TextContainer = styled.div`
   color: ${props => props.theme.colors.white};
   font-size: 1.25rem;
-  //   column-gap: 5rem;
-  //   columns: 2;
-  //   span {
-  //     font-weight: 800;
-  //   }
+  a:link,
+  a:visited,
+  a:hover,
+  a:active {
+    text-decoration: none;
+    color: ${props => props.theme.colors.white};
+  }
 `;
 
+const Hr = styled.div`
+  width: 100%;
+  height: 4px;
+  background-color: ${props => props.theme.colors.grey.warm};
+  margin: 1rem 0 2rem 0;
+`;
 const SubHeading = styled.h2`
   font-size: 3.75rem;
 `;
@@ -39,6 +47,7 @@ const Ul = styled.ul`
     font-weight: 800;
   }
   margin-left: 0;
+  width: 50%;
 `;
 
 const P = styled.p`
@@ -51,6 +60,7 @@ export const Credits = () => (
       <ImgContainer>
         <ExoFlagsLogo />
       </ImgContainer>
+      <Hr />
       <TextContainer>
         <SubHeading>Credits</SubHeading>
         <Flexbox>
@@ -62,7 +72,7 @@ export const Credits = () => (
               <span>Simona Ciocoiu</span> - Research
             </li>
             <li>
-              <span>Aifric Delahunty</span> - Database & Calculations
+              <span>Aifric Delahunty</span> - Database &amp; Calculations
             </li>
             <li>
               <span>Katie Dobberstein</span> - Research
@@ -83,13 +93,25 @@ export const Credits = () => (
               <span>Alexis Wilkinson-Defoe</span> - Front End Development
             </li>
           </Ul>
-          <P>
-            Original Constellation Icon set by Denis Moskowitz used under
-            creative commons licence, available from the noun project here
-            <span>Data obtained from the NASA / Caltech exoplanet archive</span>
-            Further information and data was obtained from
-            www.exoplanetkyoto.org resource
-          </P>
+          <div>
+            <P>
+              Original Constellation Icon set by Denis Moskowitz used under
+              creative commons licence, available from the noun project
+              <a href="https://thenounproject.com/denismm/collection/constellation-symbols-fixed-width/">
+                {' '}
+                here{' '}
+              </a>
+            </P>
+            <P>Data obtained from the NASA / Caltech exoplanet archive</P>
+            <P>
+              Further information and data was obtained from
+              <a href="https://www.exoplanetkyoto.org">
+                {' '}
+                www.exoplanetkyoto.org{' '}
+              </a>
+              resource
+            </P>
+          </div>
         </Flexbox>
       </TextContainer>
     </ContentContainer>
