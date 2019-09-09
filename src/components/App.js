@@ -122,7 +122,7 @@ const App = () => {
 
           <About path="/" />
           <Credits path="/credits" />
-          <Search path="/search" data={planetData} />
+          <Search path="/search" data={planetData} extents={EXTENTS} />
           <NotFound default />
         </Router>
       </ContentContainer>

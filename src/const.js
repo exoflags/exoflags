@@ -20,9 +20,10 @@ export const FLAG_BUILDER_STEPS = [
     flagProperty: FLAG_PROPERTIES.distance,
     title: 'Distance',
     body: [
-      'Reprehenderit mollit magna mollit proident.',
-      'Ipsum id esse in fugiat velit tempor. Sunt enim Lorem ut voluptate voluptate qui eu eiusmod et amet id. Anim pariatur labore elit irure. Nulla aliquip consequat irure ipsum. Lorem ipsum et irure sunt cillum dolor ullamco irure non est. Et veniam in proident eu dolor quis sint cillum in est ullamco.',
-      'Quis sunt minim nostrud exercitation velit nostrud et veniam ut.'
+      'When we look out into the vast expanse of space for new worlds, we measure is the light we observe from Earth as a point of origin. This light from distant stars and galaxies allows us to catch and measure glimpses of new worlds as their paths cross the light that is beaming back to us.',
+      'Knowing that light is a constant speed  we can measure the distance the light has travelled to reach us across such astronomical distances by observing how its spectrum has shifted based on how far away it begins its journey.',
+      'Due to a phenomenon called redshift, astronomers know that the most distant sources of light are shifted towards the red end of the spectrum',
+      'The Exoflags system uses this same metric, a shifting from blue to red to convey distance visually. A nearby exoplanet will automatically generate a blue background, while the further away our discovery the more shifted towards the red end of the spectrum its colour will be.'
     ]
   },
   {
@@ -30,9 +31,9 @@ export const FLAG_BUILDER_STEPS = [
     flagProperty: FLAG_PROPERTIES.stellarMass,
     title: 'Stellar Mass',
     body: [
-      'Excepteur ipsum ipsum irure officia elit laborum aliqua est aute ad occaecat nulla mollit consequat. Aliqua dolor nisi aliquip nulla laboris sint. Pariatur veniam occaecat et ex eu commodo aliquip nostrud occaecat nisi labore.',
-      'Aute Lorem cillum ea sint consequat laboris eu excepteur incididunt officia aliquip reprehenderit enim. Aute pariatur sint ullamco officia exercitation eiusmod pariatur irure esse culpa deserunt deserunt aliqua quis. Anim pariatur est ullamco irure laborum nostrud velit eu consectetur adipisicing magna Lorem deserunt. Eu fugiat aliqua labore tempor eiusmod ex commodo ex sint ut adipisicing. Tempor enim enim qui nostrud do Lorem ad ut. Eiusmod ad sit ea voluptate ut magna nisi mollit.',
-      'Cillum consectetur eu velit culpa voluptate eu.'
+      'Once the distance of a host star with a candidate exoplanet is known, the mass of the star can be calculated by looking at its apparent luminosity and its distance. Knowing that brightness, or luminosity, is directly related to mass for a given star type can give us the answer we need.',
+      'When stellar mass is calculated, the Exoflags system ties the numerical value of solar mass to the luminosity of a right-angled triangle where the most massive host stars are represented by the brightness of the triangle.',
+      'The upper limits of our current understanding of stellar mass places the greatest possible mass of a star at around 350 solar masses. The minimum mass of what we can define as a star is currently theorised to be about 0.07 solar masses.'
     ]
   },
   {
@@ -40,9 +41,8 @@ export const FLAG_BUILDER_STEPS = [
     flagProperty: FLAG_PROPERTIES.stellarRadius,
     title: 'Stellar Radius',
     body: [
-      'Cupidatat ut sunt mollit officia ex nisi proident id.',
-      'Anim ad elit deserunt occaecat et ad non velit ullamco nulla aliqua consequat eu irure.',
-      'Reprehenderit ullamco veniam minim non irure ut consequat veniam in. In culpa sit occaecat ex dolor velit consequat reprehenderit quis est do do. Occaecat id enim velit ad consectetur sint. Ea nisi id incididunt laboris cillum sunt. Lorem non irure in ad aute id eiusmod ipsum commodo fugiat aliquip pariatur ea incididunt. Eu sit laboris proident tempor. Laborum enim in qui exercitation dolore do tempor mollit sint.'
+      'The radius of an exoplanetary host star can be derived from its luminosity, distance and temperature, which can be found by spectral analysis.',
+      'The Exoflags system then relates the radial size of the star and scales the height of the right-angled stellar visualisation whereby the minimum possible stellar radius (thought currently to be around 0.10 solar radii) would draw a more acute angle, and the maximum possible stellar radius (around 2600 solar radii) would fill the entire vertical width of the flag.'
     ]
   },
   {
@@ -50,9 +50,8 @@ export const FLAG_BUILDER_STEPS = [
     flagProperty: FLAG_PROPERTIES.planetaryMass,
     title: 'Planetary Mass',
     body: [
-      'Esse qui non non cupidatat fugiat proident.',
-      'Minim irure dolore nisi cillum Lorem amet ipsum commodo voluptate proident. Eu ut tempor ex officia. Adipisicing irure id ipsum est velit ea nulla veniam. Eu irure elit eu aliquip. Ut tempor cupidatat officia proident nisi duis. Et mollit consequat sunt minim mollit proident.',
-      'Ullamco dolore cillum incididunt excepteur dolor sint cillum ullamco magna. Mollit enim laboris veniam esse ad. Commodo velit aute Lorem voluptate. Fugiat ipsum eiusmod quis ad sit ea sint in cupidatat.'
+      "Once an exoplanet has been verified in a regular orbit around a host star, its orbital period and radius can be ascertained. When the orbital radius has been determined, the mass of the planet can be calculated using Newton's Law of Gravitation.",
+      'The same visual metaphor relating a right-angled triangle to mass is used here, this time conveying the absence of light created by an exoplanet moving in front of a host star as a black triangle. This triangle derives its transparency from the mass of the planet itself where the most massive planets possible have a more opaque appearance and the least massive planets are displayed as the least opaque.'
     ]
   },
   {
@@ -60,19 +59,20 @@ export const FLAG_BUILDER_STEPS = [
     flagProperty: FLAG_PROPERTIES.planetaryRadius,
     title: 'Planetary Radius',
     body: [
-      'Reprehenderit mollit magna labore mollit. Dolore eu excepteur id deserunt laboris proident esse sunt. Cupidatat magna cillum ea incididunt ea amet ex adipisicing voluptate pariatur fugiat do non.',
-      'Dolore eu ex officia culpa qui ex veniam sint nostrud velit cillum irure proident.',
-      'Enim officia esse exercitation ad pariatur nulla sit est et occaecat dolore. Aliquip culpa commodo cillum dolor mollit culpa ex cillum veniam ullamco minim sit. Culpa aliqua ullamco irure dolor cupidatat.'
+      'To determine the planet’s radius, the drop in brightness of the parent star that occurs during a planetary transit is measured.',
+      'The Exoflag system again draws the angle of the associated right-angled triangle to correspond with the data recorded about the exoplanet’s radius.',
+      'The smallest theoretical definition of planetary radius (thought to be around 350km) will draw the most acute angle and the largest possible theoretical definition of planetary radius (thought to be about 48000 times the radius of Earth) draws the triangle to its maximum extent.'
     ]
   },
   {
     path: '/explore/6',
     flagProperty: FLAG_PROPERTIES.planetaryNeighbours,
-    title: 'Planetary Neighbours',
+    title: 'Exoplanetary Neighbours',
     body: [
-      'Reprehenderit sunt aliquip occaecat esse non velit qui eiusmod dolore labore voluptate ea anim.',
-      'Labore sit ullamco amet amet. Minim fugiat cillum elit amet cillum. Qui minim ad duis non laborum. Nulla enim mollit commodo qui aliqua sint aliqua cillum incididunt elit laboris. Consectetur ut quis amet est.',
-      'Sint cupidatat cupidatat est proident. Ad irure mollit excepteur exercitation Lorem veniam consectetur. Voluptate velit cupidatat non anim sit consectetur nisi consequat nostrud labore.'
+      'An icon is attached to the upper right corner of the flag denoting the number of other observed planets orbiting the host star in question.',
+      'Current estimates, based on observation, inform our understanding that a likely natural upper limit for the natural formation of planetary systems is estimated to be in the region of 10 planets*.',
+      'Outside of our own solar system, the current exoplanetary system with the highest number of exoplanetary neighbours with distinct orbits is HD-10180, which has 9 planetary neighbours with distinct orbits.',
+      '(*This figure is capable of changing with the emergence of further data)'
     ]
   },
   {
@@ -80,9 +80,8 @@ export const FLAG_BUILDER_STEPS = [
     flagProperty: FLAG_PROPERTIES.constellation,
     title: 'Constellation',
     body: [
-      'Culpa laboris in reprehenderit enim pariatur quis adipisicing. Aliquip elit pariatur in commodo veniam nisi nulla excepteur enim deserunt excepteur mollit occaecat. Culpa veniam incididunt laboris do ad amet nulla. Sit qui esse nulla incididunt sunt nisi minim dolor nisi in. Ipsum cillum exercitation ipsum ad nisi laborum tempor exercitation aliqua amet amet consequat id. Cupidatat esse consectetur elit in culpa. Cupidatat quis nostrud sunt et veniam et anim reprehenderit Lorem pariatur enim deserunt Lorem enim.',
-      'Proident voluptate incididunt aliquip excepteur in reprehenderit eiusmod adipisicing cillum aute eiusmod anim. Quis commodo ex dolor veniam qui consectetur sint nostrud tempor irure ad eiusmod tempor aute. Est adipisicing quis culpa deserunt veniam dolor nisi cupidatat esse deserunt. Adipisicing incididunt aliqua non proident duis culpa ullamco.',
-      'Aute ea exercitation cillum qui et sint in sunt pariatur non quis et.'
+      'You’ve just explored the steps in data visualisation necessary to build an exoplanetary flag! Of the random variables you’ve chosen, on the right are the 3 most similar actual exoplanets that Earth-based studies have confirmed to date.',
+      'You can learn more about these studies and explore the full depth of the NASA and Caltech database to find out more about the discovery of new worlds. Click here to search the confirmed exoplanets database.'
     ]
   }
 ];

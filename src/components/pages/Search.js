@@ -8,12 +8,11 @@ import CaltechLogo from '../Logos/CalTechLogo';
 import NasaLogo from '../Logos/NasaLogo/';
 import Flag from '../shared/Flag';
 
-export const Search = data => {
-  const planetNames = data.data.map(planet => ({
+export const Search = ({ data, extents }) => {
+  const planetNames = data.map(planet => ({
     label: planet.pl_name,
     value: planet.pl_name
   }));
-
   const customStyles = {
     container: (provided, state) => ({
       ...provided,
@@ -36,6 +35,9 @@ export const Search = data => {
       padding: 8
     }),
     placeholder: (provided, state) => ({
+      color: 'white'
+    }),
+    dropdownIndicator: (provided, state) => ({
       color: 'white'
     })
   };
@@ -64,6 +66,7 @@ export const Search = data => {
     font-size: 4rem;
     font-weight: 800;
     color: white;
+    margin-bottom: 2rem;
   `;
 
   const Info = styled.div`
@@ -101,19 +104,33 @@ export const Search = data => {
     padding: 5%;
   `;
 
+  const Stats = styled.div`
+    margin-top: 2.4rem;
+  `;
+
+  const Ul = styled.ul`
+    list-style-type: none;
+    font-size: 1.25rem;
+    font-weight: 800;
+    margin-left: 0;
+  `;
+
   const handleChange = planet => {
     setPlanet(planet);
   };
 
   const getProperties = () => {
-    const obj = data.data.filter(obj => obj.pl_name === selectedPlanet);
+    const obj = data.filter(obj => obj.pl_name === selectedPlanet);
     const planetData = {
       distance: obj[0].st_dist,
       stellarMass: obj[0].st_mass,
-      planetaryMass: obj[0].pl_bmass,
-      planetaryRadius: obj[0].pl_rad,
-      planetaryNeighbours: obj[0].pl_pnum
+      stellarRadius: obj[0].st_rad,
+      planetaryMass: obj[0].pl_bmassj,
+      planetaryRadius: obj[0].pl_radj,
+      planetaryNeighbours: obj[0].pl_pnum,
+      constellation: obj[0].constellation
     };
+    console.log('planet data', planetData);
     return planetData;
   };
 
@@ -168,8 +185,54 @@ export const Search = data => {
           </Info>
         </Left>
         <Right>
-          {/* <Header>Planet Name</Header>
-          {selectedPlanet && <Flag flagProperties={getProperties()} />} */}
+          {selectedPlanet && (
+            <>
+              <Header>{selectedPlanet}</Header>
+              <Flag
+                width={600}
+                extents={extents}
+                flagProperties={getProperties()}
+                basicFlag
+              />
+              {/* <p>
+                  Distance: {getProperties((planet) => (planet.st_dist ? planet.st_dist.toFixed(2) : 'n/a'))}
+                </p> */}
+              {/* <p>
+                  Stellar mass:{' '}
+                  {planet.st_mass ? planet.st_mass.toFixed(2) : 'n/a'}
+                </p>
+                <p>
+                  Stellar radius:{' '}
+                  {planet.st_rad ? planet.st_rad.toFixed(2) : 'n/a'}
+                </p>
+                <p>
+                  Planetary mass:{' '}
+                  {planet.pl_bmassj ? planet.pl_bmassj.toFixed(2) : 'n/a'}
+                </p>
+                <p>
+                  Planetary radius:{' '}
+                  {planet.pl_radj ? planet.pl_radj.toFixed(2) : 'n/a'}
+                </p>
+                <p>
+                  Planetary neighbours:{' '}
+                  {planet.pl_pnum ? planet.pl_pnum : 'n/a'}
+                </p>
+                <p>
+                  Constellation:{' '}
+                  {planet.constellation ? planet.constellation : 'n/a'}
+                </p> */}
+              <Stats>
+                <Ul>
+                  <li>Distance: </li>
+                  <li>Host star mass 2: </li>
+                  <li>Host star radius: </li>
+                  <li>Planetary Mass: </li>
+                  <li>Planetary Radius: </li>
+                  <li>Planets in system: </li>
+                </Ul>
+              </Stats>
+            </>
+          )}
         </Right>
       </Container>
     </Page>
