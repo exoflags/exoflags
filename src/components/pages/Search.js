@@ -224,8 +224,7 @@ export const Search = ({ data, extents }) => {
               <Stats>
                 <Ul>
                   <li>Distance: </li>
-                  <li>Host star mass 2: </li>
-                  <li>Host star radius: </li>
+                  <li>Host star mass 2: </li>+<li>Host star radius: </li>
                   <li>Planetary Mass: </li>
                   <li>Planetary Radius: </li>
                   <li>Planets in system: </li>

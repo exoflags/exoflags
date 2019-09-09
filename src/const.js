@@ -81,7 +81,8 @@ export const FLAG_BUILDER_STEPS = [
     title: 'Constellation',
     body: [
       'You’ve just explored the steps in data visualisation necessary to build an exoplanetary flag! Of the random variables you’ve chosen, on the right are the 3 most similar actual exoplanets that Earth-based studies have confirmed to date.',
-      'You can learn more about these studies and explore the full depth of the NASA and Caltech database to find out more about the discovery of new worlds. Click here to search the confirmed exoplanets database.'
+      'You can learn more about these studies and explore the full depth of the NASA and Caltech database to find out more about the discovery of new worlds.'
+      // Click here to search the confirmed exoplanets database.'
     ]
   }
 ];
