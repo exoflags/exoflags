@@ -126,7 +126,6 @@ const App = () => {
 
           <About path="/about" />
           <Credits path="/credits" />
-          <Examples path="/examples" />
           <Resources path="/resources" />
           <Search path="/search" />
 

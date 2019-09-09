@@ -4,7 +4,6 @@ import { navigate } from '@reach/router';
 
 import { Page } from '../shared/Layout';
 import Button from '../shared/Button';
-import backgroundVideo from '../../assets/Exoflags_Temp_BG2a.mp4';
 
 const ContentContainer = styled.div`
   padding: 2rem 4rem;
@@ -26,7 +25,7 @@ const ExploreButton = styled(Button)`
 `;
 
 const Explore = () => (
-  <Page video={backgroundVideo}>
+  <Page video="explore">
     <ContentContainer>
       <Text>
         See how Exoflags builds visual identities for new worlds using
