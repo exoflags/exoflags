@@ -44,7 +44,6 @@ const stellarBorderColor = opacity => `
 class Flag extends Component {
   constructor(props) {
     super(props);
-
     const { extents } = props;
 
     this.distanceScale = scaleLinear()

@@ -9,7 +9,6 @@ import {
   About,
   Credits,
   Examples,
-  Resources,
   Search,
   FlagBuilder,
   NotFound
@@ -102,41 +101,37 @@ const App = () => {
   };
 
   return (
-    <LocationProvider history={history}>
-      <AppContainer>
-        <HeaderContainer>
-          <Header />
-        </HeaderContainer>
+    <AppContainer>
+      <HeaderContainer>
+        <Header />
+      </HeaderContainer>
 
-        <ContentContainer>
-          <Router style={routerStyle}>
-            <Explore path="/explore" />
+      <ContentContainer>
+        <Router style={routerStyle}>
+          <Explore path="/explore" />
 
-            <FlagBuilder
-              path="explore/:stepId"
-              userFlag={userFlag}
-              setUserFlag={setUserFlag}
-              extents={EXTENTS}
-            />
+          <FlagBuilder
+            path="/explore/:stepId"
+            userFlag={userFlag}
+            setUserFlag={setUserFlag}
+            extents={EXTENTS}
+          />
 
-            <ClosestMatch
-              path="explore/closest-match"
-              userFlag={userFlag}
-              resetUserFlag={resetUserFlag}
-              data={planetData}
-              extents={EXTENTS}
-            />
+          <ClosestMatch
+            path="/explore/closest-match"
+            userFlag={userFlag}
+            resetUserFlag={resetUserFlag}
+            data={planetData}
+            extents={EXTENTS}
+          />
 
-            <About path="/" />
-            <Credits path="/credits" />
-            <Resources path="/resources" />
-            <Search path="/search" />
-
-            <NotFound default />
-          </Router>
-        </ContentContainer>
-      </AppContainer>
-    </LocationProvider>
+          <About path="/" />
+          <Credits path="/credits" />
+          <Search path="/search" data={planetData} extents={EXTENTS} />
+          <NotFound default />
+        </Router>
+      </ContentContainer>
+    </AppContainer>
   );
 };
 
