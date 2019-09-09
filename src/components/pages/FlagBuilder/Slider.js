@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import styled from '@emotion/styled';
 import { scaleLinear, scalePoint, scaleQuantize } from 'd3-scale';
 import { select, event as d3Event } from 'd3-selection';
+import { axisTop } from 'd3-axis';
 import { drag } from 'd3-drag';
 import throttle from 'lodash.throttle';
 
@@ -11,6 +12,7 @@ import {
   PLANETARY_NEIGHBOURS_CTX,
   CONSTELLATION_CTX
 } from '../../../const';
+import Axis from './Axis';
 
 const sliderHeight = 90;
 const axisHeight = 100;
@@ -18,6 +20,7 @@ const trackHeight = 2;
 const thumbSize = 30;
 const padding = thumbSize * 2;
 const labelPadding = 20;
+const tickHeight = 8;
 const getSliderWidth = width => width - 2 * padding;
 
 const SVG = styled.svg`
@@ -39,6 +42,29 @@ const Thumb = styled(SliderThumb)`
     cursor: grabbing;
   }
 `;
+
+const Tick = ({ position, label }) => (
+  <g transform={`translate(${position}, 0)`}>
+    <line
+      x1={0}
+      x2={0}
+      y1={0}
+      y2={tickHeight}
+      stroke="#d8d8d8"
+      strokeWidth={1}
+    />
+    {label !== undefined && (
+      <text
+        y={tickHeight + 8}
+        fill="white"
+        textAnchor="middle"
+        alignmentBaseline="hanging"
+      >
+        {label}
+      </text>
+    )}
+  </g>
+);
 
 const POINT_SCALES = [
   FLAG_PROPERTIES.planetaryNeighbours,
@@ -129,6 +155,7 @@ const MARKS = {
 
 class Slider extends Component {
   thumbRef = React.createRef();
+  axisRef = React.createRef();
 
   constructor(props) {
     super(props);
@@ -307,12 +334,53 @@ class Slider extends Component {
     return null;
   }
 
+  // renderAxisTicks() {
+  //   // TODO: need to ensure this is removed between renders
+  //   // DO we have to do this on component did update?
+  //   const { flagProperty, extents, width } = this.props;
+
+  //   if (
+  //     flagProperty === FLAG_PROPERTIES.planetaryNeighbours ||
+  //     flagProperty === FLAG_PROPERTIES.constellation
+  //   ) {
+  //     return null;
+  //   }
+
+  //   const scale = this.getScale();
+  //   const sliderWidth = getSliderWidth(width);
+  //   const extent = extents[flagProperty];
+
+  //   const axis = axisTop(scale);
+  //   const axisG = select('#axis');
+
+  //   if (axisG) {
+  //     axisG.call(axis);
+
+  //     const ticks = axisG.selectAll('.tick')
+
+  //     axisG.select('path')
+  //       .attr('stroke', '#d8d8d8')
+
+  //     ticks.selectAll('text')
+  //       .attr('y', 0 + tickHeight)
+  //       .attr('alignment-baseline', 'hanging')
+
+  //     ticks.selectAll('line')
+  //       .attr('stroke', '#d8d8d8')
+  //   }
+  // }
+
+  renderAxisLabels() {}
+
   render() {
     const { extents, width, userFlag, flagProperty } = this.props;
 
     const value = userFlag[flagProperty];
     const sliderWidth = getSliderWidth(width);
     const scale = this.getScale();
+    const hasAxis =
+      flagProperty !== FLAG_PROPERTIES.planetaryNeighbours &&
+      flagProperty !== FLAG_PROPERTIES.constellation;
 
     return (
       <div>
@@ -332,7 +400,12 @@ class Slider extends Component {
         </SVG>
 
         <SVG height={axisHeight} width={width}>
-          <g transform={`translate(${padding}, 0)`}></g>
+          <g transform={`translate(${padding}, 20)`}>
+            {/* <line x1={0} y1={tickHeight} x2={sliderWidth} y2={tickHeight} stroke="#d8d8d8" strokeWidth={1} />
+            {this.renderAxisTicks()}
+            <g id="axis" /> */}
+            {hasAxis && <Axis flagProperty={flagProperty} scale={scale} />}
+          </g>
         </SVG>
       </div>
     );
