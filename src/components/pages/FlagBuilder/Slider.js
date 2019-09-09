@@ -152,6 +152,11 @@ const MARKS = {
   [FLAG_PROPERTIES.constellation]: []
 };
 
+/*
+  TODO: determine minimum, e.g. start and end labels
+  
+*/
+
 const AXIS_LABELS = {
   [FLAG_PROPERTIES.distance]: [
     {
@@ -546,7 +551,7 @@ class Slider extends Component {
           <g transform={`translate(${padding}, 20)`}>
             {hasAxis && <Axis flagProperty={flagProperty} scale={scale} />}
 
-            {this.renderAxisLabels(scale, hasAxis)}
+            {/* {this.renderAxisLabels(scale, hasAxis)} */}
           </g>
         </SVG>
       </div>
