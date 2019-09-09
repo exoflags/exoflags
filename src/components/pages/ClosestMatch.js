@@ -48,8 +48,20 @@ const FlagLabel = styled.h4`
   margin-bottom: 0.5rem;
 `;
 
+function closest(arr, accessor, goal) {
+  return arr.reduce((a, b) => {
+    const current = accessor(b);
+    const previous = accessor(a);
+    return Math.abs(current - goal) < Math.abs(previous - goal) ? b : a;
+  });
+}
+
 function getsimilarPlanets(flag, data) {
-  return data.slice(0, 3);
+  return [
+    closest(data, d => d.st_dist, flag.distance),
+    closest(data, d => d.pl_bmassj, flag.planetaryMass),
+    closest(data, d => d.pl_radj, flag.planetaryRadius)
+  ];
 }
 
 const ClosestMatch = ({ userFlag, resetUserFlag, extents, data }) => {
