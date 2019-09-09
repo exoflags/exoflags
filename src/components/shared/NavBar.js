@@ -34,7 +34,6 @@ const NavLink = props => (
 
 const NavBar = () => (
   <Wrapper>
-    <NavLink to="/about">ABOUT</NavLink>
     <NavLink to="/explore">EXPLORE</NavLink>
     <NavLink to="/search">SEARCH</NavLink>
     <NavLink to="/resources">RESOURCES</NavLink>
