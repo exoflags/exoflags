@@ -113,6 +113,7 @@ const App = () => {
             path="/flag-builder/closest-match"
             userFlag={userFlag}
             setUserFlag={setUserFlag}
+            data={planetData}
             extents={EXTENTS}
           />
 
