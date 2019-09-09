@@ -72,7 +72,7 @@ export const Credits = () => (
               <span>Simona Ciocoiu</span> - Research
             </li>
             <li>
-              <span>Aifric Delahunty</span> - Database & Calculations
+              <span>Aifric Delahunty</span> - Database &amp; Calculations
             </li>
             <li>
               <span>Katie Dobberstein</span> - Research
@@ -99,7 +99,7 @@ export const Credits = () => (
               creative commons licence, available from the noun project
               <a href="https://thenounproject.com/denismm/collection/constellation-symbols-fixed-width/">
                 {' '}
-                here
+                here{' '}
               </a>
             </P>
             <P>Data obtained from the NASA / Caltech exoplanet archive</P>
@@ -108,7 +108,7 @@ export const Credits = () => (
               <a href="https://www.exoplanetkyoto.org">
                 {' '}
                 www.exoplanetkyoto.org{' '}
-              </a>{' '}
+              </a>
               resource
             </P>
           </div>
