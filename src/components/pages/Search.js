@@ -72,7 +72,7 @@ export const Search = ({ data, extents }) => {
   const Info = styled.div`
     display: flex;
     flex-direction: column;
-    align-items: center;
+    // align-items: center;
 
     p {
       color: ${props => props.theme.colors.white};
@@ -130,8 +130,16 @@ export const Search = ({ data, extents }) => {
       planetaryNeighbours: obj[0].pl_pnum,
       constellation: obj[0].constellation
     };
-    console.log('planet data', planetData);
     return planetData;
+  };
+
+  const displayProperties = property => {
+    const data = getProperties();
+    if (property === 'constellation' || property === 'planetaryNeighbours') {
+      return data[property] ? data[property] : 'n/a';
+    } else {
+      return data[property] ? data[property].toFixed(2) : 'n/a';
+    }
   };
 
   return (
@@ -194,40 +202,22 @@ export const Search = ({ data, extents }) => {
                 flagProperties={getProperties()}
                 basicFlag
               />
-              {/* <p>
-                  Distance: {getProperties((planet) => (planet.st_dist ? planet.st_dist.toFixed(2) : 'n/a'))}
-                </p> */}
-              {/* <p>
-                  Stellar mass:{' '}
-                  {planet.st_mass ? planet.st_mass.toFixed(2) : 'n/a'}
-                </p>
-                <p>
-                  Stellar radius:{' '}
-                  {planet.st_rad ? planet.st_rad.toFixed(2) : 'n/a'}
-                </p>
-                <p>
-                  Planetary mass:{' '}
-                  {planet.pl_bmassj ? planet.pl_bmassj.toFixed(2) : 'n/a'}
-                </p>
-                <p>
-                  Planetary radius:{' '}
-                  {planet.pl_radj ? planet.pl_radj.toFixed(2) : 'n/a'}
-                </p>
-                <p>
-                  Planetary neighbours:{' '}
-                  {planet.pl_pnum ? planet.pl_pnum : 'n/a'}
-                </p>
-                <p>
-                  Constellation:{' '}
-                  {planet.constellation ? planet.constellation : 'n/a'}
-                </p> */}
               <Stats>
                 <Ul>
-                  <li>Distance: </li>
-                  <li>Host star mass 2: </li>+<li>Host star radius: </li>
-                  <li>Planetary Mass: </li>
-                  <li>Planetary Radius: </li>
-                  <li>Planets in system: </li>
+                  <li>Distance: {displayProperties('distance')} </li>
+                  <li>Host star mass 2:{displayProperties('stellarMass')} </li>
+                  <li>
+                    Host star radius: {displayProperties('stellarRadius')}
+                  </li>
+                  <li>Planetary Mass: {displayProperties('planetaryMass')} </li>
+                  <li>
+                    Planetary Radius: {displayProperties('planetaryRadius')}{' '}
+                  </li>
+                  <li>
+                    Planets in system:{' '}
+                    {displayProperties('planetaryNeighbours')}{' '}
+                  </li>
+                  <li>Constellation: {displayProperties('constellation')} </li>
                 </Ul>
               </Stats>
             </>
