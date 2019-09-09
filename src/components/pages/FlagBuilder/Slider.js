@@ -12,7 +12,8 @@ import {
   CONSTELLATION_CTX
 } from '../../../const';
 
-const sliderHeight = 140;
+const sliderHeight = 90;
+const axisHeight = 100;
 const trackHeight = 2;
 const thumbSize = 30;
 const padding = thumbSize * 2;
@@ -21,6 +22,7 @@ const getSliderWidth = width => width - 2 * padding;
 
 const SVG = styled.svg`
   display: block;
+  /* border: 1px solid red; */
 `;
 
 const Track = styled.rect`
@@ -54,14 +56,12 @@ const MARKS = {
       id: 2,
       value: 7659,
       renderer: () => (
-        <ellipse
-          rx={10}
-          ry={20}
-          stroke="black"
-          strokeWidth={2}
-          fill="none"
-          style={{ filter: 'drop-shadow( 3px 3px 2px rgba(0, 0, 0, .7))' }}
-        />
+        <g stroke="#A5A5A5" stroke-width="2" fill="none">
+          <g>
+            <ellipse rx="4" ry="14"></ellipse>
+            <ellipse rx="8" ry="32"></ellipse>
+          </g>
+        </g>
       )
     },
     {
@@ -231,7 +231,7 @@ class Slider extends Component {
   }
 
   renderLabels() {
-    const { flagProperty, extents } = this.props;
+    const { flagProperty, extents, width } = this.props;
 
     /*
       For point scales, render labels for each point
@@ -245,47 +245,50 @@ class Slider extends Component {
       const height = 40;
 
       return (
-        <g>
-          {values.map(value => {
-            const filename = `${value}Planet${value === 1 ? '' : 's'}`;
-            const href = PLANETARY_NEIGHBOURS_CTX(`./${filename}.svg`);
+        <SVG height={height + 10} width={width}>
+          <g transform={`translate(${padding}, 0)`}>
+            {values.map(value => {
+              const filename = `${value}Planet${value === 1 ? '' : 's'}`;
+              const href = PLANETARY_NEIGHBOURS_CTX(`./${filename}.svg`);
 
-            return (
-              <image
-                key={href}
-                height={height}
-                x={scale(value) - height / 2}
-                y={-height - labelPadding}
-                xlinkHref={href}
-              />
-            );
-          })}
-        </g>
+              return (
+                <image
+                  key={href}
+                  height={height}
+                  x={scale(value) - height / 2}
+                  y={0}
+                  xlinkHref={href}
+                />
+              );
+            })}
+          </g>
+        </SVG>
       );
     }
 
     if (flagProperty === FLAG_PROPERTIES.constellation) {
       const scale = this.getScale();
       const values = extents[flagProperty];
+      const height = 90;
 
       return (
-        <g>
-          {values.map(value => {
-            return (
-              <text
-                key={value}
-                fill="white"
-                fontSize={10}
-                alignmentBaseline="middle"
-                transform={`translate(${scale(
-                  value
-                )}, -${labelPadding}) rotate(-90)`}
-              >
-                {value}
-              </text>
-            );
-          })}
-        </g>
+        <SVG height={height} width={width}>
+          <g transform={`translate(${padding}, ${height})`}>
+            {values.map(value => {
+              return (
+                <text
+                  key={value}
+                  fill="white"
+                  fontSize={10}
+                  alignmentBaseline="middle"
+                  transform={`translate(${scale(value)}, 0) rotate(-90)`}
+                >
+                  {value}
+                </text>
+              );
+            })}
+          </g>
+        </SVG>
       );
     }
 
@@ -300,20 +303,26 @@ class Slider extends Component {
     const scale = this.getScale();
 
     return (
-      <SVG height={sliderHeight} width={width}>
-        <g
-          transform={`translate(${padding}, ${sliderHeight / 2 -
-            trackHeight / 2})`}
-        >
-          {this.renderLabels()}
+      <div>
+        {this.renderLabels()}
 
-          <Track width={sliderWidth} height={trackHeight} />
+        <SVG height={sliderHeight} width={width}>
+          <g
+            transform={`translate(${padding}, ${sliderHeight / 2 -
+              trackHeight / 2})`}
+          >
+            <Track width={sliderWidth} height={trackHeight} />
 
-          {this.renderMarks(scale)}
+            {this.renderMarks(scale)}
 
-          {value !== undefined && this.renderThumb(scale, value)}
-        </g>
-      </SVG>
+            {value !== undefined && this.renderThumb(scale, value)}
+          </g>
+        </SVG>
+
+        <SVG height={axisHeight} width={width}>
+          <g transform={`translate(${padding}, 0)`}></g>
+        </SVG>
+      </div>
     );
   }
 }
