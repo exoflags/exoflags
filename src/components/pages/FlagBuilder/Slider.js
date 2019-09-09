@@ -179,11 +179,134 @@ const AXIS_LABELS = {
       textAnchor: 'end'
     }
   ],
-  [FLAG_PROPERTIES.stellarMass]: [],
-  [FLAG_PROPERTIES.stellarRadius]: [],
-  [FLAG_PROPERTIES.planetaryMass]: [],
-  [FLAG_PROPERTIES.planetaryRadius]: [],
-  [FLAG_PROPERTIES.planetaryNeighbours]: [],
+  [FLAG_PROPERTIES.stellarMass]: [
+    {
+      id: 1,
+      text: ['Smallest definition', 'of stellar mass', '0.07 Solar Masses'],
+      value: 0.07,
+      textAnchor: 'start'
+    },
+    {
+      id: 2,
+      text: ['Most massive host', 'star observed to date'],
+      value: 280, // TODO: need actual figure here!
+      textAnchor: 'end'
+    },
+    {
+      id: 3,
+      text: ['Theoretical limit', 'to solar mass:', '350 solar', 'masses'],
+      value: 350, // TODO: need actual values for this
+      textAnchor: 'end'
+    }
+  ],
+  [FLAG_PROPERTIES.stellarRadius]: [
+    {
+      id: 1,
+      text: ['Smallest', 'Definition of', 'Planetary Radius'],
+      value: 0,
+      textAnchor: 'start'
+    },
+    {
+      id: 2,
+      text: ['Earth', 'Radius'],
+      value: 1,
+      textAnchor: 'middle'
+    },
+    {
+      id: 3,
+      text: [
+        'Largest current',
+        'observed stellar',
+        'radius, UY Scuti:',
+        '1708 Solar radii'
+      ],
+      value: 1708,
+      textAnchor: 'middle'
+    },
+    {
+      id: 4,
+      text: [
+        'Proposed limit of',
+        'possible stellar radius:',
+        '2600 Solar radii'
+      ],
+      value: 2600,
+      textAnchor: 'end'
+    }
+  ],
+  [FLAG_PROPERTIES.planetaryMass]: [
+    {
+      id: 1,
+      text: ['Smallest Definition of', 'exoplanetary mass'],
+      value: 0,
+      textAnchor: 'start'
+    },
+    {
+      id: 2,
+      text: [
+        'Most massive',
+        'planet observed',
+        'to data CD-33',
+        '2722b: ~31',
+        'Jupiter masses'
+      ],
+      value: 31,
+      textAnchor: 'middle'
+    },
+    {
+      id: 3,
+      text: ['Limit of mass', 'possible in', 'exoplanet', 'formation'],
+      value: 60,
+      textAnchor: 'end'
+    }
+  ],
+  [FLAG_PROPERTIES.planetaryRadius]: [
+    {
+      id: 1,
+      text: [
+        'Smallest',
+        'theoretical',
+        'definition of',
+        'planetary',
+        'radius:',
+        '350km'
+      ],
+      value: 350,
+      textAnchor: 'start'
+    },
+    {
+      id: 2,
+      text: ['Earth', 'radius:', '6371km'],
+      value: 6371,
+      textAnchor: 'middle'
+    },
+    {
+      id: 3,
+      text: ['Largest', 'Observed', 'Planetary Radius', 'To Date: 1400 Er'],
+      value: 1400,
+      textAnchor: 'middle'
+    },
+    {
+      id: 4,
+      text: ['Proposed limit of', 'possible', 'planetary radius', '48000 Er'],
+      value: 48000,
+      textAnchor: 'end'
+    }
+  ],
+  [FLAG_PROPERTIES.planetaryNeighbours]: [
+    {
+      id: 1,
+      text: ['0 Planets', 'in host system'],
+      value: 0,
+      textAnchor: 'start'
+    },
+    {
+      id: 2,
+      text: ['10 Planets', 'in host system'],
+      value: 10,
+      textAnchor: 'end'
+    }
+  ],
   [FLAG_PROPERTIES.constellation]: []
 };
 
@@ -366,13 +489,15 @@ class Slider extends Component {
     return null;
   }
 
-  renderAxisLabels(scale) {
+  renderAxisLabels(scale, hasAxis) {
     const { flagProperty } = this.props;
     const labels = AXIS_LABELS[flagProperty];
 
+    const translateY = hasAxis ? tickHeight * 3 : 0;
+
     return labels.map(({ id, value, text, textAnchor }) => {
       return (
-        <g key={id} transform={`translate(${scale(value)}, ${tickHeight * 3})`}>
+        <g key={id} transform={`translate(${scale(value)}, ${translateY})`}>
           {text.map((d, i) => (
             <text
               key={i}
@@ -421,7 +546,7 @@ class Slider extends Component {
           <g transform={`translate(${padding}, 20)`}>
             {hasAxis && <Axis flagProperty={flagProperty} scale={scale} />}
 
-            {this.renderAxisLabels(scale)}
+            {this.renderAxisLabels(scale, hasAxis)}
           </g>
         </SVG>
       </div>
