@@ -6,7 +6,7 @@ import theme from '../../theme';
 
 import CaltechLogo from '../Logos/CalTechLogo';
 import NasaLogo from '../Logos/NasaLogo/';
-import Flag from '../Flag';
+import Flag from '../shared/Flag';
 
 export const Search = data => {
   const planetNames = data.data.map(planet => ({
@@ -96,6 +96,19 @@ export const Search = data => {
   const handleChange = planet => {
     setPlanet(planet);
   };
+
+  const getProperties = () => {
+    const obj = data.data.filter(obj => obj.pl_name === selectedPlanet);
+    const planetData = {
+      distance: obj[0].st_dist,
+      stellarMass: obj[0].st_mass,
+      planetaryMass: obj[0].pl_bmass,
+      planetaryRadius: obj[0].pl_rad,
+      planetaryNeighbours: obj[0].pl_pnum
+    };
+    return planetData;
+  };
+
   return (
     <div>
       <Container>
@@ -129,13 +142,7 @@ export const Search = data => {
         </Left>
         <Right>
           <Header>Planet Name</Header>
-          <Flag
-          // redshift = {}
-          // planetaryMass = {useState(planet.)}
-          // planetaryRadius = {}
-          // stellarMass = {}
-          // stellarRadius = {}
-          />
+          {selectedPlanet && <Flag flagProperties={getProperties()} />}
         </Right>
       </Container>
     </div>
