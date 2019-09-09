@@ -8,7 +8,6 @@ import {
   About,
   Credits,
   Examples,
-  Resources,
   Search,
   FlagBuilder,
   NotFound
@@ -123,7 +122,6 @@ const App = () => {
 
           <About path="/" />
           <Credits path="/credits" />
-          <Resources path="/resources" />
           <Search path="/search" data={planetData} />
           <NotFound default />
         </Router>
