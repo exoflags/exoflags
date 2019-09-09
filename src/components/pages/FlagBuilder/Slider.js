@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import styled from '@emotion/styled';
 import { scaleLinear, scalePoint, scaleQuantize } from 'd3-scale';
 import { select, event as d3Event } from 'd3-selection';
-import { axisTop } from 'd3-axis';
 import { drag } from 'd3-drag';
 import throttle from 'lodash.throttle';
 
@@ -153,6 +152,41 @@ const MARKS = {
   [FLAG_PROPERTIES.constellation]: []
 };
 
+const AXIS_LABELS = {
+  [FLAG_PROPERTIES.distance]: [
+    {
+      id: 1,
+      text: ['Earth:', '0 Parsecs'],
+      value: 0,
+      textAnchor: 'start'
+    },
+    {
+      id: 2,
+      text: ['Closest', 'Galactic', 'Neighbour', '7659 Parsecs'],
+      value: 7659,
+      textAnchor: 'middle'
+    },
+    {
+      id: 3,
+      text: ['Farthest', 'Observed', 'Exoplanet', '8495.92 Parsecs'],
+      value: 8495.92,
+      textAnchor: 'middle'
+    },
+    {
+      id: 4,
+      text: ['Farthest', 'Likely', 'Planetary', 'Formations', '10000 Parsecs'],
+      value: 10000,
+      textAnchor: 'end'
+    }
+  ],
+  [FLAG_PROPERTIES.stellarMass]: [],
+  [FLAG_PROPERTIES.stellarRadius]: [],
+  [FLAG_PROPERTIES.planetaryMass]: [],
+  [FLAG_PROPERTIES.planetaryRadius]: [],
+  [FLAG_PROPERTIES.planetaryNeighbours]: [],
+  [FLAG_PROPERTIES.constellation]: []
+};
+
 class Slider extends Component {
   thumbRef = React.createRef();
   axisRef = React.createRef();
@@ -269,7 +303,7 @@ class Slider extends Component {
     );
   }
 
-  renderLabels() {
+  renderLabels(scale) {
     const { flagProperty, extents, width } = this.props;
 
     /*
@@ -279,7 +313,6 @@ class Slider extends Component {
     */
 
     if (flagProperty === FLAG_PROPERTIES.planetaryNeighbours) {
-      const scale = this.getScale();
       const values = extents[flagProperty];
       const height = 40;
 
@@ -306,7 +339,6 @@ class Slider extends Component {
     }
 
     if (flagProperty === FLAG_PROPERTIES.constellation) {
-      const scale = this.getScale();
       const values = extents[flagProperty];
       const height = 90;
 
@@ -334,43 +366,29 @@ class Slider extends Component {
     return null;
   }
 
-  // renderAxisTicks() {
-  //   // TODO: need to ensure this is removed between renders
-  //   // DO we have to do this on component did update?
-  //   const { flagProperty, extents, width } = this.props;
+  renderAxisLabels(scale) {
+    const { flagProperty } = this.props;
+    const labels = AXIS_LABELS[flagProperty];
 
-  //   if (
-  //     flagProperty === FLAG_PROPERTIES.planetaryNeighbours ||
-  //     flagProperty === FLAG_PROPERTIES.constellation
-  //   ) {
-  //     return null;
-  //   }
-
-  //   const scale = this.getScale();
-  //   const sliderWidth = getSliderWidth(width);
-  //   const extent = extents[flagProperty];
-
-  //   const axis = axisTop(scale);
-  //   const axisG = select('#axis');
-
-  //   if (axisG) {
-  //     axisG.call(axis);
-
-  //     const ticks = axisG.selectAll('.tick')
-
-  //     axisG.select('path')
-  //       .attr('stroke', '#d8d8d8')
-
-  //     ticks.selectAll('text')
-  //       .attr('y', 0 + tickHeight)
-  //       .attr('alignment-baseline', 'hanging')
-
-  //     ticks.selectAll('line')
-  //       .attr('stroke', '#d8d8d8')
-  //   }
-  // }
-
-  renderAxisLabels() {}
+    return labels.map(({ id, value, text, textAnchor }) => {
+      return (
+        <g key={id} transform={`translate(${scale(value)}, ${tickHeight * 3})`}>
+          {text.map((d, i) => (
+            <text
+              key={i}
+              transform={`translate(0, ${i * 10})`}
+              fill="white"
+              fontSize={10}
+              alignmentBaseline="hanging"
+              textAnchor={textAnchor}
+            >
+              {d}
+            </text>
+          ))}
+        </g>
+      );
+    });
+  }
 
   render() {
     const { extents, width, userFlag, flagProperty } = this.props;
@@ -384,7 +402,7 @@ class Slider extends Component {
 
     return (
       <div>
-        {this.renderLabels()}
+        {this.renderLabels(scale)}
 
         <SVG height={sliderHeight} width={width}>
           <g
@@ -401,10 +419,9 @@ class Slider extends Component {
 
         <SVG height={axisHeight} width={width}>
           <g transform={`translate(${padding}, 20)`}>
-            {/* <line x1={0} y1={tickHeight} x2={sliderWidth} y2={tickHeight} stroke="#d8d8d8" strokeWidth={1} />
-            {this.renderAxisTicks()}
-            <g id="axis" /> */}
             {hasAxis && <Axis flagProperty={flagProperty} scale={scale} />}
+
+            {this.renderAxisLabels(scale)}
           </g>
         </SVG>
       </div>
