@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 
 import aboutBackgroundImage from '../../../assets/ExoFlags_BG_Still.png';
 import aboutBackgroundVideo from '../../../assets/ExoFlags_BG1.mp4';
-import defaultBackgroundImage from '../../../assets/ExoFlags_BG_Still.png';
+import defaultBackgroundImage from '../../../assets/ExoFlags_BG1_Still.png';
 import defaultBackgroundVideo from '../../../assets/ExoFlags_Space_BG.mp4';
 
 const backgrounds = {
