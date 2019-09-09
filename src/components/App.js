@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Router } from '@reach/router';
+import { Router, LocationProvider, createHistory } from '@reach/router';
+import createHashSource from 'hash-source';
 import styled from '@emotion/styled';
 import { extent } from 'd3-array';
 
@@ -28,6 +29,7 @@ const AppContainer = styled.div`
 const HeaderContainer = styled.div`
   height: ${props => props.theme.headerHeight};
   width: 100%;
+  z-index: 2;
 `;
 
 const ContentContainer = styled.div`
@@ -36,6 +38,7 @@ const ContentContainer = styled.div`
   flex: 1;
   position: relative;
   background-color: ${props => props.theme.colors.grey.dark};
+  z-index: 1;
 `;
 
 const routerStyle = {
@@ -49,17 +52,20 @@ const distanceExtent = () => {
 };
 
 const EXTENTS = {
-  [FLAG_PROPERTIES.distance]: distanceExtent(),
-  [FLAG_PROPERTIES.stellarMass]: extent(planetData, planet => planet.st_mass),
-  [FLAG_PROPERTIES.stellarRadius]: extent(planetData, planet => planet.st_rad),
+  [FLAG_PROPERTIES.distance]: [0, 10000], //distanceExtent(),
+  [FLAG_PROPERTIES.stellarMass]: [0, 350], //extent(planetData, planet => planet.st_mass),
+  [FLAG_PROPERTIES.stellarRadius]: [0, 2600], //extent(planetData, planet => planet.st_rad),
   [FLAG_PROPERTIES.planetaryMass]: extent(
     planetData,
     planet => planet.pl_bmassj
   ),
-  [FLAG_PROPERTIES.planetaryRadius]: extent(
+  [FLAG_PROPERTIES.planetaryRadius]: [
+    0,
+    168.134
+  ] /* extent(
     planetData,
     planet => planet.pl_radj
-  ),
+  ), */,
   // At time of writing extent of data is [1, 8] but we want to show all 10 graphics on slider
   [FLAG_PROPERTIES.planetaryNeighbours]: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
   [FLAG_PROPERTIES.constellation]: uniq(
@@ -84,16 +90,15 @@ const initialUserFlag = Object.entries(EXTENTS).reduce(
   {}
 );
 
+const source = createHashSource();
+const history = createHistory(source);
+
 const App = () => {
-  // TODO: consider doing this outside of component, in a const file or something, or just above
-  // No time to dynamically load in data
   const [userFlag, setUserFlag] = useState(initialUserFlag);
 
   const resetUserFlag = () => {
     setUserFlag(initialUserFlag);
   };
-
-  console.log('extents', EXTENTS);
 
   return (
     <AppContainer>

@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { navigate } from '@reach/router';
 
 import { Page } from '../shared/Layout';
 import Flag from '../shared/Flag';
@@ -64,7 +63,7 @@ function getsimilarPlanets(flag, data) {
   ];
 }
 
-const ClosestMatch = ({ userFlag, resetUserFlag, extents, data }) => {
+const ClosestMatch = ({ userFlag, resetUserFlag, extents, data, navigate }) => {
   const similarPlanets = getsimilarPlanets(userFlag, data);
 
   const handleStartAgain = () => {

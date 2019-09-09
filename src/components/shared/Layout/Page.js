@@ -7,6 +7,7 @@ import defaultBackgroundImage from '../../../assets/ExoFlags_BG1_Still.png';
 import defaultBackgroundVideo from '../../../assets/ExoFlags_Space_BG.mp4';
 import exploreBackgroundVideo from '../../../assets/Exoflags_Temp_BG2a.mp4';
 
+// TODO: wrong for explore page
 const backgrounds = {
   about: {
     video: aboutBackgroundVideo,
@@ -38,7 +39,9 @@ const PageView = styled.div`
 `;
 
 const Video = styled.video`
-  position: absolute;
+  position: fixed;
+  top: 0;
+  left: 0;
   height: 100%;
   width: 100%;
   object-fit: cover;
@@ -65,7 +68,11 @@ export const Page = ({
         loop
         src={video ? backgrounds[video].video : backgrounds.default.video}
         type="video/mp4"
-        poster={fallbackImg}
+        poster={
+          fallbackImg
+            ? backgrounds[fallbackImg]
+            : backgrounds.default.backgroundImage
+        }
       />
 
       <Children>{children}</Children>

@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { navigate } from '@reach/router';
 
 import { Page } from '../shared/Layout';
 import Button from '../shared/Button';
@@ -10,6 +9,8 @@ const ContentContainer = styled.div`
   height: 100%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
 `;
 
 const Text = styled.p`
@@ -24,19 +25,21 @@ const ExploreButton = styled(Button)`
   margin-top: 2rem;
 `;
 
-const Explore = () => (
+const Explore = ({ navigate }) => (
   <Page video="explore">
     <ContentContainer>
-      <Text>
-        See how Exoflags builds visual identities for new worlds using
-        observational data.
-      </Text>
+      <div>
+        <Text>
+          See how Exoflags builds visual identities for new worlds using
+          observational data.
+        </Text>
 
-      <Text>Explore the process here...</Text>
+        <Text>Explore the process here...</Text>
 
-      <ExploreButton onClick={() => navigate('/explore/1')} primaryInverted>
-        EXPLORE
-      </ExploreButton>
+        <ExploreButton onClick={() => navigate('/explore/1')} primaryInverted>
+          EXPLORE
+        </ExploreButton>
+      </div>
     </ContentContainer>
   </Page>
 );

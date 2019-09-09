@@ -12,7 +12,7 @@ import { FLAG_BUILDER_STEPS, FLAG_PROPERTIES } from '../../../const';
 // below FlagBuilderNav
 const ContentContainer = styled.div`
   position: absolute;
-  height: calc(100% - ${props => props.theme.flagBuilderNavHeight});
+  /* height: calc(100% - ${props => props.theme.flagBuilderNavHeight}); */
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -59,7 +59,13 @@ const sliderLabelRef = {
     'choose the constellation in which the planet can be found'
 };
 
-export const FlagBuilder = ({ userFlag, setUserFlag, extents, stepId }) => {
+export const FlagBuilder = ({
+  userFlag,
+  setUserFlag,
+  extents,
+  stepId,
+  navigate
+}) => {
   const stepIdx = +stepId - 1;
   const { title, body, flagProperty } = FLAG_BUILDER_STEPS[stepIdx];
 
@@ -107,7 +113,7 @@ export const FlagBuilder = ({ userFlag, setUserFlag, extents, stepId }) => {
         </SliderContainer>
       </ContentContainer>
 
-      <FlagBuilderNav stepId={+stepId} stepIdx={stepIdx} />
+      <FlagBuilderNav stepId={+stepId} stepIdx={stepIdx} navigate={navigate} />
     </Page>
   );
 };
