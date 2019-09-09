@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import styled from '@emotion/styled';
-import { Link, navigate } from '@reach/router';
+import { Link } from '@reach/router';
 
 import Button from '../../shared/Button';
 import { FLAG_BUILDER_STEPS } from '../../../const';
@@ -62,7 +62,7 @@ const NavDot = props => (
   />
 );
 
-const FlagBuilderNav = ({ stepId, stepIdx }) => {
+const FlagBuilderNav = ({ stepId, stepIdx, navigate }) => {
   const isFirstStep = stepIdx === 0;
   const isLastStep = stepIdx === FLAG_BUILDER_STEPS.length - 1;
 

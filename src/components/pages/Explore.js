@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { navigate } from '@reach/router';
 
 import { Page } from '../shared/Layout';
 import Button from '../shared/Button';
@@ -26,7 +25,7 @@ const ExploreButton = styled(Button)`
   margin-top: 2rem;
 `;
 
-const Explore = () => (
+const Explore = ({ navigate }) => (
   <Page video="explore">
     <ContentContainer>
       <div>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Router } from '@reach/router';
+import { Router, LocationProvider, createHistory } from '@reach/router';
+import createHashSource from 'hash-source';
 import styled from '@emotion/styled';
 import { extent } from 'd3-array';
 
@@ -88,51 +89,52 @@ const initialUserFlag = Object.entries(EXTENTS).reduce(
   {}
 );
 
+const source = createHashSource();
+const history = createHistory(source);
+
 const App = () => {
-  // TODO: consider doing this outside of component, in a const file or something, or just above
-  // No time to dynamically load in data
   const [userFlag, setUserFlag] = useState(initialUserFlag);
 
   const resetUserFlag = () => {
     setUserFlag(initialUserFlag);
   };
 
-  console.log('extents', EXTENTS);
-
   return (
-    <AppContainer>
-      <HeaderContainer>
-        <Header />
-      </HeaderContainer>
+    <LocationProvider history={history}>
+      <AppContainer>
+        <HeaderContainer>
+          <Header />
+        </HeaderContainer>
 
-      <ContentContainer>
-        <Router style={routerStyle}>
-          <Explore path="/explore" />
+        <ContentContainer>
+          <Router style={routerStyle}>
+            <Explore path="/explore" />
 
-          <FlagBuilder
-            path="/explore/:stepId"
-            userFlag={userFlag}
-            setUserFlag={setUserFlag}
-            extents={EXTENTS}
-          />
+            <FlagBuilder
+              path="explore/:stepId"
+              userFlag={userFlag}
+              setUserFlag={setUserFlag}
+              extents={EXTENTS}
+            />
 
-          <ClosestMatch
-            path="/explore/closest-match"
-            userFlag={userFlag}
-            resetUserFlag={resetUserFlag}
-            data={planetData}
-            extents={EXTENTS}
-          />
+            <ClosestMatch
+              path="explore/closest-match"
+              userFlag={userFlag}
+              resetUserFlag={resetUserFlag}
+              data={planetData}
+              extents={EXTENTS}
+            />
 
-          <About path="/" />
-          <Credits path="/credits" />
-          <Resources path="/resources" />
-          <Search path="/search" />
+            <About path="/" />
+            <Credits path="/credits" />
+            <Resources path="/resources" />
+            <Search path="/search" />
 
-          <NotFound default />
-        </Router>
-      </ContentContainer>
-    </AppContainer>
+            <NotFound default />
+          </Router>
+        </ContentContainer>
+      </AppContainer>
+    </LocationProvider>
   );
 };
 
