@@ -24,8 +24,8 @@ const SubHeading = styled.h2`
 `;
 
 export const About = () => (
-  //  <Page>
-  <>
+  <Page>
+    {/* <> */}
     <ImgContainer>
       <ExoFlagsLogo />
     </ImgContainer>
@@ -83,6 +83,6 @@ export const About = () => (
         </span>
       </p>
     </Container>
-    {/* </Page> */}
-  </>
+  </Page>
+  //   </>
 );
