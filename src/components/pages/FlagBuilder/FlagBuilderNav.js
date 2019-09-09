@@ -67,14 +67,21 @@ const FlagBuilderNav = ({ stepId, stepIdx }) => {
   const isLastStep = stepIdx === FLAG_BUILDER_STEPS.length - 1;
 
   const prev = () => navigate(`/flag-builder/${stepId - 1}`);
-  const next = () => navigate(`/flag-builder/${stepId + 1}`);
+  const next = () => {
+    if (isLastStep) {
+      navigate('/flag-builder/closest-match');
+      return;
+    }
+
+    navigate(`/flag-builder/${stepId + 1}`);
+  };
 
   useEffect(() => {
     function handleKeyDown(e) {
       if (e.code === 'ArrowLeft' && !isFirstStep) {
         prev();
       }
-      if (e.code === 'ArrowRight' && !isLastStep) {
+      if (e.code === 'ArrowRight') {
         next();
       }
     }
@@ -100,11 +107,10 @@ const FlagBuilderNav = ({ stepId, stepIdx }) => {
             PREVIOUS
           </Button>
         )}
-        {!isLastStep && (
-          <Button onClick={next} primary>
-            NEXT
-          </Button>
-        )}
+
+        <Button onClick={next} primary>
+          NEXT
+        </Button>
       </ButtonContainer>
     </Wrapper>
   );

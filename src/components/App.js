@@ -15,8 +15,9 @@ import {
   NotFound
 } from './pages';
 import { FLAG_PROPERTIES } from '../const';
-import exoplanets from '../data/data.json';
+import planetData from '../data/data.json';
 import { uniq } from '../utils/uniq';
+import ClosestMatch from './pages/ClosestMatch';
 
 const AppContainer = styled.div`
   height: 100vh;
@@ -42,63 +43,54 @@ const routerStyle = {
   height: '100%'
 };
 
+const distanceExtent = () => {
+  const values = extent(planetData, planet => planet.st_dist);
+  values[1] = Math.max(values[1], 10000);
+  return values;
+};
+
+const EXTENTS = {
+  [FLAG_PROPERTIES.distance]: distanceExtent(),
+  [FLAG_PROPERTIES.stellarMass]: extent(planetData, planet => planet.st_mass),
+  [FLAG_PROPERTIES.stellarRadius]: extent(planetData, planet => planet.st_rad),
+  [FLAG_PROPERTIES.planetaryMass]: extent(
+    planetData,
+    planet => planet.pl_bmassj
+  ),
+  [FLAG_PROPERTIES.planetaryRadius]: extent(
+    planetData,
+    planet => planet.pl_radj
+  ),
+  // At time of writing extent of data is [1, 8] but we want to show all 10 graphics on slider
+  [FLAG_PROPERTIES.planetaryNeighbours]: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+  [FLAG_PROPERTIES.constellation]: uniq(
+    planetData.map(planet => planet.constellation).filter(Boolean)
+  ).sort()
+};
+
+const midPoint = extent => (extent[0] + extent[1]) / 2;
+const firstValue = extent => extent[0];
+const accessors = {
+  [FLAG_PROPERTIES.planetaryNeighbours]: firstValue,
+  [FLAG_PROPERTIES.constellation]: firstValue
+};
+
+const initialUserFlag = Object.entries(EXTENTS).reduce(
+  (memo, [key, extent]) => {
+    const accessor = accessors[key] || midPoint;
+    const value = accessor(extent);
+    memo[key] = value;
+    return memo;
+  },
+  {}
+);
+
 const App = () => {
   // TODO: consider doing this outside of component, in a const file or something, or just above
   // No time to dynamically load in data
-  const [userFlag, setUserFlag] = useState({});
-  const [planetData] = useState(exoplanets);
-
-  const distanceExtent = () => {
-    const values = extent(planetData, planet => planet.st_dist);
-    values[1] = Math.max(values[1], 10000);
-    return values;
-  };
-
-  const EXTENTS = {
-    [FLAG_PROPERTIES.distance]: distanceExtent(),
-    [FLAG_PROPERTIES.stellarMass]: extent(planetData, planet => planet.st_mass),
-    [FLAG_PROPERTIES.stellarRadius]: extent(
-      planetData,
-      planet => planet.st_rad
-    ),
-    [FLAG_PROPERTIES.planetaryMass]: extent(
-      planetData,
-      planet => planet.pl_bmassj
-    ),
-    [FLAG_PROPERTIES.planetaryRadius]: extent(
-      planetData,
-      planet => planet.pl_radj
-    ),
-    // At time of writing extent of data is [1, 8] but we want to show all 10 graphics on slider
-    [FLAG_PROPERTIES.planetaryNeighbours]: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-    [FLAG_PROPERTIES.constellation]: uniq(
-      planetData.map(planet => planet.constellation).filter(Boolean)
-    ).sort()
-  };
+  const [userFlag, setUserFlag] = useState(initialUserFlag);
 
   console.log('extents', EXTENTS);
-
-  useEffect(() => {
-    // Define default and special accessors for initial user flag values
-    const midPoint = extent => (extent[0] + extent[1]) / 2;
-    const firstValue = extent => extent[0];
-    const accessors = {
-      [FLAG_PROPERTIES.planetaryNeighbours]: firstValue,
-      [FLAG_PROPERTIES.constellation]: firstValue
-    };
-
-    const initialUserFlag = Object.entries(EXTENTS).reduce(
-      (memo, [key, extent]) => {
-        const accessor = accessors[key] || midPoint;
-        const value = accessor(extent);
-        memo[key] = value;
-        return memo;
-      },
-      {}
-    );
-
-    setUserFlag(initialUserFlag);
-  }, []);
 
   return (
     <AppContainer>
@@ -112,6 +104,13 @@ const App = () => {
 
           <FlagBuilder
             path="/flag-builder/:stepId"
+            userFlag={userFlag}
+            setUserFlag={setUserFlag}
+            extents={EXTENTS}
+          />
+
+          <ClosestMatch
+            path="/flag-builder/closest-match"
             userFlag={userFlag}
             setUserFlag={setUserFlag}
             extents={EXTENTS}
