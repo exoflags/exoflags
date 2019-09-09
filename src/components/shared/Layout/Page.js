@@ -16,6 +16,10 @@ const backgrounds = {
     video: exploreBackgroundVideo,
     image: defaultBackgroundImage
   },
+  credits: {
+    video: exploreBackgroundVideo,
+    image: defaultBackgroundImage
+  },
   default: {
     video: defaultBackgroundVideo,
     image: defaultBackgroundImage
