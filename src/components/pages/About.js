@@ -24,8 +24,7 @@ const SubHeading = styled.h2`
 `;
 
 export const About = () => (
-  <Page>
-    {/* <> */}
+  <Page video="about">
     <ImgContainer>
       <ExoFlagsLogo />
     </ImgContainer>
@@ -43,7 +42,7 @@ export const About = () => (
         unprecedented 2,662 confirmed planets.
       </p>
       <p>
-        <span>To date, 4,044 exoplanets have been confirmed</span>
+        <span>To date, 4,044 exoplanets have been confirmed </span>
       </p>
       <p>
         …and scientists believe that there could be as many as 40 billion rocky
@@ -68,7 +67,7 @@ export const About = () => (
         Exoflags seeks to inspire wonder and insight to each new discovery by
         giving a little piece of identity, rooted in the planet’s data, to
         encourage a wider audience to learn more about the exciting new
-        discoveries at the frontier of planetary discovery.{' '}
+        discoveries at the frontier of planetary discovery.
       </p>
       <p>
         Exoflags is a dynamic data visualisation tool where information can be
@@ -84,5 +83,4 @@ export const About = () => (
       </p>
     </Container>
   </Page>
-  //   </>
 );
