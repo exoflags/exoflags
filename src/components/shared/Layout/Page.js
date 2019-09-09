@@ -5,11 +5,16 @@ import aboutBackgroundImage from '../../../assets/ExoFlags_BG_Still.png';
 import aboutBackgroundVideo from '../../../assets/ExoFlags_BG1.mp4';
 import defaultBackgroundImage from '../../../assets/ExoFlags_BG1_Still.png';
 import defaultBackgroundVideo from '../../../assets/ExoFlags_Space_BG.mp4';
+import exploreBackgroundVideo from '../../../assets/Exoflags_Temp_BG2a.mp4';
 
 const backgrounds = {
   about: {
     video: aboutBackgroundVideo,
     image: aboutBackgroundImage
+  },
+  explore: {
+    video: exploreBackgroundVideo,
+    image: defaultBackgroundImage
   },
   default: {
     video: defaultBackgroundVideo,
@@ -43,23 +48,23 @@ const Children = styled.div`
   width: 100%;
 `;
 
-export const Page = props => {
+export const Page = ({
+  video = backgrounds.default.backgroundVideo,
+  fallbackImg = backgrounds.default.backgroundImage,
+  children
+}) => {
   return (
     <PageView>
       <Video
         autoPlay
         muted
         loop
-        src={
-          props.video
-            ? backgrounds[props.video].video
-            : backgrounds.default.video
-        }
+        src={video ? backgrounds[video].video : backgrounds.default.video}
         type="video/mp4"
-        poster={defaultBackgroundImage}
+        poster={fallbackImg}
       />
 
-      <Children>{props.children}</Children>
+      <Children>{children}</Children>
     </PageView>
   );
 };

@@ -69,7 +69,7 @@ const ClosestMatch = ({ userFlag, resetUserFlag, extents, data }) => {
 
   const handleStartAgain = () => {
     resetUserFlag();
-    navigate('/flag-builder/1');
+    navigate('/explore/1');
   };
 
   return (
