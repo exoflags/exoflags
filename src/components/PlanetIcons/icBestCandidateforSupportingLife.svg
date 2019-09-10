@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="182px" height="182px" viewBox="0 0 182 182" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 57.1 (101010) - https://sketch.com -->
+    <title>D6515F1C-FBDF-4D91-9DE2-60525FBA4BDE@1.00x</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <radialGradient cx="50%" cy="0%" fx="50%" fy="0%" r="100%" id="radialGradient-1">
+            <stop stop-color="#7C9FF0" offset="0%"></stop>
+            <stop stop-color="#2F64C9" offset="100%"></stop>
+        </radialGradient>
+    </defs>
+    <g id="Site-UI" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.724516369">
+        <g id="Examples-1" transform="translate(-1580.000000, -251.000000)" fill="url(#radialGradient-1)" stroke="#979797">
+            <circle id="icBestCandidateforSupportingLife" cx="1671" cy="342" r="90"></circle>
+        </g>
+    </g>
+</svg>

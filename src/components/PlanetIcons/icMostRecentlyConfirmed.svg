@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="241px" height="241px" viewBox="0 0 241 241" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 57.1 (101010) - https://sketch.com -->
+    <title>1E02224E-C380-499E-926C-9A4C4DB23DCD@1.00x</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <radialGradient cx="85.750704%" cy="50%" fx="85.750704%" fy="50%" r="100%" id="radialGradient-1">
+            <stop stop-color="#3E3E3E" offset="0%"></stop>
+            <stop stop-color="#D8D8D8" offset="100%"></stop>
+        </radialGradient>
+    </defs>
+    <g id="Site-UI" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Examples-1" transform="translate(-122.000000, -222.000000)" fill="url(#radialGradient-1)">
+            <circle id="icMostRecentlyConfirmed" cx="242.5" cy="342.5" r="120.5"></circle>
+        </g>
+    </g>
+</svg>
