@@ -28,16 +28,20 @@ export const Search = ({ data, extents }) => {
       color: 'black'
     }),
     input: (provided, state) => ({
+      ...provided,
       color: 'white'
     }),
     option: (provided, state) => ({
+      ...provided,
       color: 'black',
       padding: 8
     }),
     placeholder: (provided, state) => ({
+      ...provided,
       color: 'white'
     }),
     dropdownIndicator: (provided, state) => ({
+      ...provided,
       color: 'white'
     })
   };
