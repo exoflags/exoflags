@@ -128,7 +128,11 @@ const App = () => {
           <About path="/" />
           <Credits path="/credits" />
           <Examples path="/examples/" />
-          <Examples path="/examples/:stepId" />
+          <Examples
+            path="/examples/:stepId"
+            data={planetData}
+            extents={EXTENTS}
+          />
 
           {/* <Examples path="/examples/*" /> */}
 

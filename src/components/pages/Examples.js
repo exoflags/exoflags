@@ -3,6 +3,7 @@ import { Link } from '@reach/router';
 import styled from '@emotion/styled';
 
 import { EXAMPLES } from '../../const';
+import Flag from '../shared/Flag';
 
 import { Page } from '../shared/Layout';
 import {
@@ -37,17 +38,37 @@ const Section1 = styled.div`
 `;
 const Section2 = styled.div`
   height: 45%;
-  width: 100%;
+  display: flex;
+  justify-content: space-between;
   p {
     font-size: 1.25rem;
-    max-width: 620px;
+    max-width: 640px;
   }
 `;
 
 const Heading = styled.h1`
   font-size: 3.75rem;
 `;
-export const Examples = ({ navigate, stepId = 0 }) => (
+
+const Text = styled.div`
+  width: 50%;
+`;
+const getProperties = (data, stepId) => {
+  let selectedPlanet = EXAMPLES[stepId].name;
+  const obj = data.filter(obj => obj.pl_name === selectedPlanet);
+  const planetData = {
+    distance: obj[0].st_dist,
+    stellarMass: obj[0].st_mass,
+    stellarRadius: obj[0].st_rad,
+    planetaryMass: obj[0].pl_bmassj,
+    planetaryRadius: obj[0].pl_radj,
+    planetaryNeighbours: obj[0].pl_pnum,
+    constellation: obj[0].constellation
+  };
+  return planetData;
+};
+
+export const Examples = ({ navigate, stepId = 0, data, extents }) => (
   <Page>
     <ContentContainer>
       <Section1>
@@ -66,10 +87,22 @@ export const Examples = ({ navigate, stepId = 0 }) => (
       </Section1>
       <Hr />
       <Section2>
-        <Heading>{EXAMPLES[stepId].title}</Heading>
-        {EXAMPLES[stepId].body.map((p, i) => (
-          <p key={i + stepId}>{p}</p>
-        ))}
+        <Text>
+          <Heading>{EXAMPLES[stepId].title}</Heading>
+          {EXAMPLES[stepId].body.map((p, i) => (
+            <p key={i + '_' + stepId}>{p}</p>
+          ))}
+        </Text>
+        <div>
+          {stepId > 0 && (
+            <Flag
+              width={600}
+              extents={extents}
+              flagProperties={getProperties(data, stepId)}
+              basicFlag
+            />
+          )}
+        </div>
       </Section2>
     </ContentContainer>
   </Page>
