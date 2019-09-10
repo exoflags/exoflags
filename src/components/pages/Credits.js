@@ -11,7 +11,7 @@ const ImgContainer = styled.div`
 
 const ContentContainer = styled.div`
   padding: 2rem 8rem;
-  height: 100%;
+  height: auto;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.7);
 `;
