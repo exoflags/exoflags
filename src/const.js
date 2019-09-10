@@ -80,9 +80,13 @@ export const FLAG_BUILDER_STEPS = [
     flagProperty: FLAG_PROPERTIES.constellation,
     title: 'Constellation',
     body: [
-      'You’ve just explored the steps in data visualisation necessary to build an exoplanetary flag! Of the random variables you’ve chosen, on the right are the 3 most similar actual exoplanets that Earth-based studies have confirmed to date.',
-      'You can learn more about these studies and explore the full depth of the NASA and Caltech database to find out more about the discovery of new worlds.'
+      'The final component of the system identifies the area of the night sky from Earth where we can locate the exoplanet in question.',
+      'In 1922 the International Astronomical Union (IAU) formally accepted the modern list of 88 constellations, and in 1928 adopted official constellation boundaries that together cover the entire celestial sphere from the earth as a point of origin.',
+      'Any given point in a celestial coordinate system lies within the boundaries of one of these modern constellation symbols, thus aiding in approximating the area of the sky where the associated exoplanet can be found.',
+      // 'The basis of this set of modern constellation iconography builds upon the work originally created by Denis Moskowitz, which can be found here: <a href="https://thenounproject.com/denismm/collection/constellation-symbols-fixed-width/">https://thenounproject.com/denismm/collection/constellation-symbols-fixed-width/</a>'
+
       // Click here to search the confirmed exoplanets database.'
+      'Drag the red pin to choose the constellation where the planet can be found.'
     ]
   }
 ];
