@@ -90,22 +90,6 @@ export const Examples = ({ navigate, stepId = '0', data, extents }) => (
       <Hr />
       <Section2>
         <TextContent stepId={stepId} />
-        {/* <Text>
-          <Heading>{EXAMPLES[stepId].title}</Heading>
-          {EXAMPLES[stepId].body.map((p, i) => (
-            <p key={i + '_' + stepId}>{p}</p>
-          ))}
-        </Text>
-        <div>
-          {stepId > 0 && (
-            <Flag
-              width={600}
-              extents={extents}
-              flagProperties={getProperties(data, stepId)}
-              basicFlag
-            />
-          )}
-        </div> */}
         {stepId > 0 && <FlagContent stepId={stepId} />}
       </Section2>
     </ContentContainer>
