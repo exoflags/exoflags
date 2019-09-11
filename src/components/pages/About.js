@@ -24,7 +24,7 @@ const SubHeading = styled.h2`
 `;
 
 export const About = () => (
-  <Page video="about">
+  <Page video="about" fallbackImg="about">
     <ImgContainer>
       <ExoFlagsLogo />
     </ImgContainer>
