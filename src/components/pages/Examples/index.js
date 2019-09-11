@@ -2,16 +2,17 @@ import React from 'react';
 import { Link } from '@reach/router';
 import styled from '@emotion/styled';
 
-import { EXAMPLES } from '../../const';
-import Flag from '../shared/Flag';
-
-import { Page } from '../shared/Layout';
+import { EXAMPLES } from '../../../const';
+import Flag from '../../shared/Flag';
+import TextContent from './TextContent';
+import FlagContent from './FlagContent';
+import { Page } from '../../shared/Layout';
 import {
   MostRecent,
   ClosestConfirmed,
   LargestConfirmed,
   BestCandidate
-} from '../PlanetIcons';
+} from '../../PlanetIcons';
 
 const Hr = styled.div`
   width: 100%;
@@ -65,10 +66,11 @@ const getProperties = (data, stepId) => {
     planetaryNeighbours: obj[0].pl_pnum,
     constellation: obj[0].constellation
   };
+  console.log('flag', selectedPlanet, 'data', planetData);
   return planetData;
 };
 
-export const Examples = ({ navigate, stepId = 0, data, extents }) => (
+export const Examples = ({ navigate, stepId = '0', data, extents }) => (
   <Page>
     <ContentContainer>
       <Section1>
@@ -87,7 +89,8 @@ export const Examples = ({ navigate, stepId = 0, data, extents }) => (
       </Section1>
       <Hr />
       <Section2>
-        <Text>
+        <TextContent stepId={stepId} />
+        {/* <Text>
           <Heading>{EXAMPLES[stepId].title}</Heading>
           {EXAMPLES[stepId].body.map((p, i) => (
             <p key={i + '_' + stepId}>{p}</p>
@@ -102,7 +105,8 @@ export const Examples = ({ navigate, stepId = 0, data, extents }) => (
               basicFlag
             />
           )}
-        </div>
+        </div> */}
+        {stepId > 0 && <FlagContent stepId={stepId} />}
       </Section2>
     </ContentContainer>
   </Page>

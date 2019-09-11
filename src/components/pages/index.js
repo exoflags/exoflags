@@ -1,6 +1,6 @@
 export * from './About';
 export * from './Credits';
-export * from './Examples';
+export * from './Examples/index.js';
 export * from './FlagBuilder';
 export * from './Home';
 export * from './NotFound';
