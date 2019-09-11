@@ -55,7 +55,7 @@ const P = styled.p`
 `;
 
 export const Credits = () => (
-  <Page video="credits">
+  <Page video="credits" fallbackImg="credits">
     <ContentContainer>
       <ImgContainer>
         <ExoFlagsLogo />
