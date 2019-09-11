@@ -101,46 +101,48 @@ const App = () => {
   };
 
   return (
-    <AppContainer>
-      <HeaderContainer>
-        <Header />
-      </HeaderContainer>
+    <LocationProvider history={history}>
+      <AppContainer>
+        <HeaderContainer>
+          <Header />
+        </HeaderContainer>
 
-      <ContentContainer>
-        <Router style={routerStyle}>
-          <Explore path="/explore" />
+        <ContentContainer>
+          <Router style={routerStyle}>
+            <Explore path="/explore" />
 
-          <FlagBuilder
-            path="/explore/:stepId"
-            userFlag={userFlag}
-            setUserFlag={setUserFlag}
-            extents={EXTENTS}
-          />
+            <FlagBuilder
+              path="/explore/:stepId"
+              userFlag={userFlag}
+              setUserFlag={setUserFlag}
+              extents={EXTENTS}
+            />
 
-          <ClosestMatch
-            path="/explore/closest-match"
-            userFlag={userFlag}
-            resetUserFlag={resetUserFlag}
-            data={planetData}
-            extents={EXTENTS}
-          />
+            <ClosestMatch
+              path="/explore/closest-match"
+              userFlag={userFlag}
+              resetUserFlag={resetUserFlag}
+              data={planetData}
+              extents={EXTENTS}
+            />
 
-          <About path="/" />
-          <Credits path="/credits" />
-          <Examples path="/examples/" />
-          <Examples
-            path="/examples/:stepId"
-            data={planetData}
-            extents={EXTENTS}
-          />
+            <About path="/" />
+            <Credits path="/credits" />
+            <Examples path="/examples/" />
+            <Examples
+              path="/examples/:stepId"
+              data={planetData}
+              extents={EXTENTS}
+            />
 
-          {/* <Examples path="/examples/*" /> */}
+            {/* <Examples path="/examples/*" /> */}
 
-          <Search path="/search" data={planetData} extents={EXTENTS} />
-          <NotFound default />
-        </Router>
-      </ContentContainer>
-    </AppContainer>
+            <Search path="/search" data={planetData} extents={EXTENTS} />
+            <NotFound default />
+          </Router>
+        </ContentContainer>
+      </AppContainer>
+    </LocationProvider>
   );
 };
 
