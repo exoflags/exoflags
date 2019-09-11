@@ -20,7 +20,7 @@ export const FLAG_BUILDER_STEPS = [
     flagProperty: FLAG_PROPERTIES.distance,
     title: 'Distance',
     body: [
-      'When we look out into the vast expanse of space for new worlds, we measure is the light we observe from Earth as a point of origin. This light from distant stars and galaxies allows us to catch and measure glimpses of new worlds as their paths cross the light that is beaming back to us.',
+      'When we look out into the vast expanse of space for new worlds, what we measure is the light we observe from Earth as a point of origin. This light from distant stars and galaxies allows us to catch and measure glimpses of new worlds as their paths cross the light that is beaming back to us.',
       'Knowing that light is a constant speed  we can measure the distance the light has travelled to reach us across such astronomical distances by observing how its spectrum has shifted based on how far away it begins its journey.',
       'Due to a phenomenon called redshift, astronomers know that the most distant sources of light are shifted towards the red end of the spectrum',
       'The Exoflags system uses this same metric, a shifting from blue to red to convey distance visually. A nearby exoplanet will automatically generate a blue background, while the further away our discovery the more shifted towards the red end of the spectrum its colour will be.'
