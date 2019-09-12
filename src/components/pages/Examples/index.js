@@ -1,9 +1,6 @@
 import React from 'react';
-import { Link } from '@reach/router';
 import styled from '@emotion/styled';
 
-import { EXAMPLES } from '../../../const';
-import Flag from '../../shared/Flag';
 import TextContent from './TextContent';
 import FlagImage from './FlagContent';
 import { Page } from '../../shared/Layout';

@@ -134,9 +134,6 @@ const App = () => {
               data={planetData}
               extents={EXTENTS}
             />
-
-            {/* <Examples path="/examples/*" /> */}
-
             <Search path="/search" data={planetData} extents={EXTENTS} />
             <NotFound default />
           </Router>

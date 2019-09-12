@@ -36,7 +36,6 @@ const Header = styled.div`
 const Info = styled.div`
   display: flex;
   flex-direction: column;
-  // align-items: center;
 
   p {
     color: ${props => props.theme.colors.white};
@@ -47,11 +46,7 @@ const Info = styled.div`
   }
 `;
 
-const Logos = styled.div`
-  // display: flex;
-  // align-items: center;
-  // justify-content: flex-start;
-`;
+const Logos = styled.div``;
 
 const SearchEl = styled.div`
   display: flex;

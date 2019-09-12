@@ -14,52 +14,6 @@ export const FLAG_PROPERTIES = {
   constellation: 'constellation'
 };
 
-export const EXAMPLES = [
-  {
-    path: '/examples/',
-    title: 'Objects of interest',
-    name: '',
-    body: [
-      'Click a planet above to discover a selection of notable confirmed exoplanets and their associated flag visualisations.'
-    ]
-  },
-  {
-    path: '/examples/1',
-    title: 'Most Recently Confirmed',
-    name: 'bet Pic c',
-    body: [
-      'Beta Pictoris-C was discovered on August 28th 2019 by Lagrange et al. It can be found 19.3 Parsecs away from Earth in the consteallation Pictor. It is 2860 times more massive than the Earth. Its host star has a mass of 1.76 solar masses.',
-      'As new planets get discovered, this page and our Instagram feed automatically posts the most up-to-date flag visualisation, follow @Exoflags on Instagram to stay up to date'
-    ]
-  },
-  {
-    path: '/examples/2',
-    title: 'Closest Confirmed',
-    name: 'Proxima Cen b',
-    body: [
-      'The closest confirmed exoplanet fs Proxima Centauri b, which was confirmed in 2016 to orbit Proxima Centauri, the closest star to our Solar System, 1.3 parsecs (4.25 light years away in the constellation Centaurus.',
-      'At the current progress of human space travel technology, it would take over 81,000 years to reach it.'
-    ]
-  },
-  {
-    path: '/examples/3',
-    title: 'Largest Confirmed',
-    name: 'TrES-4 b',
-    body: [
-      'The largest planet discovered to date is also one of the strangest and theoretically should not even exist, scientists say. Dubbed TrES-4, the planet is about 1.7',
-      'times the size of Jupiter and belongs to a small subclass of "puffy" planets that have extremely low densities.'
-    ]
-  },
-  {
-    path: '/examples/4',
-    title: 'Best candidate for supporting life',
-    name: 'Kepler-186 f',
-    body: [
-      'A 2015 review concluded that the exoplanet Kepler-186f was likely the best candidates for being potentially habitable. It is located at a distance of 490 light-years away.',
-      'Kepler-186f is similar in size to Earth with a 1.2-Earth-radius size and it is located towards the outer edge of the habitable zone around its red dwarf host star in the constellation Cygnus'
-    ]
-  }
-];
 export const FLAG_BUILDER_STEPS = [
   {
     path: '/explore/1',
