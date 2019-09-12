@@ -13,7 +13,7 @@ import {
 
 const Hr = styled.div`
   width: 100%;
-  height: 4px;
+  padding: 2px;
   background-color: ${props => props.theme.colors.grey.warm};
   margin: 2rem 0 2rem 0;
   @media only screen and (max-width: 1200px) {
@@ -41,9 +41,6 @@ const Section2 = styled.div`
   justify-content: space-between;
   flex-wrap: wrap;
   margin-top: 2rem;
-  @media only screen and (max-width: 1200px) {
-    margin-top: 0;
-  }
 
   p {
     font-size: 1.25rem;
