@@ -5,7 +5,7 @@ import styled from '@emotion/styled';
 import { EXAMPLES } from '../../../const';
 import Flag from '../../shared/Flag';
 import TextContent from './TextContent';
-import FlagContent from './FlagContent';
+import FlagImage from './FlagContent';
 import { Page } from '../../shared/Layout';
 import {
   MostRecent,
@@ -30,68 +30,63 @@ const ContentContainer = styled.div`
 `;
 
 const Section1 = styled.div`
-  height: 40%;
   width: 100%;
   display: flex;
-  padding-top: 3rem;
+  padding: 3rem 0;
   justify-content: space-between;
   align-items: center;
 `;
 const Section2 = styled.div`
-  height: 45%;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+
   p {
     font-size: 1.25rem;
-    max-width: 640px;
+    max-width: 600px;
   }
 `;
 
-const Heading = styled.h1`
-  font-size: 3.75rem;
+const FlagContainer = styled.div``;
+const TextContainer = styled.div`
+  width: 45%;
+  @media only screen and (max-width: 1200px) {
+    width: 100%;
+  }
 `;
 
-const Text = styled.div`
-  width: 50%;
-`;
-const getProperties = (data, stepId) => {
-  let selectedPlanet = EXAMPLES[stepId].name;
-  const obj = data.filter(obj => obj.pl_name === selectedPlanet);
-  const planetData = {
-    distance: obj[0].st_dist,
-    stellarMass: obj[0].st_mass,
-    stellarRadius: obj[0].st_rad,
-    planetaryMass: obj[0].pl_bmassj,
-    planetaryRadius: obj[0].pl_radj,
-    planetaryNeighbours: obj[0].pl_pnum,
-    constellation: obj[0].constellation
-  };
-  console.log('flag', selectedPlanet, 'data', planetData);
-  return planetData;
+export const Examples = ({ navigate, stepId = 0 }) => {
+  const step = parseInt(stepId, 10);
+  return (
+    <Page>
+      <ContentContainer>
+        <Section1>
+          <div onClick={() => navigate('/examples/1')}>
+            <MostRecent />
+          </div>
+          <div onClick={() => navigate('/examples/2')}>
+            <ClosestConfirmed />
+          </div>
+          <div onClick={() => navigate('/examples/3')}>
+            <LargestConfirmed />
+          </div>
+          <div onClick={() => navigate('/examples/4')}>
+            <BestCandidate />
+          </div>
+        </Section1>
+        <Hr />
+        <Section2>
+          <TextContainer>
+            <TextContent stepId={parseInt(stepId, 10)} />
+          </TextContainer>
+
+          {stepId > 0 && (
+            <FlagContainer>
+              <FlagImage stepId={parseInt(stepId, 10)} />
+            </FlagContainer>
+          )}
+        </Section2>
+      </ContentContainer>
+    </Page>
+  );
 };
-
-export const Examples = ({ navigate, stepId = '0', data, extents }) => (
-  <Page>
-    <ContentContainer>
-      <Section1>
-        <div onClick={() => navigate('/examples/1')}>
-          <MostRecent />
-        </div>
-        <div onClick={() => navigate('/examples/2')}>
-          <ClosestConfirmed />
-        </div>
-        <div onClick={() => navigate('/examples/3')}>
-          <LargestConfirmed />
-        </div>
-        <div onClick={() => navigate('/examples/4')}>
-          <BestCandidate />
-        </div>
-      </Section1>
-      <Hr />
-      <Section2>
-        <TextContent stepId={stepId} />
-        {stepId > 0 && <FlagContent stepId={stepId} />}
-      </Section2>
-    </ContentContainer>
-  </Page>
-);

@@ -15,8 +15,8 @@ const Flag = [
   MostRecentlyConfirmed
 ];
 
-const FlagContent = ({ stepId }) => {
+const FlagImage = ({ stepId }) => {
   return Flag[stepId - 1]();
 };
 
-export default FlagContent;
+export default FlagImage;

@@ -6,7 +6,6 @@ const Heading = styled.h1`
 `;
 
 const Text = styled.div`
-  width: 50%;
   span {
     font-weight: 800;
   }
@@ -21,7 +20,7 @@ const Text = styled.div`
 
 const Content = ({ stepId }) => (
   <>
-    {stepId === '0' ? (
+    {stepId === 0 ? (
       <Text>
         <Heading>Objects of interest</Heading>
         <p>
@@ -29,7 +28,7 @@ const Content = ({ stepId }) => (
           exoplanets and their associated flag visualisations.
         </p>
       </Text>
-    ) : stepId === '1' ? (
+    ) : stepId === 1 ? (
       <Text>
         <Heading>Most Recently Confirmed</Heading>
         <p>
@@ -45,7 +44,7 @@ const Content = ({ stepId }) => (
           Instagram to stay up to date.
         </p>
       </Text>
-    ) : stepId === '2' ? (
+    ) : stepId === 2 ? (
       <Text>
         <Heading>Closest Confirmed</Heading>
         <p>
@@ -59,7 +58,7 @@ const Content = ({ stepId }) => (
           take over 81,000 years to reach it.
         </p>
       </Text>
-    ) : stepId === '3' ? (
+    ) : stepId === 3 ? (
       <Text>
         <Heading>Largest Confirmed</Heading>
         <p>
@@ -71,7 +70,7 @@ const Content = ({ stepId }) => (
         </p>
       </Text>
     ) : (
-      stepId === '4' && (
+      stepId === 4 && (
         <Text>
           <Heading>Best candidate for supporting life</Heading>
           <p>
