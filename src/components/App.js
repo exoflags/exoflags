@@ -128,6 +128,12 @@ const App = () => {
 
             <About path="/" />
             <Credits path="/credits" />
+            <Examples path="/examples/" />
+            <Examples
+              path="/examples/:stepId"
+              data={planetData}
+              extents={EXTENTS}
+            />
             <Search path="/search" data={planetData} extents={EXTENTS} />
             <NotFound default />
           </Router>

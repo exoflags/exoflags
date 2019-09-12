@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="632px" height="378px" viewBox="0 0 632 378" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>ClosestConfirmed</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Site-UI" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Examples-3" transform="translate(-1121.000000, -608.000000)">
+            <g id="ClosestConfirmed" transform="translate(1121.000000, 608.000000)">
+                <g id="Group-2">
+                    <rect id="Rectangle" fill="#0000FF" transform="translate(315.000000, 189.000000) scale(-1, 1) translate(-315.000000, -189.000000) " x="0" y="0" width="630" height="378"></rect>
+                    <polygon id="Rectangle" fill-opacity="0.15" fill="#FFFFFF" points="631.5 351.175781 631.5 378 0 378"></polygon>
+                    <polygon id="Rectangle" fill-opacity="0.28" fill="#000000" transform="translate(11.845703, 189.000000) scale(-1, 1) translate(-11.845703, -189.000000) " points="23.6914063 0 23.6914063 378 0 378"></polygon>
+                </g>
+                <g id="Group" transform="translate(253.000000, 126.000000)" stroke="#FFFFFF" stroke-width="16">
+                    <g id="Clipped" transform="translate(19.000000, 0.000000)">
+                        <path d="M38,18 C38,27.9402985 29.4925373,36 19,36 C8.50746269,36 0,27.9402985 0,18 C0,8.05970149 8.50746269,0 19,0 C29.4925373,0 38,8.05970149 38,18 Z" id="Path" transform="translate(19.000000, 18.000000) scale(-1, 1) rotate(-180.000000) translate(-19.000000, -18.000000) "></path>
+                    </g>
+                    <path d="M1.43729959,65.1 L69.6424278,65.1" id="Path" transform="translate(35.000000, 65.000000) scale(-1, 1) rotate(-180.000000) translate(-35.000000, -65.000000) "></path>
+                    <path d="M37,126 L37,35" id="Path" transform="translate(37.000000, 80.500000) scale(-1, 1) rotate(-180.000000) translate(-37.000000, -80.500000) "></path>
+                    <path d="M37,95 L127,95" id="Path" transform="translate(82.000000, 95.000000) scale(-1, 1) rotate(-180.000000) translate(-82.000000, -95.000000) "></path>
+                    <path d="M121,125 L121,65" id="Path" transform="translate(121.000000, 95.000000) scale(-1, 1) rotate(-180.000000) translate(-121.000000, -95.000000) "></path>
+                </g>
+                <circle id="Oval" fill="#FFFFFF" cx="557" cy="75" r="50"></circle>
+            </g>
+        </g>
+    </g>
+</svg>
