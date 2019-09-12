@@ -209,13 +209,13 @@ export const Search = ({ data, extents }) => {
               <Stats>
                 <Ul>
                   <li>Distance: {displayProperties('distance')} </li>
-                  <li>Host star mass 2:{displayProperties('stellarMass')} </li>
+                  <li>Host star mass: {displayProperties('stellarMass')} </li>
                   <li>
                     Host star radius: {displayProperties('stellarRadius')}
                   </li>
-                  <li>Planetary Mass: {displayProperties('planetaryMass')} </li>
+                  <li>Planetary mass: {displayProperties('planetaryMass')} </li>
                   <li>
-                    Planetary Radius: {displayProperties('planetaryRadius')}{' '}
+                    Planetary radius: {displayProperties('planetaryRadius')}{' '}
                   </li>
                   <li>
                     Planets in system:{' '}
