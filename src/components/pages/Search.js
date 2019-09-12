@@ -178,10 +178,11 @@ export const Search = ({ data, extents }) => {
             curves, photometric light curves, images, and spectra).
           </p>
           <p>
-            You can find out more and view the dataset here:
+            You can find out more and view the dataset{' '}
             <a href="https://exoplanetarchive.ipac.caltech.edu/index.html">
-              https://exoplanetarchive.ipac.caltech.edu/index.html
+              here
             </a>
+            .
           </p>
           <Info>
             <p>Information provided by</p>

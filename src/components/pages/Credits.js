@@ -107,12 +107,9 @@ export const Credits = () => (
             </P>
             <P>Data obtained from the NASA / Caltech exoplanet archive</P>
             <P>
-              Further information and data was obtained from
-              <a href="https://www.exoplanetkyoto.org">
-                {' '}
-                www.exoplanetkyoto.org{' '}
-              </a>
-              resource
+              Further information and data was obtained from the
+              <a href="https://www.exoplanetkyoto.org"> ExoKyoto </a>
+              resource.
             </P>
           </div>
         </Flexbox>
