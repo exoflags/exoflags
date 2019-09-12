@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="632px" height="378px" viewBox="0 0 632 378" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>LargestConfirmed</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Site-UI" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Examples-4" transform="translate(-1125.000000, -608.000000)">
+            <g id="LargestConfirmed" transform="translate(1125.000000, 608.000000)">
+                <g id="Group-2">
+                    <rect id="Rectangle" fill="#0D00F2" transform="translate(315.000000, 189.000000) scale(-1, 1) translate(-315.000000, -189.000000) " x="0" y="0" width="630" height="378"></rect>
+                    <polygon id="Rectangle" fill-opacity="0.15" fill="#FFFFFF" points="631.5 333 631.5 378 -9.09494702e-13 378"></polygon>
+                    <polygon id="Rectangle" fill-opacity="0.16" fill="#000000" transform="translate(49.000000, 189.000000) scale(-1, 1) translate(-49.000000, -189.000000) " points="98 0 98 378 0 378"></polygon>
+                </g>
+                <g id="Clipped" transform="translate(258.000000, 140.000000)" stroke="#FFFFFF" stroke-width="16">
+                    <g id="Group">
+                        <path d="M0.213350271,59.1333422 C0.213350271,26.836732 26.242762,0.650291314 58.3457032,0.650291314 C90.4554228,0.650291314 116.478056,26.836732 116.478056,59.1333422" id="Path" transform="translate(58.345703, 29.891817) scale(-1, 1) rotate(-180.000000) translate(-58.345703, -29.891817) "></path>
+                        <polyline id="Path" transform="translate(58.345703, 76.621656) scale(-1, 1) rotate(-180.000000) translate(-58.345703, -76.621656) " points="29.2795267 101.945445 0.213350271 51.297868 116.478056 51.297868 87.4118797 101.945445"></polyline>
+                    </g>
+                </g>
+                <circle id="Oval" fill="#FFFFFF" cx="557" cy="75" r="50"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

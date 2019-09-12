@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="632px" height="378px" viewBox="0 0 632 378" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>MostRecentlyConfirmed</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Site-UI" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Examples-2" transform="translate(-1125.000000, -608.000000)">
+            <g id="MostRecentlyConfirmed" transform="translate(1125.000000, 608.000000)">
+                <g id="Group-2">
+                    <rect id="Rectangle" fill="#0100FE" transform="translate(315.000000, 189.000000) scale(-1, 1) translate(-315.000000, -189.000000) " x="0" y="0" width="630" height="378"></rect>
+                    <polygon id="Rectangle" fill-opacity="0.28" fill="#000000" transform="translate(11.515625, 189.000000) scale(-1, 1) translate(-11.515625, -189.000000) " points="23.03125 0 23.03125 378 -4.54747351e-13 378"></polygon>
+                    <polygon id="Rectangle" fill-opacity="0.15" fill="#FFFFFF" points="630 346.148438 631.5 378 -1.13686838e-13 378"></polygon>
+                </g>
+                <g id="Clipped" transform="translate(276.000000, 134.000000)" stroke="#FFFFFF" stroke-width="16">
+                    <path d="M76.7675781,100.580807 C70.0457799,107.252973 60.9312566,111 51.4320715,111 C41.9328864,111 32.8183631,107.252973 26.0965649,100.580807 L0.7675781,75.438841 C14.7588278,75.438841 26.0965649,64.1783466 26.0965649,50.2904035 C26.0965649,22.5145173 48.7850783,0 76.7675781,0" id="Path" transform="translate(38.767578, 55.500000) scale(-1, 1) rotate(-180.000000) translate(-38.767578, -55.500000) "></path>
+                </g>
+                <g id="Group-8" transform="translate(507.000000, 25.000000)" fill="#FFFFFF">
+                    <circle id="Oval" cx="23" cy="23" r="23"></circle>
+                    <circle id="Oval" cx="77" cy="75" r="23"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

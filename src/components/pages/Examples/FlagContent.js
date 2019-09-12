@@ -1,8 +1,22 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-//import 4 Flag SVGs and use them here
+import {
+  BestCandidate,
+  ClosestConfirmed,
+  LargestConfirmed,
+  MostRecentlyConfirmed
+} from './ExampleFlagSvgs';
 
-const FlagContent = ({ stepId }) => <p>flag {stepId}</p>;
+const Flag = [
+  BestCandidate,
+  ClosestConfirmed,
+  LargestConfirmed,
+  MostRecentlyConfirmed
+];
+
+const FlagContent = ({ stepId }) => {
+  return Flag[stepId - 1]();
+};
 
 export default FlagContent;

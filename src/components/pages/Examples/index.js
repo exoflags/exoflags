@@ -18,7 +18,7 @@ const Hr = styled.div`
   width: 100%;
   height: 4px;
   background-color: ${props => props.theme.colors.grey.warm};
-  margin: 0 0 2rem 0;
+  margin: 2rem 0 2rem 0;
 `;
 
 const ContentContainer = styled.div`

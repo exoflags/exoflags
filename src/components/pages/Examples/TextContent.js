@@ -10,6 +10,13 @@ const Text = styled.div`
   span {
     font-weight: 800;
   }
+  a:link,
+  a:visited,
+  a:hover,
+  a:active {
+    text-decoration: none;
+    color: ${props => props.theme.colors.white};
+  }
 `;
 
 const Content = ({ stepId }) => (
@@ -34,7 +41,8 @@ const Content = ({ stepId }) => (
         <p>
           As new planets get discovered, this page and our Instagram feed
           automatically posts the most up-to-date flag visualisation, follow
-          @Exoflags on Instagram to stay up to date.'
+          <a href="https://www.instagram.com/exoflags/"> @Exoflags </a>on
+          Instagram to stay up to date.
         </p>
       </Text>
     ) : stepId === '2' ? (
@@ -59,7 +67,7 @@ const Content = ({ stepId }) => (
           theoretically should not even exist, scientists say. Dubbed{' '}
           <span>TrES-4</span>, the planet is about 1.7 times the size of Jupiter
           and belongs to a small subclass of "puffy" planets that have extremely
-          low densities.'
+          low densities.
         </p>
       </Text>
     ) : (
