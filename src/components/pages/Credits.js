@@ -39,6 +39,9 @@ const SubHeading = styled.h2`
 
 const Flexbox = styled.div`
   display: flex;
+  @media only screen and (max-width: 1200px) {
+    flex-wrap: wrap;
+  }
 `;
 
 const Ul = styled.ul`
