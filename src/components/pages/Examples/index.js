@@ -16,6 +16,9 @@ const Hr = styled.div`
   height: 4px;
   background-color: ${props => props.theme.colors.grey.warm};
   margin: 2rem 0 2rem 0;
+  @media only screen and (max-width: 1200px) {
+    margin: 1rem 0 0 0;
+  }
 `;
 
 const ContentContainer = styled.div`
@@ -37,6 +40,10 @@ const Section2 = styled.div`
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  margin-top: 2rem;
+  @media only screen and (max-width: 1200px) {
+    margin-top: 0;
+  }
 
   p {
     font-size: 1.25rem;
