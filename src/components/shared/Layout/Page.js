@@ -8,23 +8,15 @@ import spaceBackgroundVideo from '../../../assets/ExoFlags_Space_BG.mp4';
 import exploreBackgroundVideo from '../../../assets/Exoflags_Temp_BG2a.mp4';
 
 const backgrounds = {
-  about: {
+  earth: {
     video: earthBackgroundVideo,
     image: earthBackgroundImage
   },
-  explore: {
-    video: exploreBackgroundVideo,
-    image: spaceBackgroundImage
-  },
-  credits: {
+  flags: {
     video: exploreBackgroundVideo,
     image: spaceBackgroundImage
   },
   default: {
-    video: spaceBackgroundVideo,
-    image: spaceBackgroundImage
-  },
-  search: {
     video: spaceBackgroundVideo,
     image: spaceBackgroundImage
   }
@@ -58,11 +50,7 @@ const Children = styled.div`
   width: 100%;
 `;
 
-export const Page = ({
-  video = 'default',
-  fallbackImg = 'default',
-  children
-}) => {
+export const Page = ({ video, fallbackImg, children }) => {
   return (
     <PageView>
       <Video
@@ -78,3 +66,18 @@ export const Page = ({
     </PageView>
   );
 };
+
+{
+  /* <Video
+        autoPlay
+        muted
+        loop
+        src={video ? backgrounds[video].video : backgrounds.default.video}
+        type="video/mp4"
+        poster={
+          fallbackImg
+            ? backgrounds[fallbackImg]
+            : backgrounds.default.backgroundImage
+        }
+      /> */
+}

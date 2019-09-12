@@ -59,7 +59,7 @@ const TextContainer = styled.div`
 export const Examples = ({ navigate, stepId = 0 }) => {
   const step = parseInt(stepId, 10);
   return (
-    <Page>
+    <Page video="default" fallbackImg="default">
       <ContentContainer>
         <Section1>
           <div onClick={() => navigate('/examples/1')}>

@@ -142,7 +142,7 @@ export const Search = ({ data, extents }) => {
   };
 
   return (
-    <Page video="search" fallbackImg="search">
+    <Page video="default" fallbackImg="default">
       <Container>
         <Left>
           <Header>Search the API</Header>

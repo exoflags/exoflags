@@ -26,7 +26,7 @@ const ExploreButton = styled(Button)`
 `;
 
 const Explore = ({ navigate }) => (
-  <Page video="explore" fallbackImg="explore">
+  <Page video="flags" fallbackImg="flags">
     <ContentContainer>
       <div>
         <Text>
