@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-import theme from '../../theme';
 import { Page } from '../shared/Layout';
 import ExoFlagsLogo from '../Logos/ExoFlagsLogo';
 
@@ -11,9 +10,11 @@ const ImgContainer = styled.div`
 
 const ContentContainer = styled.div`
   padding: 2rem 8rem;
-  height: auto;
+  height: 100%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
 `;
 const TextContainer = styled.div`
   color: ${props => props.theme.colors.white};
@@ -51,6 +52,7 @@ const Ul = styled.ul`
   }
   margin-left: 0;
   width: 50%;
+  margin-bottom: 2rem;
 `;
 
 const P = styled.p`
@@ -60,63 +62,66 @@ const P = styled.p`
 export const Credits = () => (
   <Page video="flags" fallbackImg="flags">
     <ContentContainer>
-      <ImgContainer>
-        <ExoFlagsLogo />
-      </ImgContainer>
-      <Hr />
-      <TextContainer>
-        <SubHeading>Credits</SubHeading>
-        <Flexbox>
-          <Ul>
-            <li>
-              <span>Daragh Anderson</span> - Design / Art Direction
-            </li>
-            <li>
-              <span>Simona Ciocoiu</span> - Research
-            </li>
-            <li>
-              <span>Aifric Delahunty</span> - Database &amp; Calculations
-            </li>
-            <li>
-              <span>Katie Dobberstein</span> - Research
-            </li>
-            <li>
-              <span>Arina Fjodorova</span> - UI/UX Design
-            </li>
-            <li>
-              <span>Sam Riches</span> - Copy Editor
-            </li>
-            <li>
-              <span>Rory Sedgwick</span> - Front End Development
-            </li>
-            <li>
-              <span>Tom Valorsa</span> - Front End Development
-            </li>
-            <li>
-              <span>Alexis Wilkinson-Defoe</span> - Front End Development
-            </li>
-          </Ul>
-          <div>
-            <P>
-              Original Constellation Icon set by Denis Moskowitz used under
-              creative commons licence, available from the noun project
-              <a href="https://thenounproject.com/denismm/collection/constellation-symbols-fixed-width/">
-                {' '}
-                here{' '}
-              </a>
-            </P>
-            <P>Data obtained from the NASA / Caltech exoplanet archive</P>
-            <P>
-              Further information and data was obtained from
-              <a href="https://www.exoplanetkyoto.org">
-                {' '}
-                www.exoplanetkyoto.org{' '}
-              </a>
-              resource
-            </P>
-          </div>
-        </Flexbox>
-      </TextContainer>
+      <div>
+        <ImgContainer>
+          <ExoFlagsLogo />
+        </ImgContainer>
+        <Hr />
+        <TextContainer>
+          <SubHeading>Credits</SubHeading>
+          <Flexbox>
+            <Ul>
+              <li>
+                <span>Daragh Anderson</span> - Design / Art Direction
+              </li>
+              <li>
+                <span>Simona Ciocoiu</span> - Research
+              </li>
+              <li>
+                <span>Aifric Delahunty</span> - Database &amp; Calculations
+              </li>
+              <li>
+                <span>Katie Dobberstein</span> - Research
+              </li>
+              <li>
+                <span>Arina Fjodorova</span> - UI/UX Design
+              </li>
+              <li>
+                <span>Sam Riches</span> - Copy Editor
+              </li>
+              <li>
+                <span>Rory Sedgwick</span> - Front End Development
+              </li>
+              <li>
+                <span>Tom Valorsa</span> - Front End Development
+              </li>
+              <li>
+                <span>Alexis Wilkinson-Defoe</span> - Front End Development
+              </li>
+            </Ul>
+            <div>
+              <P>
+                Original Constellation Icon set by Denis Moskowitz used under
+                creative commons licence, available from the noun project
+                <a href="https://thenounproject.com/denismm/collection/constellation-symbols-fixed-width/">
+                  {' '}
+                  here{' '}
+                </a>
+                .
+              </P>
+              <P>Data obtained from the NASA / Caltech exoplanet archive</P>
+              <P>
+                Further information and data was obtained from
+                <a href="https://www.exoplanetkyoto.org">
+                  {' '}
+                  www.exoplanetkyoto.org{' '}
+                </a>
+                resource.
+              </P>
+            </div>
+          </Flexbox>
+        </TextContainer>
+      </div>
     </ContentContainer>
   </Page>
 );

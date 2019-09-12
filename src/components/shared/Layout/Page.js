@@ -50,7 +50,11 @@ const Children = styled.div`
   width: 100%;
 `;
 
-export const Page = ({ video, fallbackImg, children }) => {
+export const Page = ({
+  video = 'default',
+  fallbackImg = 'default',
+  children
+}) => {
   return (
     <PageView>
       <Video
@@ -66,18 +70,3 @@ export const Page = ({ video, fallbackImg, children }) => {
     </PageView>
   );
 };
-
-{
-  /* <Video
-        autoPlay
-        muted
-        loop
-        src={video ? backgrounds[video].video : backgrounds.default.video}
-        type="video/mp4"
-        poster={
-          fallbackImg
-            ? backgrounds[fallbackImg]
-            : backgrounds.default.backgroundImage
-        }
-      /> */
-}
