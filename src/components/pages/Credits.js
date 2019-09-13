@@ -6,10 +6,7 @@ import { Page } from '../shared/Layout';
 import ExoFlagsLogo from '../Logos/ExoFlagsLogo';
 
 const ImgContainer = styled.div`
-  padding: 10rem 0 0 0;
-  //   @media only screen and (max-width: 1200px) {
-  //     padding: 6em 0 0 0;
-  //   }
+  height: 40%;
 `;
 
 const ContentContainer = styled.div`
@@ -35,9 +32,6 @@ const Hr = styled.div`
   padding: 2px;
   background-color: ${props => props.theme.colors.grey.warm};
   margin: 2rem 0 2rem 0;
-  @media only screen and (max-width: 1200px) {
-    margin: 1rem 0 0 0;
-  }
 `;
 const SubHeading = styled.h2`
   font-size: 3.75rem;
@@ -65,6 +59,7 @@ const P = styled.p`
 
 const Header = styled.div`
   height: 40%;
+  padding: 10rem 0 0 0;
 `;
 
 export const Credits = () => (
