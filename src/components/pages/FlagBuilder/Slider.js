@@ -213,7 +213,7 @@ const AXIS_LABELS = {
     // },
     {
       id: 2,
-      text: ['Earth', 'Radius'],
+      text: ['Solar', 'Radius'],
       value: 1,
       textAnchor: 'start'
     },
