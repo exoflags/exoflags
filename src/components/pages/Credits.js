@@ -6,7 +6,10 @@ import { Page } from '../shared/Layout';
 import ExoFlagsLogo from '../Logos/ExoFlagsLogo';
 
 const ImgContainer = styled.div`
-  padding: 8rem 0 0 0;
+  padding: 10rem 0 0 0;
+  //   @media only screen and (max-width: 1200px) {
+  //     padding: 6em 0 0 0;
+  //   }
 `;
 
 const ContentContainer = styled.div`
@@ -29,9 +32,12 @@ const TextContainer = styled.div`
 
 const Hr = styled.div`
   width: 100%;
-  height: 4px;
+  padding: 2px;
   background-color: ${props => props.theme.colors.grey.warm};
-  margin: 1rem 0 2rem 0;
+  margin: 2rem 0 2rem 0;
+  @media only screen and (max-width: 1200px) {
+    margin: 1rem 0 0 0;
+  }
 `;
 const SubHeading = styled.h2`
   font-size: 3.75rem;
@@ -57,12 +63,18 @@ const P = styled.p`
   width: 675px;
 `;
 
+const Header = styled.div`
+  height: 40%;
+`;
+
 export const Credits = () => (
   <Page video="credits" fallbackImg="credits">
     <ContentContainer>
-      <ImgContainer>
-        <ExoFlagsLogo />
-      </ImgContainer>
+      <Header>
+        <ImgContainer>
+          <ExoFlagsLogo />
+        </ImgContainer>
+      </Header>
       <Hr />
       <TextContainer>
         <SubHeading>Credits</SubHeading>
