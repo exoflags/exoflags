@@ -109,6 +109,10 @@ export const Search = ({ data, extents }) => {
     dropdownIndicator: (provided, state) => ({
       ...provided,
       color: 'white'
+    }),
+    singleValue: (provided, state) => ({
+      ...provided,
+      color: 'white'
     })
   };
 
