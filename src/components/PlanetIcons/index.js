@@ -6,7 +6,9 @@ import closestConfirmed from './icClosestConfirmed.svg';
 import largestConfirmed from './icLargestConfirmed.svg';
 import bestCandidate from './icBestCandidateforSupportingLife.svg';
 
-const Icon = styled.img``;
+const Icon = styled.img`
+  cursor: pointer;
+`;
 
 export const MostRecent = () => <Icon src={mostRecent} />;
 
