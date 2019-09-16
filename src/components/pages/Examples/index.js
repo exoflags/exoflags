@@ -35,6 +35,7 @@ const Section1 = styled.div`
   padding: 3rem 0;
   justify-content: space-between;
   align-items: center;
+  height: 40%;
 `;
 const Section2 = styled.div`
   display: flex;
