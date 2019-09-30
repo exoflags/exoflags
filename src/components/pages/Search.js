@@ -139,9 +139,9 @@ export const Search = ({ data, extents }) => {
   const displayProperties = property => {
     const data = getProperties();
     if (property === 'constellation' || property === 'planetaryNeighbours') {
-      return data[property] ? data[property] : 'n/a';
+      return data[property] ? data[property] : 'Currently unknown';
     } else {
-      return data[property] ? data[property].toFixed(2) : 'n/a';
+      return data[property] ? data[property].toFixed(2) : 'Currently unknown';
     }
   };
 

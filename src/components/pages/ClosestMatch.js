@@ -124,31 +124,44 @@ const ClosestMatch = ({ userFlag, resetUserFlag, extents, data, navigate }) => {
                 />
 
                 <p>
-                  Distance: {planet.st_dist ? planet.st_dist.toFixed(2) : 'n/a'}
+                  Distance:{' '}
+                  {planet.st_dist
+                    ? planet.st_dist.toFixed(2)
+                    : 'Currently unknown'}
                 </p>
                 <p>
                   Stellar mass:{' '}
-                  {planet.st_mass ? planet.st_mass.toFixed(2) : 'n/a'}
+                  {planet.st_mass
+                    ? planet.st_mass.toFixed(2)
+                    : 'Currently unknown'}
                 </p>
                 <p>
                   Stellar radius:{' '}
-                  {planet.st_rad ? planet.st_rad.toFixed(2) : 'n/a'}
+                  {planet.st_rad
+                    ? planet.st_rad.toFixed(2)
+                    : 'Currently unknown'}
                 </p>
                 <p>
                   Planetary mass:{' '}
-                  {planet.pl_bmassj ? planet.pl_bmassj.toFixed(2) : 'n/a'}
+                  {planet.pl_bmassj
+                    ? planet.pl_bmassj.toFixed(2)
+                    : 'Currently unknown'}
                 </p>
                 <p>
                   Planetary radius:{' '}
-                  {planet.pl_radj ? planet.pl_radj.toFixed(2) : 'n/a'}
+                  {planet.pl_radj
+                    ? planet.pl_radj.toFixed(2)
+                    : 'Currently unknown'}
                 </p>
                 <p>
                   Planetary neighbours:{' '}
-                  {planet.pl_pnum ? planet.pl_pnum : 'n/a'}
+                  {planet.pl_pnum ? planet.pl_pnum : 'Currently unknown'}
                 </p>
                 <p>
                   Constellation:{' '}
-                  {planet.constellation ? planet.constellation : 'n/a'}
+                  {planet.constellation
+                    ? planet.constellation
+                    : 'Currently unknown'}
                 </p>
               </FlagWrapper>
             ))}
