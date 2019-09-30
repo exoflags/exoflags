@@ -37,6 +37,16 @@ const Flags = styled.div`
   justify-content: space-between;
 `;
 
+const Matches = styled.div`
+  flex: 1;
+  display: flex;
+  margin-left: 2rem;
+
+  > div {
+    width: calc(100% / 3);
+  }
+`;
+
 const FlagWrapper = styled.div`
   p {
     margin-bottom: 0;
@@ -105,66 +115,68 @@ const ClosestMatch = ({ userFlag, resetUserFlag, extents, data, navigate }) => {
               />
             </FlagWrapper>
 
-            {similarPlanets.map(planet => (
-              <FlagWrapper>
-                <FlagLabel>{planet.pl_name}</FlagLabel>
-                <Flag
-                  width={200}
-                  extents={extents}
-                  flagProperties={{
-                    distance: planet.st_dist,
-                    stellarMass: planet.st_mass,
-                    stellarRadius: planet.st_rad,
-                    planetaryMass: planet.pl_bmassj,
-                    planetaryRadius: planet.pl_radj,
-                    planetaryNeighbours: planet.pl_pnum,
-                    constellation: planet.constellation
-                  }}
-                  basicFlag
-                />
+            <Matches>
+              {similarPlanets.map(planet => (
+                <FlagWrapper key={planet.pl_name}>
+                  <FlagLabel>{planet.pl_name}</FlagLabel>
+                  <Flag
+                    width={200}
+                    extents={extents}
+                    flagProperties={{
+                      distance: planet.st_dist,
+                      stellarMass: planet.st_mass,
+                      stellarRadius: planet.st_rad,
+                      planetaryMass: planet.pl_bmassj,
+                      planetaryRadius: planet.pl_radj,
+                      planetaryNeighbours: planet.pl_pnum,
+                      constellation: planet.constellation
+                    }}
+                    basicFlag
+                  />
 
-                <p>
-                  Distance:{' '}
-                  {planet.st_dist
-                    ? planet.st_dist.toFixed(2)
-                    : 'Currently unknown'}
-                </p>
-                <p>
-                  Stellar mass:{' '}
-                  {planet.st_mass
-                    ? planet.st_mass.toFixed(2)
-                    : 'Currently unknown'}
-                </p>
-                <p>
-                  Stellar radius:{' '}
-                  {planet.st_rad
-                    ? planet.st_rad.toFixed(2)
-                    : 'Currently unknown'}
-                </p>
-                <p>
-                  Planetary mass:{' '}
-                  {planet.pl_bmassj
-                    ? planet.pl_bmassj.toFixed(2)
-                    : 'Currently unknown'}
-                </p>
-                <p>
-                  Planetary radius:{' '}
-                  {planet.pl_radj
-                    ? planet.pl_radj.toFixed(2)
-                    : 'Currently unknown'}
-                </p>
-                <p>
-                  Planetary neighbours:{' '}
-                  {planet.pl_pnum ? planet.pl_pnum : 'Currently unknown'}
-                </p>
-                <p>
-                  Constellation:{' '}
-                  {planet.constellation
-                    ? planet.constellation
-                    : 'Currently unknown'}
-                </p>
-              </FlagWrapper>
-            ))}
+                  <p>
+                    Distance:{' '}
+                    {planet.st_dist
+                      ? planet.st_dist.toFixed(2)
+                      : 'Currently unknown'}
+                  </p>
+                  <p>
+                    Stellar mass:{' '}
+                    {planet.st_mass
+                      ? planet.st_mass.toFixed(2)
+                      : 'Currently unknown'}
+                  </p>
+                  <p>
+                    Stellar radius:{' '}
+                    {planet.st_rad
+                      ? planet.st_rad.toFixed(2)
+                      : 'Currently unknown'}
+                  </p>
+                  <p>
+                    Planetary mass:{' '}
+                    {planet.pl_bmassj
+                      ? planet.pl_bmassj.toFixed(2)
+                      : 'Currently unknown'}
+                  </p>
+                  <p>
+                    Planetary radius:{' '}
+                    {planet.pl_radj
+                      ? planet.pl_radj.toFixed(2)
+                      : 'Currently unknown'}
+                  </p>
+                  <p>
+                    Planetary neighbours:{' '}
+                    {planet.pl_pnum ? planet.pl_pnum : 'Currently unknown'}
+                  </p>
+                  <p>
+                    Constellation:{' '}
+                    {planet.constellation
+                      ? planet.constellation
+                      : 'Currently unknown'}
+                  </p>
+                </FlagWrapper>
+              ))}
+            </Matches>
           </Flags>
 
           <Button primary onClick={handleStartAgain}>
