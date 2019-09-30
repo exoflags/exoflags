@@ -81,7 +81,7 @@ const MARKS = {
       id: 2,
       value: 7659,
       renderer: () => (
-        <g stroke="#A5A5A5" stroke-width="2" fill="none">
+        <g stroke="#A5A5A5" strokeWidth="2" fill="none">
           <g>
             <ellipse rx="4" ry="14"></ellipse>
             <ellipse rx="8" ry="32"></ellipse>
@@ -459,6 +459,7 @@ class Slider extends Component {
                 <image
                   key={href}
                   height={height}
+                  width={40}
                   x={scale(value) - height / 2}
                   y={0}
                   xlinkHref={href}
