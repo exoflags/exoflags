@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-import spaceBackgroundImage from '../../../assets/ExoFlags_BG_Still.png';
+import spaceBackgroundImage from '../../../assets/FN_ExoFlags_Space_Still.png';
 import earthBackgroundVideo from '../../../assets/ExoFlags_BG1.mp4';
 import earthBackgroundImage from '../../../assets/ExoFlags_BG1_Still.png';
-import spaceBackgroundVideo from '../../../assets/ExoFlags_Space_BG.mp4';
-import exploreBackgroundVideo from '../../../assets/Exoflags_Temp_BG2a.mp4';
+import spaceBackgroundVideo from '../../../assets/FN_ExoFlags_Space.mp4';
+import exploreBackgroundVideo from '../../../assets/FN_ExoFlags_Explore.mp4';
 
 const backgrounds = {
   about: {
@@ -14,7 +14,7 @@ const backgrounds = {
   },
   explore: {
     video: exploreBackgroundVideo,
-    image: spaceBackgroundImage
+    image: ''
   },
   credits: {
     video: exploreBackgroundVideo,
@@ -36,9 +36,6 @@ const PageView = styled.div`
   width: 100%;
   color: ${props => props.theme.colors.white};
   background-color: #04040a;
-  background-image: url(${earthBackgroundImage});
-  background-position: center center;
-  background-size: cover;
   margrin-top: ${props => props.theme.headerHeight};
 `;
 

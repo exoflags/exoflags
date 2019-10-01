@@ -13,7 +13,6 @@ const ContentContainer = styled.div`
   padding: 5%;
   height: auto;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
 `;
 const TextContainer = styled.div`
   color: ${props => props.theme.colors.white};

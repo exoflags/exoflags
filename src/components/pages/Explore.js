@@ -8,7 +8,6 @@ const ContentContainer = styled.div`
   padding: 2rem 4rem;
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
   display: flex;
   align-items: center;
 `;
