@@ -17,7 +17,6 @@ const Container = styled.div`
   p {
     font-weight: 300px;
     letter-spacing: 0.09px;
-    // font-size: 1.25rem;
   }
   a:link,
   a:visited,
@@ -68,9 +67,6 @@ const Left = styled.div`
 const Right = styled.div`
   width: 50%;
   padding: 5%;
-  @media only screen and (max-width: 900px) {
-    // width: 100%;
-  }
 `;
 
 const Stats = styled.div`
