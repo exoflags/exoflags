@@ -11,6 +11,7 @@ import Flag from '../shared/Flag';
 const Container = styled.div`
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   padding: 5%;
   color: ${props => props.theme.colors.white};
   p {
@@ -55,11 +56,18 @@ const SearchEl = styled.div`
 `;
 
 const Left = styled.div`
-  width: 50%;Å
+  width: 50%;
+  @media only screen and (max-width: 900px) {
+    width: 100%;
+    padding: 5%;
+  }
 `;
 const Right = styled.div`
   width: 50%;
   padding: 5%;
+  @media only screen and (max-width: 900px) {
+    width: 100%;
+  }
 `;
 
 const Stats = styled.div`
