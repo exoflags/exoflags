@@ -5,7 +5,7 @@ import { Page } from '../shared/Layout';
 import Button from '../shared/Button';
 
 const ContentContainer = styled.div`
-  padding: 2rem 4rem;
+  padding: 5%;
   height: 100%;
   width: 100%;
   display: flex;
