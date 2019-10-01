@@ -39,6 +39,7 @@ const PageView = styled.div`
   background-image: url(${earthBackgroundImage});
   background-position: center center;
   background-size: cover;
+  margrin-top: ${props => props.theme.headerHeight};
 `;
 
 const Video = styled.video`
