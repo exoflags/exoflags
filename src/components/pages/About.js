@@ -16,10 +16,16 @@ const Container = styled.div`
   span {
     font-weight: 800;
   }
+  @media only screen and (max-width: 1200px) {
+    columns: 1;
+  }
 `;
 
 const SubHeading = styled.h2`
   font-size: 3.75rem;
+  @media only screen and (max-width: 900px) {
+    font-size: 1.75rem;
+  }
 `;
 
 export const About = () => (
