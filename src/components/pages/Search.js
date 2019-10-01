@@ -68,6 +68,10 @@ const Left = styled.div`
 const Right = styled.div`
   width: 50%;
   padding: 5%;
+  @media only screen and (max-width: 900px) {
+    width: 100%;
+    padding: 5%;
+  }
 `;
 
 const Stats = styled.div`
