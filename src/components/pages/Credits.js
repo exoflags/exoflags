@@ -57,7 +57,7 @@ const Ul = styled.ul`
 `;
 
 const P = styled.p`
-  width: 675px;
+  max-width: 675px;
 `;
 
 export const Credits = () => (

@@ -50,6 +50,12 @@ const Section2 = styled.div`
     max-width: 600px;
     line-height: 1.2;
   }
+  @media only screen and (max-width: 1200px) {
+    justify-content: center;
+    p {
+      max-width: 100%;
+    }
+  }
 `;
 
 const FlagContainer = styled.div``;
