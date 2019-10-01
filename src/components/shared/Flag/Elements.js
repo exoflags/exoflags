@@ -37,8 +37,8 @@ export const PlanetaryNeighbours = styled.img`
   margin: 0;
   position: absolute;
   top: 5%;
-  right: 5%;
-  height: 33%;
+  right: 1%;
+  height: 20%;
   width: 20%;
 `;
 
@@ -48,6 +48,6 @@ export const Constellation = styled.img`
   top: 50%;
   left: 50%;
   transform: translate3d(-50%, -50%, 0);
-  height: 50%;
+  height: 80%;
   width: 50%;
 `;

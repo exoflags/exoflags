@@ -52,7 +52,7 @@ class Flag extends Component {
 
     this.stellarRadiusScale = scaleLinear()
       .domain(extents[FLAG_PROPERTIES.stellarRadius])
-      .range([8.333, 100]); // width percentages
+      .range([25, 100]); // width percentages
 
     this.stellarMassScale = scaleLinear()
       .domain(extents[FLAG_PROPERTIES.stellarMass])
@@ -60,7 +60,7 @@ class Flag extends Component {
 
     this.planetaryRadiusScale = scaleLinear()
       .domain(extents[FLAG_PROPERTIES.planetaryRadius])
-      .range([5, 100]); // width percentages
+      .range([25, 100]); // width percentages
 
     this.planetaryMassScale = scaleLinear()
       .domain(extents[FLAG_PROPERTIES.planetaryMass])
@@ -182,12 +182,13 @@ class Flag extends Component {
           />
         )}
 
-        {(basicFlag || stepIdx >= planetaryNeighboursIdx) && (
-          <PlanetaryNeighbours
-            src={planetaryNeighboursFilename}
-            alt={`${planetaryNeighbours} planetary neighbours`}
-          />
-        )}
+        {(basicFlag || stepIdx >= planetaryNeighboursIdx) &&
+          planetaryNeighbours > 0 && (
+            <PlanetaryNeighbours
+              src={planetaryNeighboursFilename}
+              alt={`${planetaryNeighbours} planetary neighbours`}
+            />
+          )}
 
         {(basicFlag || stepIdx >= constellationIdx) && (
           <Constellation src={constellationFilename} alt={constellationName} />

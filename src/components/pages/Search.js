@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Select from 'react-select';
+import AutoSizer from 'react-virtualized-auto-sizer';
 import styled from '@emotion/styled';
 
 import { Page } from '../shared/Layout';
@@ -145,9 +146,9 @@ export const Search = ({ data, extents }) => {
   const displayProperties = property => {
     const data = getProperties();
     if (property === 'constellation' || property === 'planetaryNeighbours') {
-      return data[property] ? data[property] : 'n/a';
+      return data[property] ? data[property] : 'Currently unknown';
     } else {
-      return data[property] ? data[property].toFixed(2) : 'n/a';
+      return data[property] ? data[property].toFixed(2) : 'Currently unknown';
     }
   };
 
@@ -206,12 +207,16 @@ export const Search = ({ data, extents }) => {
           {selectedPlanet && (
             <>
               <Header>{selectedPlanet}</Header>
-              <Flag
-                width={600}
-                extents={extents}
-                flagProperties={getProperties()}
-                basicFlag
-              />
+              <AutoSizer disableHeight>
+                {({ width }) => (
+                  <Flag
+                    width={width}
+                    extents={extents}
+                    flagProperties={getProperties()}
+                    basicFlag
+                  />
+                )}
+              </AutoSizer>
               <Stats>
                 <Ul>
                   <li>Distance: {displayProperties('distance')} </li>
