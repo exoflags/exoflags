@@ -20,6 +20,7 @@ const ContentContainer = styled.div`
 
 const SliderContainer = styled.div`
   padding: 5%;
+  padding-top: 0;
 `;
 
 const SliderLabel = styled.p`
