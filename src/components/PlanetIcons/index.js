@@ -8,6 +8,7 @@ import bestCandidate from './icBestCandidateforSupportingLife.svg';
 
 const Icon = styled.img`
   cursor: pointer;
+  padding: 5px;
 `;
 
 export const MostRecent = () => <Icon src={mostRecent} />;

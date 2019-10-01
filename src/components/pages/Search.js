@@ -29,10 +29,13 @@ const Container = styled.div`
 `;
 
 const Header = styled.div`
-  font-size: 4rem;
+  font-size: 3.75rem;
   font-weight: 800;
   color: white;
   margin-bottom: 2rem;
+  @media only screen and (max-width: 900px) {
+    font-size: 1.75rem;
+  }
 `;
 
 const Info = styled.div`

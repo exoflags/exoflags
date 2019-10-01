@@ -35,6 +35,9 @@ const Hr = styled.div`
 `;
 const SubHeading = styled.h2`
   font-size: 3.75rem;
+  @media only screen and (max-width: 900px) {
+    font-size: 1.75rem;
+  }
 `;
 
 const Flexbox = styled.div`
