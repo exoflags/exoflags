@@ -6,11 +6,10 @@ import { Page } from '../shared/Layout';
 import ExoFlagsLogo from '../Logos/ExoFlagsLogo';
 
 const ImgContainer = styled.div`
-  padding: 2rem 0 0 8rem;
+  padding: 5% 0 0 8rem;
 `;
 const Container = styled.div`
   color: ${props => props.theme.colors.white};
-  font-size: 1.25rem;
   padding: 0 8rem;
   column-gap: 5rem;
   columns: 2;

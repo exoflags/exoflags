@@ -22,7 +22,7 @@ const Hr = styled.div`
 `;
 
 const ContentContainer = styled.div`
-  padding: 2rem 8rem;
+  padding: 5%;
   height: 100%;
   width: 100%;
   display: flex;
@@ -32,10 +32,13 @@ const ContentContainer = styled.div`
 const Section1 = styled.div`
   width: 100%;
   display: flex;
-  padding: 3rem 0;
+  padding: 0;
   justify-content: space-between;
   align-items: center;
   height: 40%;
+  p {
+    line-height: 1.2;
+  }
 `;
 const Section2 = styled.div`
   display: flex;
@@ -44,8 +47,8 @@ const Section2 = styled.div`
   margin-top: 2rem;
 
   p {
-    font-size: 1.25rem;
     max-width: 600px;
+    line-height: 1.2;
   }
 `;
 

@@ -11,11 +11,12 @@ import Flag from '../shared/Flag';
 const Container = styled.div`
   display: flex;
   justify-content: center;
+  padding: 5%;
   color: ${props => props.theme.colors.white};
   p {
     font-weight: 300px;
     letter-spacing: 0.09px;
-    font-size: 1.25rem;
+    // font-size: 1.25rem;
   }
   a:link,
   a:visited,
@@ -41,7 +42,6 @@ const Info = styled.div`
     color: ${props => props.theme.colors.white};
     font-weight: 800;
     letter-spacing: 0.09px;
-    font-size: 1.25rem;
     margin: 0;
   }
 `;
@@ -55,8 +55,7 @@ const SearchEl = styled.div`
 `;
 
 const Left = styled.div`
-  width: 50%;
-  padding: 5%;
+  width: 50%;Å
 `;
 const Right = styled.div`
   width: 50%;

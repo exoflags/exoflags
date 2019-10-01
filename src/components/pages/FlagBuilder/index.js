@@ -19,7 +19,7 @@ const ContentContainer = styled.div`
 `;
 
 const SliderContainer = styled.div`
-  padding: 2rem 4rem;
+  padding: 5%;
 `;
 
 const SliderLabel = styled.p`
@@ -27,13 +27,16 @@ const SliderLabel = styled.p`
 `;
 
 const InfoContainer = styled.div`
-  padding: 2rem 4rem 0;
+  padding: 5% 5% 0;
   flex: 1;
   display: flex;
 `;
 
 const TextContainer = styled.div`
   width: 60%;
+  p {
+    max-width: 80%;
+  }
   padding-right: 3rem;
 `;
 

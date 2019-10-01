@@ -17,7 +17,7 @@ const SectionTitle = styled.h3`
 
 const ContentContainer = styled.div`
   height: 100%;
-  padding: 2rem 4rem;
+  padding: 5%;
 `;
 
 const Top = styled.div`
@@ -30,6 +30,9 @@ const Bottom = styled.div`
 
 const Text = styled.div`
   width: 60%;
+  p {
+    width: 80%;
+  }
 `;
 
 const Flags = styled.div`
@@ -45,6 +48,10 @@ const FlagWrapper = styled.div`
 
 const FlagLabel = styled.h4`
   margin-bottom: 0.5rem;
+`;
+
+const Info = styled.div`
+  padding-top: 1rem;
 `;
 
 function closest(arr, accessor, goal) {
@@ -122,34 +129,36 @@ const ClosestMatch = ({ userFlag, resetUserFlag, extents, data, navigate }) => {
                   }}
                   basicFlag
                 />
-
-                <p>
-                  Distance: {planet.st_dist ? planet.st_dist.toFixed(2) : 'n/a'}
-                </p>
-                <p>
-                  Stellar mass:{' '}
-                  {planet.st_mass ? planet.st_mass.toFixed(2) : 'n/a'}
-                </p>
-                <p>
-                  Stellar radius:{' '}
-                  {planet.st_rad ? planet.st_rad.toFixed(2) : 'n/a'}
-                </p>
-                <p>
-                  Planetary mass:{' '}
-                  {planet.pl_bmassj ? planet.pl_bmassj.toFixed(2) : 'n/a'}
-                </p>
-                <p>
-                  Planetary radius:{' '}
-                  {planet.pl_radj ? planet.pl_radj.toFixed(2) : 'n/a'}
-                </p>
-                <p>
-                  Planetary neighbours:{' '}
-                  {planet.pl_pnum ? planet.pl_pnum : 'n/a'}
-                </p>
-                <p>
-                  Constellation:{' '}
-                  {planet.constellation ? planet.constellation : 'n/a'}
-                </p>
+                <Info>
+                  <p>
+                    Distance:{' '}
+                    {planet.st_dist ? planet.st_dist.toFixed(2) : 'n/a'}
+                  </p>
+                  <p>
+                    Stellar mass:{' '}
+                    {planet.st_mass ? planet.st_mass.toFixed(2) : 'n/a'}
+                  </p>
+                  <p>
+                    Stellar radius:{' '}
+                    {planet.st_rad ? planet.st_rad.toFixed(2) : 'n/a'}
+                  </p>
+                  <p>
+                    Planetary mass:{' '}
+                    {planet.pl_bmassj ? planet.pl_bmassj.toFixed(2) : 'n/a'}
+                  </p>
+                  <p>
+                    Planetary radius:{' '}
+                    {planet.pl_radj ? planet.pl_radj.toFixed(2) : 'n/a'}
+                  </p>
+                  <p>
+                    Planetary neighbours:{' '}
+                    {planet.pl_pnum ? planet.pl_pnum : 'n/a'}
+                  </p>
+                  <p>
+                    Constellation:{' '}
+                    {planet.constellation ? planet.constellation : 'n/a'}
+                  </p>
+                </Info>
               </FlagWrapper>
             ))}
           </Flags>

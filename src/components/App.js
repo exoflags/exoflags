@@ -28,6 +28,7 @@ const AppContainer = styled.div`
 
 const HeaderContainer = styled.div`
   height: ${props => props.theme.headerHeight};
+  position: absolute;
   width: 100%;
   z-index: 2;
 `;
