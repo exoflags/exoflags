@@ -18,6 +18,9 @@ const Text = styled.p`
   font-size: 3rem;
   width: 60%;
   line-height: 1.2;
+  @media only screen and (max-width: 900px) {
+    font-size: 1.75rem;
+  }
 `;
 
 const ExploreButton = styled(Button)`
