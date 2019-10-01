@@ -3,6 +3,9 @@ import styled from '@emotion/styled';
 
 const Heading = styled.h1`
   font-size: 3.75rem;
+  @media only screen and (max-width: 1200px) {
+    font-size: 1.75rem;
+  }
 `;
 
 const Text = styled.div`

@@ -12,11 +12,12 @@ import Flag from '../shared/Flag';
 const Container = styled.div`
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  padding: 5%;
   color: ${props => props.theme.colors.white};
   p {
     font-weight: 300px;
     letter-spacing: 0.09px;
-    font-size: 1.25rem;
   }
   a:link,
   a:visited,
@@ -28,10 +29,13 @@ const Container = styled.div`
 `;
 
 const Header = styled.div`
-  font-size: 4rem;
+  font-size: 3.75rem;
   font-weight: 800;
   color: white;
   margin-bottom: 2rem;
+  @media only screen and (max-width: 900px) {
+    font-size: 1.75rem;
+  }
 `;
 
 const Info = styled.div`
@@ -42,7 +46,6 @@ const Info = styled.div`
     color: ${props => props.theme.colors.white};
     font-weight: 800;
     letter-spacing: 0.09px;
-    font-size: 1.25rem;
     margin: 0;
   }
 `;
@@ -57,11 +60,18 @@ const SearchEl = styled.div`
 
 const Left = styled.div`
   width: 50%;
-  padding: 5%;
+  @media only screen and (max-width: 900px) {
+    width: 100%;
+    padding: 5%;
+  }
 `;
 const Right = styled.div`
   width: 50%;
   padding: 5%;
+  @media only screen and (max-width: 900px) {
+    width: 100%;
+    padding: 5%;
+  }
 `;
 
 const Stats = styled.div`

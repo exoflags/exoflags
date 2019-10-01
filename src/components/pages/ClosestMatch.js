@@ -17,7 +17,7 @@ const SectionTitle = styled.h3`
 
 const ContentContainer = styled.div`
   height: 100%;
-  padding: 2rem 4rem;
+  padding: 5%;
 `;
 
 const Top = styled.div`
@@ -30,6 +30,9 @@ const Bottom = styled.div`
 
 const Text = styled.div`
   width: 60%;
+  p {
+    width: 80%;
+  }
 `;
 
 const Flags = styled.div`
@@ -55,6 +58,10 @@ const FlagWrapper = styled.div`
 
 const FlagLabel = styled.h4`
   margin-bottom: 0.5rem;
+`;
+
+const Info = styled.div`
+  padding-top: 1rem;
 `;
 
 function closest(arr, accessor, goal) {
