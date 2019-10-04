@@ -4,7 +4,7 @@ import styled from '@emotion/styled';
 import spaceBackgroundImage from '../../../assets/FN_ExoFlags_Space_Still.png';
 import earthBackgroundVideo from '../../../assets/ExoFlags_BG1.mp4';
 import earthBackgroundImage from '../../../assets/ExoFlags_BG1_Still.png';
-import spaceBackgroundVideo from '../../../assets/FN_ExoFlags_Space.mp4';
+import spaceBackgroundVideo from '../../../assets/NF_ExoFlags_Space.mp4';
 import exploreBackgroundVideo from '../../../assets/FN_ExoFlags_Explore.mp4';
 
 const backgrounds = {
