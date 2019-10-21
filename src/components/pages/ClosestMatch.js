@@ -22,14 +22,18 @@ const ContentContainer = styled.div`
 
 const Top = styled.div`
   width: 100%;
+  padding-left: 2rem;
 `;
 
 const Bottom = styled.div`
   width: 100%;
+  padding-left: 2rem;
 `;
 
 const Text = styled.div`
   width: 60%;
+  padding-top: 1.5rem;
+  padding-left: 1.5rem;
   p {
     width: 80%;
   }
@@ -43,7 +47,7 @@ const Flags = styled.div`
 const Matches = styled.div`
   flex: 1;
   display: flex;
-  margin-left: 2rem;
+  margin-bottom: 2rem;
 
   > div {
     width: calc(100% / 3);
@@ -54,6 +58,11 @@ const FlagWrapper = styled.div`
   p {
     margin-bottom: 0;
   }
+`;
+
+const MyFlagWrapper = styled.div`
+  display: flex;
+  margin-bottom: 2rem;
 `;
 
 const FlagLabel = styled.h4`
@@ -93,25 +102,7 @@ const ClosestMatch = ({ userFlag, resetUserFlag, extents, data, navigate }) => {
       <ContentContainer>
         <Top>
           <SectionTitle>Closest Matches</SectionTitle>
-
-          <Text>
-            <p>
-              You've just explored the steps in data visualisation necessary to
-              build an exoplanetary flag! Of the random variables you've chosen,
-              below are the 3 most similar actual exoplanets that Earth based
-              studies have confirmed to date.
-            </p>
-
-            <p>
-              You can learn more about these studies and explore the full depth
-              of the NASA and Kepler database to find out more about the
-              discovery of new worlds.
-            </p>
-          </Text>
-        </Top>
-
-        <Bottom>
-          <Flags>
+          <MyFlagWrapper>
             <FlagWrapper>
               <FlagLabel>MY FLAG</FlagLabel>
               <Flag
@@ -121,7 +112,25 @@ const ClosestMatch = ({ userFlag, resetUserFlag, extents, data, navigate }) => {
                 basicFlag
               />
             </FlagWrapper>
+            <Text>
+              <p>
+                You've just explored the steps in data visualisation necessary
+                to build an exoplanetary flag! Of the random variables you've
+                chosen, below are the 3 most similar actual exoplanets that
+                Earth based studies have confirmed to date.
+              </p>
 
+              <p>
+                You can learn more about these studies and explore the full
+                depth of the NASA and Kepler database to find out more about the
+                discovery of new worlds.
+              </p>
+            </Text>
+          </MyFlagWrapper>
+        </Top>
+
+        <Bottom>
+          <Flags>
             <Matches>
               {similarPlanets.map(planet => (
                 <FlagWrapper key={planet.pl_name}>
@@ -186,7 +195,11 @@ const ClosestMatch = ({ userFlag, resetUserFlag, extents, data, navigate }) => {
             </Matches>
           </Flags>
 
-          <Button primary onClick={handleStartAgain}>
+          <Button
+            primary
+            onClick={handleStartAgain}
+            style={{ 'margin-bottom': '2rem' }}
+          >
             START AGAIN
           </Button>
         </Bottom>
